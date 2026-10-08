@@ -11,6 +11,10 @@ on:
     paths:
       - 'generate_playlist.py'
 
+concurrency:
+  group: update-playlist
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -21,6 +25,8 @@ jobs:
     steps:
       - name: Kodu Çek
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Python Kur
         uses: actions/setup-python@v5
@@ -35,7 +41,7 @@ jobs:
         run: |
           python generate_playlist.py
 
-            - name: Değişiklikleri Kaydet ve Push Et
+      - name: Değişiklikleri Kaydet ve Push Et
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -44,6 +50,6 @@ jobs:
             echo "Değişiklik yok, liste güncel."
           else
             git commit -m "chore: Canlı kanallar güncellendi [skip ci]"
-            git pull --rebase origin main
-            git push
+            git pull --rebase -X theirs origin main
+            git push origin main
           fi

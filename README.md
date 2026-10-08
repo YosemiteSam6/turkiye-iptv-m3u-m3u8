@@ -56,7 +56,7 @@ Televizyonunuz veya cihazınız Google TV / Android TV tabanlı ise Google Play 
 
 1. **GitHub'da Yeni Repo Açın:**
    - [github.com/new](https://github.com/new) adresine gidin.
-   - Depo adı olarak örneğin `tcl-turkiye-iptv` yazın ve **Public (Herkese Açık)** seçin.
+   - Depo adı olarak örneğin `turkiye-iptv` yazın ve **Public (Herkese Açık)** seçin.
 
 2. **Dosyaları Yükleyin:**
    Terminalden deponun bulunduğu dizinde şu komutları çalıştırarak GitHub'a gönderebilirsiniz:
