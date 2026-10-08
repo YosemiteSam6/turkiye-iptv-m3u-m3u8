@@ -1,6 +1,6 @@
 #EXTM3U
 # Generated automatically for Android TV & Smart TV
-# Total Working Turkish Channels: 159 (Sorted A-Z)
+# Total Working Turkish Channels: 157 (Sorted A-Z)
 
 #EXTINF:-1 tvg-name="24 TV" tvg-logo="https://i.imgur.com/8FO41es.png",24 TV
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
@@ -18,8 +18,6 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8
 https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8
 #EXTINF:-1 tvg-name="Alanya Posta TV",Alanya Posta TV
 https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
-#EXTINF:-1 tvg-name="Almahriah TV",Almahriah TV
-https://starmenajo.com/hls/almahriah/index.m3u8
 #EXTINF:-1 tvg-name="Altas TV",Altas TV
 https://edge1.taksimbilisim.com/altastv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Al-Zahra TV Turkic" tvg-logo="https://i.imgur.com/QEHKGnG.png",Al-Zahra TV Turkic
@@ -106,8 +104,6 @@ https://edge2.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
 https://edge1.taksimbilisim.com/frttv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Haber Global" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Haber_Global_logo.svg/512px-Haber_Global_logo.svg.png",Haber Global
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
-#EXTINF:-1 tvg-name="Haber61 TV",Haber61 TV
-https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8
 #EXTINF:-1 tvg-name="Habertürk TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Habert%C3%BCrk_TV_logo.svg/512px-Habert%C3%BCrk_TV_logo.svg.png",Habertürk TV
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
 #EXTINF:-1 tvg-name="Halk TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Halk_TV_logo.svg/512px-Halk_TV_logo.svg.png",Halk TV
@@ -124,8 +120,6 @@ https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
 https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 15",Kanal 15
 https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8
-#EXTINF:-1 tvg-name="Kanal 19",Kanal 19
-https://live.euromediacenter.com/kanal19/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 23",Kanal 23
 https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
 #EXTINF:-1 tvg-name="Kanal 26",Kanal 26
@@ -194,8 +188,6 @@ https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
 #EXTINF:-1 tvg-name="Minika Go",Minika Go
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
-#EXTINF:-1 tvg-name="Neo Haber",Neo Haber
-https://edge2.taksimbilisim.com/neohaber/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="NOW" tvg-logo="https://i.imgur.com/5EYjWK7.png",NOW
 https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
 #EXTINF:-1 tvg-name="NTV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/NTV_%28Turkey%29_logo.svg/960px-NTV_%28Turkey%29_logo.svg.png",NTV
@@ -246,6 +238,8 @@ https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-2
 https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
 #EXTINF:-1 tvg-name="TBMM TV",TBMM TV
 https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8
+#EXTINF:-1 tvg-name="Tele1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Tele1_logo.svg/512px-Tele1_logo.svg.png",Tele1
+https://tele1-live.ercdn.net/tele1/tele1.m3u8
 #EXTINF:-1 tvg-name="Tempo TV",Tempo TV
 https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8
 #EXTINF:-1 tvg-name="TGRT Belgesel" tvg-logo="https://i.imgur.com/VwWTnf0.png",TGRT Belgesel
@@ -266,6 +260,8 @@ https://tv-trt3.live.trt.com.tr/master.m3u8
 https://tv-trtarabi.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT Avaz" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/TRT_Avaz_logo_2021.svg/512px-TRT_Avaz_logo_2021.svg.png",TRT Avaz
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-name="TRT Çocuk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/TRT_%C3%87ocuk_logo_2021.svg/512px-TRT_%C3%87ocuk_logo_2021.svg.png",TRT Çocuk
+https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT Diyanet Cocuk",TRT Diyanet Cocuk
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT EBA",TRT EBA
