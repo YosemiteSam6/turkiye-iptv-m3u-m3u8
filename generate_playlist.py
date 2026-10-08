@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 """
 Android / Google TV & Akıllı TV - Profesyonel Türkiye Canlı TV M3U Oluşturucu
+- ⭐ TOP 50 Özel En Çok İzlenen Kanal Grubu
 - Otomatik EPG (Elektronik Program Rehberi) Entegrasyonu (epg_ripper_TR1)
-- IPTV Akıllı Kategori Gruplama (Ulusal, Çocuk, Haber, Spor, Belgesel, Müzik, Kültür & Dini, Yerel)
+- IPTV Akıllı Kategori Gruplama (TOP 50, Ulusal, Çocuk, Haber, Spor, Belgesel, Müzik, Kültür & Dini, Yerel)
 - Çocuklara Özel İzole Liste Desteği (cocuk.m3u & cocuk.m3u8)
+- TOP 50 Özel Hafif & Hızlı Liste Desteği (top50.m3u & top50.m3u8)
 - Yedekli Yayın (Failover) & Toleranslı Canlılık Testi (Retry + Backup URL)
-- Çift Dosya Dağıtımı (kanallar.m3u ve cocuk.m3u)
 """
 
 import os
@@ -41,6 +42,67 @@ CATEGORY_ORDER = [
     "Kültür & Dini",
     "Dünya",
     "Yerel"
+]
+
+# Türkiye'de En Çok İzlenen 50 Kanal (Reyting ve Popülerlik Sıralı)
+TOP_50_RANKS = [
+    # --- Ulusal Ana Kanallar ---
+    "TRT 1",
+    "ATV",
+    "NOW",
+    "Kanal D",
+    "Star TV",
+    "TV8",
+    "TV8.5",
+    "A2",
+    "360",
+    "Kanal 7 Avrupa",
+    "Euro D",
+    "Show Max",
+    "TV 4",
+    # --- Popüler Çocuk Kanalları ---
+    "TRT Çocuk",
+    "Minika Çocuk",
+    "Minika Go",
+    "Disney Jr.",
+    "Spacetoon Turkey",
+    "TRT Diyanet Çocuk",
+    "TRT EBA İlkokul",
+    # --- Ana Haber & Ekonomi Kanalları ---
+    "TRT Haber",
+    "NTV",
+    "Habertürk TV",
+    "A Haber",
+    "Haber Global",
+    "TV100",
+    "Halk TV",
+    "Tele1",
+    "TGRT Haber",
+    "Bloomberg HT",
+    "24 TV",
+    "Flash Haber TV",
+    "Bengütürk TV",
+    "Ekol TV",
+    "TRT 3 / TBMM TV",
+    # --- Spor Kanalları ---
+    "TRT Spor",
+    "TRT Spor Yıldız",
+    "A Spor",
+    "Ekol Sports",
+    "FB TV",
+    "TJK TV",
+    # --- Belgesel Kanalları ---
+    "TRT Belgesel",
+    "TGRT Belgesel",
+    # --- Müzik Kanalları ---
+    "TRT Müzik",
+    "Power TV",
+    "PowerTurk TV",
+    "Kral Pop TV",
+    "Dream Turk",
+    "Number 1 TV",
+    # --- Kültür & Sanat ---
+    "TRT 2"
 ]
 
 # Doğrulanmış Öncelikli Kanallar (Failover Yedekleri ve EPG Kimlikleri ile)
@@ -435,7 +497,6 @@ EPG_MAP = {
     "bengütürk tv": "BENGÜ.TÜRK.tr",
     "cnn türk": "CNN.TÜRK.HD.tr",
     "ulusal kanal": "ULUSAL.KANAL.tr",
-    "akıt tv": "AKİT.TV.tr",
     "akit tv": "AKİT.TV.tr",
     "a para": "A.PARA.tr",
     "ekotürk": "EKOTÜRK.tr",
@@ -466,7 +527,6 @@ EPG_MAP = {
     "trt türk": "TRT.TÜRK.tr",
     "trt avaz": "TRT.AVAZ.HD.tr",
     "trt kurdî": "TRT.KURDİ.tr",
-    "trt kurdi": "TRT.KURDİ.tr",
     "trt world": "TRT.WORLD.HD.tr",
     "kon tv": "KON.TV.tr",
     "olay tv": "OLAY.TV.tr"
@@ -717,12 +777,12 @@ def fetch_iptv_org_channels():
         print(f"[IPTV-org] Çekme hatası: {e}")
     return items
 
-def format_m3u_entry(channel: dict) -> list:
+def format_m3u_entry(channel: dict, custom_group: str = None) -> list:
     """Standartlara uygun M3U kanal satırlarını üretir."""
     name = channel['name']
     url = channel['url']
     logo = channel.get('logo', '')
-    category = channel.get('category', 'Yerel')
+    category = custom_group or channel.get('category', 'Yerel')
     epg_id = channel.get('epg_id', '')
 
     parts = ['#EXTINF:-1']
@@ -739,7 +799,7 @@ def format_m3u_entry(channel: dict) -> list:
 
 def build_playlist():
     print("=" * 65)
-    print("Profesyonel Türkiye Canlı TV & Çocuk Özel Listesi Oluşturuluyor...")
+    print("Profesyonel Türkiye Canlı TV (TOP 50, EPG, Kategorili) Oluşturuluyor...")
     print("=" * 65)
 
     # 1. Kaynakları Topla
@@ -828,37 +888,61 @@ def build_playlist():
     final_channels = list(final_channel_map.values())
     print(f"Tekilleştirme sonrası net kanal sayısı: {len(final_channels)}")
 
-    # 5. Sıralama: Kategori Önceliği + Kategori İçi Türkçe A-Z Sıralama
+    # 5. TOP 50 Listesini Belirle (Reyting/Popülerlik Sıralamasına Göre)
+    top_50_channels = []
+    top_50_names_lower = [clean_channel_name(n).lower() for n in TOP_50_RANKS]
+    
+    for req_name in TOP_50_RANKS:
+        req_key = clean_channel_name(req_name).lower()
+        if req_key in final_channel_map:
+            top_50_channels.append(final_channel_map[req_key])
+        else:
+            # Yakın isim eşleşmesi
+            match = next((v for k, v in final_channel_map.items() if req_key in k or k in req_key), None)
+            if match and match not in top_50_channels:
+                top_50_channels.append(match)
+
+    print(f"\n⭐ TOP 50 Grubu Başarıyla Eşleştirildi: {len(top_50_channels)} kanal")
+
+    # 6. Kategorik Sıralama (Kategori Önceliği + Kategori İçi Türkçe A-Z)
     def sort_key(ch):
         cat = ch.get('category', 'Yerel')
         cat_index = CATEGORY_ORDER.index(cat) if cat in CATEGORY_ORDER else 99
         return (cat_index, turkish_sort_key(ch['name']))
 
-    final_channels.sort(key=sort_key)
+    categorized_channels = list(final_channels)
+    categorized_channels.sort(key=sort_key)
 
     # Kategori dağılımını yazdır
     cat_counts = {}
-    for ch in final_channels:
+    for ch in categorized_channels:
         cat = ch.get('category', 'Yerel')
         cat_counts[cat] = cat_counts.get(cat, 0) + 1
 
     print("\nKategori Dağılımı:")
+    print(f"  • ⭐ TOP 50: {len(top_50_channels)} kanal (En Popüler)")
     for cat in CATEGORY_ORDER:
         if cat in cat_counts:
             print(f"  • {cat}: {cat_counts[cat]} kanal")
 
-    # 6. GENEL M3U / M3U8 Dosyalarını Oluştur (kanallar.m3u & kanallar.m3u8)
+    # 7. GENEL M3U / M3U8 Dosyalarını Oluştur (kanallar.m3u & kanallar.m3u8)
     base_dir = os.path.dirname(os.path.abspath(__file__))
     
     header_lines = [
         f'#EXTM3U url-tvg="{EPG_URL}" x-tvg-url="{EPG_URL}"',
         "# Generated automatically for Android TV & Smart TV",
-        f"# Total Verified Channels: {len(final_channels)} (Smart Categorized)",
+        f"# Total Working Channels: {len(final_channels)} (TOP 50 + Categorized)",
         ""
     ]
 
     main_lines = list(header_lines)
-    for ch in final_channels:
+
+    # 7.1. Listenin En Başında: ⭐ TOP 50 Grubu
+    for ch in top_50_channels:
+        main_lines.extend(format_m3u_entry(ch, custom_group="TOP 50"))
+
+    # 7.2. Kategorilerine Göre Sıralı Kanallar
+    for ch in categorized_channels:
         main_lines.extend(format_m3u_entry(ch))
 
     main_content = "\n".join(main_lines) + "\n"
@@ -873,9 +957,32 @@ def build_playlist():
     print(f"\n[Başarılı] Ana Liste '{m3u_path}' oluşturuldu!")
     print(f"[Başarılı] Ana Liste '{m3u8_path}' oluşturuldu!")
 
-    # 7. ÇOCUK ÖZEL M3U / M3U8 Dosyalarını Oluştur (cocuk.m3u & cocuk.m3u8)
+    # 8. TOP 50 ÖZEL M3U / M3U8 Dosyalarını Oluştur (top50.m3u & top50.m3u8)
+    # Hızlı, hafif ve sadece en popüler 50 kanalı isteyenler için izole liste
+    top50_header = [
+        f'#EXTM3U url-tvg="{EPG_URL}" x-tvg-url="{EPG_URL}"',
+        "# Turkiye En Cok Izlenen TOP 50 Canli TV Listesi",
+        f"# Total Channels: {len(top_50_channels)}",
+        ""
+    ]
+    top50_lines = list(top50_header)
+    for ch in top_50_channels:
+        top50_lines.extend(format_m3u_entry(ch, custom_group="TOP 50"))
+
+    top50_content = "\n".join(top50_lines) + "\n"
+    top50_m3u_path = os.path.join(base_dir, "top50.m3u")
+    top50_m3u8_path = os.path.join(base_dir, "top50.m3u8")
+
+    with open(top50_m3u_path, "w", encoding="utf-8") as f:
+        f.write(top50_content)
+    with open(top50_m3u8_path, "w", encoding="utf-8") as f:
+        f.write(top50_content)
+
+    print(f"[Başarılı] TOP 50 Özel Listesi '{top50_m3u_path}' oluşturuldu! ({len(top_50_channels)} kanal)")
+    print(f"[Başarılı] TOP 50 Özel Listesi '{top50_m3u8_path}' oluşturuldu!")
+
+    # 9. ÇOCUK ÖZEL M3U / M3U8 Dosyalarını Oluştur (cocuk.m3u & cocuk.m3u8)
     kids_channels = [ch for ch in final_channels if ch.get('category') == 'Çocuk']
-    # Çocuk listesini kendi içinde alfabetik sırala
     kids_channels.sort(key=lambda x: turkish_sort_key(x['name']))
 
     kids_header = [
@@ -899,11 +1006,6 @@ def build_playlist():
 
     print(f"[Başarılı] Çocuk Özel Listesi '{kids_m3u_path}' oluşturuldu! ({len(kids_channels)} kanal)")
     print(f"[Başarılı] Çocuk Özel Listesi '{kids_m3u8_path}' oluşturuldu!")
-    print("  Çocuk Kanalları Listesi:")
-    for k in kids_channels:
-        epg_info = f"[EPG: {k['epg_id']}]" if k.get('epg_id') else "[EPG Yok]"
-        print(f"    - {k['name']} {epg_info}")
-
     print("=" * 65)
 
 if __name__ == "__main__":

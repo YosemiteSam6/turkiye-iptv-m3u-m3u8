@@ -45,7 +45,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add kanallar.m3u kanallar.m3u8 cocuk.m3u cocuk.m3u8
+          git add kanallar.m3u kanallar.m3u8 cocuk.m3u cocuk.m3u8 top50.m3u top50.m3u8
           if git diff --staged --quiet; then
             echo "Değişiklik yok, liste güncel."
           else
