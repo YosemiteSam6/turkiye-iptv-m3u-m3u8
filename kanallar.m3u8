@@ -1,6 +1,6 @@
 #EXTM3U
 # Generated automatically for Android TV & Smart TV
-# Total Working Turkish Channels: 164 (Sorted A-Z)
+# Total Working Turkish Channels: 159 (Sorted A-Z)
 
 #EXTINF:-1 tvg-name="24 TV" tvg-logo="https://i.imgur.com/8FO41es.png",24 TV
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
@@ -56,14 +56,14 @@ https://edge.taksimbilisim.com/caytv/bant1/playlist.m3u8
 https://panel.5gtvhosting.com/hls/cemtv/cemtv.m3u8
 #EXTINF:-1 tvg-name="Ciftci TV",Ciftci TV
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
+#EXTINF:-1 tvg-name="Cine 1",Cine 1
+https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3_output_0.m3u8
 #EXTINF:-1 tvg-name="CNBC-e",CNBC-e
 https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
 #EXTINF:-1 tvg-name="Deniz Postasi TV",Deniz Postasi TV
 https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8
 #EXTINF:-1 tvg-name="DHA" tvg-logo="https://i.imgur.com/VZhag2x.png",DHA
 https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8
-#EXTINF:-1 tvg-name="Disney Jr." tvg-logo="https://www.dsmart.com.tr/api/v1/public/images/kanallar/disneyjr.png",Disney Jr.
-https://saran-live.ercdn.net/disneyjunior/index.m3u8
 #EXTINF:-1 tvg-name="Diyanet TV",Diyanet TV
 https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="Diyar TV",Diyar TV
@@ -246,8 +246,6 @@ https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-2
 https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
 #EXTINF:-1 tvg-name="TBMM TV",TBMM TV
 https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8
-#EXTINF:-1 tvg-name="Tele1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Tele1_logo.svg/512px-Tele1_logo.svg.png",Tele1
-https://tele1-live.ercdn.net/tele1/tele1.m3u8
 #EXTINF:-1 tvg-name="Tempo TV",Tempo TV
 https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8
 #EXTINF:-1 tvg-name="TGRT Belgesel" tvg-logo="https://i.imgur.com/VwWTnf0.png",TGRT Belgesel
@@ -258,24 +256,16 @@ https://canli.tgrthaber.com/tgrt.m3u8
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
 #EXTINF:-1 tvg-name="TJK TV",TJK TV
 https://tjktv-live.tjk.org/tjktv.m3u8
-#EXTINF:-1 tvg-name="TJK TV 2" tvg-logo="https://i.imgur.com/3zHdkYG.png",TJK TV 2
-https://tjktv-live.tjk.org/tjktv2/tjktv2.m3u8
 #EXTINF:-1 tvg-name="Ton TV",Ton TV
 https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8
 #EXTINF:-1 tvg-name="TRT 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/TRT_1_logo_2021.svg/512px-TRT_1_logo_2021.svg.png",TRT 1
 https://tv-trt1.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-name="TRT 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/TRT_2_logo_2021.svg/512px-TRT_2_logo_2021.svg.png",TRT 2
-https://tv-trt2.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT 3" tvg-logo="https://i.imgur.com/JrWFwBd.png",TRT 3
 https://tv-trt3.live.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT Arabi",TRT Arabi
 https://tv-trtarabi.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT Avaz" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/TRT_Avaz_logo_2021.svg/512px-TRT_Avaz_logo_2021.svg.png",TRT Avaz
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-name="TRT Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/TRT_Belgesel_logo_2021.svg/512px-TRT_Belgesel_logo_2021.svg.png",TRT Belgesel
-https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-name="TRT Çocuk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/TRT_%C3%87ocuk_logo_2021.svg/512px-TRT_%C3%87ocuk_logo_2021.svg.png",TRT Çocuk
-https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT Diyanet Cocuk",TRT Diyanet Cocuk
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT EBA",TRT EBA
@@ -292,16 +282,16 @@ https://tv-trthaber.medya.trt.com.tr/master.m3u8
 https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT Müzik" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/TRT_M%C3%BCzik_logo_2021.svg/512px-TRT_M%C3%BCzik_logo_2021.svg.png",TRT Müzik
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-name="TRT Spor" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/TRT_Spor_logo_2021.svg/512px-TRT_Spor_logo_2021.svg.png",TRT Spor
-https://tv-trtspor1.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT Spor Yıldız" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg/512px-TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg.png",TRT Spor Yıldız
-https://tv-trtspor2.medya.trt.com.tr/master.m3u8
+https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor
 #EXTINF:-1 tvg-name="TRT Türk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/TRT_T%C3%BCrk_logo_2021.svg/512px-TRT_T%C3%BCrk_logo_2021.svg.png",TRT Türk
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TRT World" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/TRT_World_logo_2021.svg/512px-TRT_World_logo_2021.svg.png",TRT World
 https://tv-trtworld.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-name="TurkHaber TV",TurkHaber TV
 https://edge2.taksimbilisim.com/turkhaber/bant1/playlist.m3u8
+#EXTINF:-1 tvg-name="TV 100" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/0/0f/TV100_logo.png/960px-TV100_logo.png",TV 100
+https://7nyaler.streamhostingcdn.top/stream/46/index.m3u8
 #EXTINF:-1 tvg-name="TV 264",TV 264
 https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="TV 4",TV 4
