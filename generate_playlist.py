@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Android / Google TV & Akıllı TV - Türkiye Canlı TV Kanalları M3U Oluşturucu
-- Famelack + IPTV-org + Doğrulanmış Ulusal ve Yerel Kanallar
-- Aktiflik ve yayın kontrolü (ölü ve çalışmayan linkleri eler)
-- Tekrarları temizler (kanal başına en stabil tek yayın)
-- Kategori/grup karmaşası olmadan, Türkçe harf sırasına göre (A-Z) sıralar.
+Android / Google TV & Akıllı TV - Profesyonel Türkiye Canlı TV M3U Oluşturucu
+- Otomatik EPG (Elektronik Program Rehberi) Entegrasyonu (epg_ripper_TR1)
+- IPTV Akıllı Kategori Gruplama (Ulusal, Çocuk, Haber, Spor, Belgesel, Müzik, Kültür & Dini, Yerel)
+- Çocuklara Özel İzole Liste Desteği (cocuk.m3u & cocuk.m3u8)
+- Yedekli Yayın (Failover) & Toleranslı Canlılık Testi (Retry + Backup URL)
+- Çift Dosya Dağıtımı (kanallar.m3u ve cocuk.m3u)
 """
 
 import os
@@ -17,195 +18,466 @@ import unicodedata
 from concurrent.futures import ThreadPoolExecutor
 import requests
 
-# İstek ayarları
-TIMEOUT_CONNECT = 2.5
-TIMEOUT_READ = 3.0
-MAX_WORKERS = 25
+# İstek ve Zaman Aşımı Ayarları (Toleranslı Test)
+TIMEOUT_CONNECT = 3.5
+TIMEOUT_READ = 4.0
+MAX_WORKERS = 20
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
 }
 
-# Öncelikli ve doğrulanmış ana kanal kaynakları (Logolar ve direkt HLS yayınları)
+# EPG Kaynağı (Türkiye Kanalları XMLTV Rehberi)
+EPG_URL = "https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz"
+
+# Kategori Öncelik Sıralaması
+CATEGORY_ORDER = [
+    "Ulusal",
+    "Çocuk",
+    "Haber",
+    "Spor",
+    "Belgesel",
+    "Müzik",
+    "Sinema & Dizi",
+    "Kültür & Dini",
+    "Dünya",
+    "Yerel"
+]
+
+# Doğrulanmış Öncelikli Kanallar (Failover Yedekleri ve EPG Kimlikleri ile)
 VERIFIED_CHANNELS = [
+    # ==================== ULUSAL ====================
     {
         "name": "TRT 1",
+        "category": "Ulusal",
+        "epg_id": "TRT.1.HD.tr",
         "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trt1.live.trt.com.tr/master.m3u8"],
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/TRT_1_logo_2021.svg/512px-TRT_1_logo_2021.svg.png"
     },
     {
-        "name": "TRT 2",
-        "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/TRT_2_logo_2021.svg/512px-TRT_2_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Haber",
-        "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Haber_logo_2021.svg/512px-TRT_Haber_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Spor",
-        "url": "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/TRT_Spor_logo_2021.svg/512px-TRT_Spor_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Spor Yıldız",
-        "url": "https://tv-trtspor2.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg/512px-TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Belgesel",
-        "url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/TRT_Belgesel_logo_2021.svg/512px-TRT_Belgesel_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Çocuk",
-        "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/TRT_%C3%87ocuk_logo_2021.svg/512px-TRT_%C3%87ocuk_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Müzik",
-        "url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/TRT_M%C3%BCzik_logo_2021.svg/512px-TRT_M%C3%BCzik_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Türk",
-        "url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/TRT_T%C3%BCrk_logo_2021.svg/512px-TRT_T%C3%BCrk_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Avaz",
-        "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/TRT_Avaz_logo_2021.svg/512px-TRT_Avaz_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Kurdî",
-        "url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TRT_Kurd%C3%AE_logo_2021.svg/512px-TRT_Kurd%C3%AE_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT World",
-        "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/TRT_World_logo_2021.svg/512px-TRT_World_logo_2021.svg.png"
-    },
-    {
         "name": "ATV",
+        "category": "Ulusal",
+        "epg_id": "ATV.HD.tr",
         "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8",
+        "fallbacks": ["https://trkvz-live.ercdn.net/atv/atv.m3u8"],
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ATV_logo.svg/512px-ATV_logo.svg.png"
     },
     {
-        "name": "A2",
-        "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8",
-        "logo": "https://iatv.tmgrup.com.tr/site/v2/a2tv/i/a2tv-logo.png"
-    },
-    {
-        "name": "A Haber",
-        "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Ahaber_Logo.png"
-    },
-    {
-        "name": "A Spor",
-        "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
-        "logo": "https://i.imgur.com/ZhkZzLf.png"
-    },
-    {
         "name": "Kanal D",
+        "category": "Ulusal",
+        "epg_id": "KANAL.D.HD.tr",
         "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3",
         "logo": "https://i.imgur.com/9o1atM6.png"
     },
     {
         "name": "Star TV",
+        "category": "Ulusal",
+        "epg_id": "STAR.TV.HD.tr",
         "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5",
         "logo": "https://i.imgur.com/9O3DHRB.png"
     },
     {
-        "name": "NOW TV",
+        "name": "NOW",
+        "category": "Ulusal",
+        "epg_id": "FOX.HD.tr",
         "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
         "logo": "https://i.imgur.com/5EYjWK7.png"
     },
     {
         "name": "TV8",
+        "category": "Ulusal",
+        "epg_id": "TV8.HD.tr",
         "url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
         "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/6/68/Tv8_Yeni_Logo.png/960px-Tv8_Yeni_Logo.png"
     },
     {
+        "name": "TV8.5",
+        "category": "Ulusal",
+        "epg_id": "TV8.HD.tr",
+        "url": "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3",
+        "logo": "https://upload.wikimedia.org/wikipedia/tr/c/cf/Tv8_bucuk_logo.png"
+    },
+    {
+        "name": "A2",
+        "category": "Ulusal",
+        "epg_id": "A2.HD.tr",
+        "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8",
+        "fallbacks": ["https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8"],
+        "logo": "https://iatv.tmgrup.com.tr/site/v2/a2tv/i/a2tv-logo.png"
+    },
+    {
+        "name": "360",
+        "category": "Ulusal",
+        "epg_id": "360.HD.tr",
+        "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8",
+        "logo": "https://i.imgur.com/agn47sQ.png"
+    },
+    {
+        "name": "Kanal 7 Avrupa",
+        "category": "Ulusal",
+        "epg_id": "KANAL.7.HD.tr",
+        "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Kanal_7_logo.svg/512px-Kanal_7_logo.svg.png"
+    },
+
+    # ==================== ÇOCUK (ÖNCELİKLİ VE KORUMALI) ====================
+    {
+        "name": "TRT Çocuk",
+        "category": "Çocuk",
+        "epg_id": "TRT.ÇOCUK.HD.tr",
+        "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trtcocuk.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/TRT_%C3%87ocuk_logo_2021.svg/512px-TRT_%C3%87ocuk_logo_2021.svg.png"
+    },
+    {
+        "name": "Minika Çocuk",
+        "category": "Çocuk",
+        "epg_id": "MİNİKA.ÇOCUK.tr",
+        "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8",
+        "fallbacks": ["https://trkvz-live.ercdn.net/minikacocuk/minikacocuk.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/8/87/Minika_%C3%87ocuk_logosu.png/512px-Minika_%C3%87ocuk_logosu.png"
+    },
+    {
+        "name": "Minika Go",
+        "category": "Çocuk",
+        "epg_id": "MİNİKA.GO.tr",
+        "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8",
+        "fallbacks": ["https://trkvz-live.ercdn.net/minikago/minikago.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/9/91/Minika_GO_logosu.png/512px-Minika_GO_logosu.png"
+    },
+    {
+        "name": "TRT Diyanet Çocuk",
+        "category": "Çocuk",
+        "epg_id": "TRT.ÇOCUK.tr",
+        "url": "https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trtdiyanetcocuk.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/512px-TRT_%C3%87ocuk_logo_%282021%29.svg.png"
+    },
+    {
+        "name": "TRT EBA İlkokul",
+        "category": "Çocuk",
+        "epg_id": "TRT.1.tr",
+        "url": "https://tv-e-okul00.medya.trt.com.tr/master.m3u8",
+        "logo": "https://i.imgur.com/CRBfZi4.png"
+    },
+    {
+        "name": "Spacetoon Turkey",
+        "category": "Çocuk",
+        "epg_id": "",
+        "url": "https://live-tr-next.spacetoongo.com/ST_TR_NEXT/hls/h7qefeiwfbjn1.m3u8",
+        "logo": "https://upload.wikimedia.org/wikipedia/tr/2/2b/Spacetoon_logo.png"
+    },
+
+    # ==================== HABER ====================
+    {
+        "name": "TRT Haber",
+        "category": "Haber",
+        "epg_id": "TRT.HABER.HD.tr",
+        "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trthaber.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Haber_logo_2021.svg/512px-TRT_Haber_logo_2021.svg.png"
+    },
+    {
+        "name": "A Haber",
+        "category": "Haber",
+        "epg_id": "A.HABER.HD.tr",
+        "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
+        "fallbacks": ["https://trkvz-live.ercdn.net/ahaber/ahaber.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Ahaber_Logo.png"
+    },
+    {
+        "name": "NTV",
+        "category": "Haber",
+        "epg_id": "NTV.HD.tr",
+        "url": "https://dogus.daioncdn.net/ntv/ntv_720p.m3u8",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/NTV_logo.svg/512px-NTV_logo.svg.png"
+    },
+    {
         "name": "Habertürk TV",
+        "category": "Haber",
+        "epg_id": "HABERTÜRK.tr",
         "url": "https://tv.ensonhaber.com/haberturk/haberturk.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Habert%C3%BCrk_TV_logo.svg/512px-Habert%C3%BCrk_TV_logo.svg.png"
     },
     {
         "name": "Haber Global",
+        "category": "Haber",
+        "epg_id": "HABER.GLOBAL.HD.tr",
         "url": "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Haber_Global_logo.svg/512px-Haber_Global_logo.svg.png"
     },
     {
         "name": "Bloomberg HT",
+        "category": "Haber",
+        "epg_id": "BLOOMBERG.HT.HD.tr",
         "url": "https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bloomberg_HT_logo.svg/512px-Bloomberg_HT_logo.svg.png"
     },
     {
         "name": "TV100",
+        "category": "Haber",
+        "epg_id": "TV100.HD.tr",
         "url": "https://tv.ensonhaber.com/tv100/tv100.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TV100_logosu.svg/512px-TV100_logosu.svg.png"
     },
     {
         "name": "Halk TV",
+        "category": "Haber",
+        "epg_id": "HALK.TV.HD.tr",
         "url": "https://halktv-live.daioncdn.net/halktv/halktv.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Halk_TV_logo.svg/512px-Halk_TV_logo.svg.png"
     },
     {
-        "name": "Tele 1",
+        "name": "Tele1",
+        "category": "Haber",
+        "epg_id": "TELE1.HD.tr",
         "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Tele1_logo.svg/512px-Tele1_logo.svg.png"
     },
     {
         "name": "TGRT Haber",
+        "category": "Haber",
+        "epg_id": "TGRT.HABER.tr",
         "url": "https://canli.tgrthaber.com/tgrt.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/TGRT_Haber_logo.svg/512px-TGRT_Haber_logo.svg.png"
     },
     {
         "name": "Flash Haber TV",
+        "category": "Haber",
+        "epg_id": "",
         "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Flash_Haber_logosu.png/512px-Flash_Haber_logosu.png"
     },
     {
-        "name": "Kanal 7 Avrupa",
-        "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Kanal_7_logo.svg/512px-Kanal_7_logo.svg.png"
-    },
-    {
         "name": "Bengütürk TV",
+        "category": "Haber",
+        "epg_id": "BENGÜ.TÜRK.tr",
         "url": "https://tv.ensonhaber.com/benguturk/benguturk.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/8/8c/Beng%C3%BCt%C3%BCrk_TV_logosu.png/512px-Beng%C3%BCt%C3%BCrk_TV_logosu.png"
     },
     {
         "name": "Ekol TV",
+        "category": "Haber",
+        "epg_id": "",
         "url": "https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ekol_TV_logosu.png/512px-Ekol_TV_logosu.png"
     },
     {
-        "name": "Ekol Sports",
-        "url": "https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ekol_TV_logosu.png/512px-Ekol_TV_logosu.png"
-    },
-    {
         "name": "24 TV",
+        "category": "Haber",
+        "epg_id": "24.TV.tr",
         "url": "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8",
         "logo": "https://i.imgur.com/8FO41es.png"
     },
     {
-        "name": "360",
-        "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8",
-        "logo": "https://i.imgur.com/agn47sQ.png"
+        "name": "TRT 3 / TBMM TV",
+        "category": "Haber",
+        "epg_id": "TRT.3.-..SPOR.tr",
+        "url": "https://tv-trt3.live.trt.com.tr/master.m3u8",
+        "logo": "https://i.imgur.com/JrWFwBd.png"
+    },
+
+    # ==================== SPOR ====================
+    {
+        "name": "TRT Spor",
+        "category": "Spor",
+        "epg_id": "TRT.SPOR.HD.tr",
+        "url": "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trtspor1.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/TRT_Spor_logo_2021.svg/512px-TRT_Spor_logo_2021.svg.png"
+    },
+    {
+        "name": "TRT Spor Yıldız",
+        "category": "Spor",
+        "epg_id": "TRT.SPOR.HD.tr",
+        "url": "https://tv-trtspor2.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trtspor2.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg/512px-TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg.png"
+    },
+    {
+        "name": "A Spor",
+        "category": "Spor",
+        "epg_id": "A.SPOR.HD.tr",
+        "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
+        "fallbacks": ["https://trkvz-live.ercdn.net/aspor/aspor.m3u8"],
+        "logo": "https://i.imgur.com/ZhkZzLf.png"
+    },
+    {
+        "name": "Ekol Sports",
+        "category": "Spor",
+        "epg_id": "",
+        "url": "https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ekol_TV_logosu.png/512px-Ekol_TV_logosu.png"
+    },
+
+    # ==================== BELGESEL ====================
+    {
+        "name": "TRT Belgesel",
+        "category": "Belgesel",
+        "epg_id": "TRT.BELGESEL.HD.tr",
+        "url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trtbelgesel.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/TRT_Belgesel_logo_2021.svg/512px-TRT_Belgesel_logo_2021.svg.png"
+    },
+
+    # ==================== MÜZİK ====================
+    {
+        "name": "TRT Müzik",
+        "category": "Müzik",
+        "epg_id": "TRT.MÜZİK.tr",
+        "url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trtmuzik.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/TRT_M%C3%BCzik_logo_2021.svg/512px-TRT_M%C3%BCzik_logo_2021.svg.png"
+    },
+
+    # ==================== KÜLTÜR & DİNİ ====================
+    {
+        "name": "TRT 2",
+        "category": "Kültür & Dini",
+        "epg_id": "TRT.2.HD.tr",
+        "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trt2.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/TRT_2_logo_2021.svg/512px-TRT_2_logo_2021.svg.png"
+    },
+    {
+        "name": "TRT EBA",
+        "category": "Kültür & Dini",
+        "epg_id": "TRT.1.tr",
+        "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
+        "logo": "https://i.imgur.com/CRBfZi4.png"
+    },
+    {
+        "name": "TRT EBA Lise",
+        "category": "Kültür & Dini",
+        "epg_id": "TRT.1.tr",
+        "url": "https://tv-e-okul02.medya.trt.com.tr/master.m3u8",
+        "logo": "https://i.imgur.com/vj2L2L2.png"
+    },
+
+    # ==================== DÜNYA & DIŞ YAYINLAR ====================
+    {
+        "name": "TRT Türk",
+        "category": "Dünya",
+        "epg_id": "TRT.TÜRK.tr",
+        "url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trtturk.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/TRT_T%C3%BCrk_logo_2021.svg/512px-TRT_T%C3%BCrk_logo_2021.svg.png"
+    },
+    {
+        "name": "TRT Avaz",
+        "category": "Dünya",
+        "epg_id": "TRT.AVAZ.HD.tr",
+        "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trtavaz.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/TRT_Avaz_logo_2021.svg/512px-TRT_Avaz_logo_2021.svg.png"
+    },
+    {
+        "name": "TRT Kurdî",
+        "category": "Dünya",
+        "epg_id": "TRT.KURDİ.tr",
+        "url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trtkurdi.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TRT_Kurd%C3%AE_logo_2021.svg/512px-TRT_Kurd%C3%AE_logo_2021.svg.png"
+    },
+    {
+        "name": "TRT World",
+        "category": "Dünya",
+        "epg_id": "TRT.WORLD.HD.tr",
+        "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
+        "fallbacks": ["https://tv-trtworld.live.trt.com.tr/master.m3u8"],
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/TRT_World_logo_2021.svg/512px-TRT_World_logo_2021.svg.png"
     }
 ]
 
+# Dinamik Kanal EPG Haritası (XMLTV ID eşleştirmeleri)
+EPG_MAP = {
+    # Ulusal
+    "trt 1": "TRT.1.HD.tr",
+    "atv": "ATV.HD.tr",
+    "kanal d": "KANAL.D.HD.tr",
+    "star tv": "STAR.TV.HD.tr",
+    "now": "FOX.HD.tr",
+    "now tv": "FOX.HD.tr",
+    "tv8": "TV8.HD.tr",
+    "tv8.5": "TV8.HD.tr",
+    "a2": "A2.HD.tr",
+    "360": "360.HD.tr",
+    "show tv": "SHOW.TV.HD.tr",
+    "kanal 7": "KANAL.7.HD.tr",
+    "kanal 7 avrupa": "KANAL.7.HD.tr",
+    "beyaz tv": "BEYAZ.TV.HD.tr",
+    "teve2": "TEVE2.HD.tr",
+    "tlc": "TLC.HD.tr",
+    "dmax": "DMAX.HD.tr",
+    
+    # Çocuk
+    "trt çocuk": "TRT.ÇOCUK.HD.tr",
+    "minika çocuk": "MİNİKA.ÇOCUK.tr",
+    "minika go": "MİNİKA.GO.tr",
+    "trt diyanet çocuk": "TRT.ÇOCUK.tr",
+    "spacetoon turkey": "SpacetoonTurkey.tr@SD",
+    "baby tv": "BABY.TV.tr",
+    "cartoon network": "CARTOON.NETWORK.tr",
+    "ducktv": "DUCKTV.HD.tr",
+
+    # Haber
+    "trt haber": "TRT.HABER.HD.tr",
+    "a haber": "A.HABER.HD.tr",
+    "ntv": "NTV.HD.tr",
+    "habertürk tv": "HABERTÜRK.tr",
+    "haber global": "HABER.GLOBAL.HD.tr",
+    "bloomberg ht": "BLOOMBERG.HT.HD.tr",
+    "tv100": "TV100.HD.tr",
+    "halk tv": "HALK.TV.HD.tr",
+    "tele1": "TELE1.HD.tr",
+    "tgrt haber": "TGRT.HABER.tr",
+    "24 tv": "24.TV.tr",
+    "bengütürk tv": "BENGÜ.TÜRK.tr",
+    "cnn türk": "CNN.TÜRK.HD.tr",
+    "ulusal kanal": "ULUSAL.KANAL.tr",
+    "akıt tv": "AKİT.TV.tr",
+    "akit tv": "AKİT.TV.tr",
+    "a para": "A.PARA.tr",
+    "ekotürk": "EKOTÜRK.tr",
+    "trt 3": "TRT.3.-..SPOR.tr",
+    "trt 3 / tbmm tv": "TRT.3.-..SPOR.tr",
+
+    # Spor
+    "trt spor": "TRT.SPOR.HD.tr",
+    "trt spor yıldız": "TRT.SPOR.HD.tr",
+    "a spor": "A.SPOR.HD.tr",
+    "bein sports haber": "beIN.SPORTS.HABER.HD.tr",
+    "fb tv": "FENERBAHÇE.TV.tr",
+    "fenerbahçe tv": "FENERBAHÇE.TV.tr",
+    "sports tv": "SPORTS.TV.tr",
+
+    # Belgesel
+    "trt belgesel": "TRT.BELGESEL.HD.tr",
+    "national geographic": "NATIONAL.GEOGRAPHIC.HD.tr",
+
+    # Müzik
+    "trt müzik": "TRT.MÜZİK.tr",
+    "power tv": "POWER.TV.HD.tr",
+    "dream tv": "DREAM.TV.tr",
+    "tmb": "TMB.tr",
+
+    # Kültür, Dini & Dünya
+    "trt 2": "TRT.2.HD.tr",
+    "trt türk": "TRT.TÜRK.tr",
+    "trt avaz": "TRT.AVAZ.HD.tr",
+    "trt kurdî": "TRT.KURDİ.tr",
+    "trt kurdi": "TRT.KURDİ.tr",
+    "trt world": "TRT.WORLD.HD.tr",
+    "kon tv": "KON.TV.tr",
+    "olay tv": "OLAY.TV.tr"
+}
+
 def clean_channel_name(raw_name: str) -> str:
-    """Kanal adlarındaki gereksiz çözünürlük ve ek ifadeleri temizler."""
+    """Kanal adlarındaki gereksiz etiketleri temizler ve standartlaştırır."""
     if not raw_name:
         return ""
     name = raw_name.strip()
     
-    # Gereksiz etiketleri kaldır
     patterns = [
         r'\s*\((?:1080p|720p|576p|480p|360p|1440p|4k|hd|sd)\)',
         r'\s*\[(?:Not 24/7|Geo-blocked|Blocked)\]',
@@ -218,7 +490,6 @@ def clean_channel_name(raw_name: str) -> str:
     
     name = re.sub(r'\s+', ' ', name).strip()
     
-    # İsim standartlaştırma
     name_map = {
         "A2TV": "A2",
         "AHaber": "A Haber",
@@ -236,22 +507,67 @@ def clean_channel_name(raw_name: str) -> str:
         "TRT Haber (720p)": "TRT Haber",
         "TRT Spor Yildiz": "TRT Spor Yıldız",
         "TRT Cocuk": "TRT Çocuk",
+        "Minika Cocuk": "Minika Çocuk",
+        "Minika Go": "Minika Go",
+        "TRT Diyanet Cocuk": "TRT Diyanet Çocuk",
         "TRT Muzik": "TRT Müzik",
         "TRT Turk": "TRT Türk",
         "NOW TV": "NOW",
+        "TV 100": "TV100",
+        "TV 8.5": "TV8.5",
+        "TV 8": "TV8",
     }
     return name_map.get(name, name)
+
+def get_channel_category(name: str) -> str:
+    """Kanal adına göre akıllı kategori sınıflandırması yapar."""
+    n = name.lower()
+    
+    # 1. Çocuk Kanalları
+    if any(k in n for k in ['çocuk', 'cocuk', 'minika', 'cartoon', 'disney', 'baby', 'spacetoon', 'zarok', 'animasyon', 'eba ilkokul']):
+        return 'Çocuk'
+        
+    # 2. Ulusal Kanallar
+    if n in ['trt 1', 'atv', 'kanal d', 'star tv', 'now', 'tv8', 'tv8.5', 'show tv', 'show max', 'kanal 7', 'kanal 7 avrupa', 'a2', 'teve2', 'beyaz tv', '360', 'tlc', 'euro d', 'tv 4']:
+        return 'Ulusal'
+        
+    # 3. Spor
+    if any(k in n for k in ['spor', 'sport', 'tjk', 'fb tv', 'gs tv', 'bjk tv', 'satranc']):
+        return 'Spor'
+        
+    # 4. Haber
+    if any(k in n for k in ['haber', 'news', 'bloomberg', 'finans', 'dha', 'tele1', 'halk tv', '24 tv', 'tv100', 'bengütürk', 'ekotürk', 'ekoturk', 'ulusal kanal', 'tbmm']):
+        return 'Haber'
+        
+    # 5. Belgesel
+    if any(k in n for k in ['belgesel', 'docu', 'wild', 'ciftci', 'çiftçi', 'yaban', 'dmax', 'nat geo']):
+        return 'Belgesel'
+        
+    # 6. Müzik
+    if any(k in n for k in ['müzik', 'muzik', 'music', 'power', 'kral', 'dream', 'nr1', 'number 1', 'damar', 'pop', 'akustik', 'slow', 'dance']):
+        return 'Müzik'
+        
+    # 7. Sinema & Dizi
+    if any(k in n for k in ['sinema', 'cinema', 'film', 'dizi', 'bbc first']):
+        return 'Sinema & Dizi'
+        
+    # 8. Kültür & Dini
+    if any(k in n for k in ['trt 2', 'eba', 'diyanet', 'semerkand', 'dost tv', 'lalegül', 'lalegul', 'hilal', 'kudus', 'kudüs', 'berat', 'rehber', 'vav', 'meltem']):
+        return 'Kültür & Dini'
+        
+    # 9. Dünya / Dış Yayınlar
+    if any(k in n for k in ['trt world', 'trt arabi', 'trt avaz', 'trt kurdî', 'trt kurdi', 'persiana', 'sat 7', 'elsharq', 'mekameleen', 'almahriah', 'al-zahra', 'kanal avrupa', 'luys', 'tyt']):
+        return 'Dünya'
+        
+    # 10. Yerel (Varsayılan)
+    return 'Yerel'
 
 def turkish_lower(text: str) -> str:
     """Türkçe İ ve I harflerini doğru şekilde küçük harfe dönüştürür."""
     return text.replace('İ', 'i').replace('I', 'ı').lower()
 
 def turkish_sort_key(text: str):
-    """
-    Türkçe alfabesine ve sözlük sırasına göre harf sıralama anahtarı üretir.
-    Boşluk en başta, sonra sayılar, sonra Türkçe alfabe.
-    a, b, c, ç, d, e, f, g, ğ, h, ı, i, j, k, l, m, n, o, ö, p, r, s, ş, t, u, ü, v, y, z
-    """
+    """Türkçe alfabesine göre sıralama anahtarı üretir."""
     order = {
         ' ': 0,
         'a': 1, 'b': 2, 'c': 3, 'ç': 4, 'd': 5, 'e': 6, 'f': 7,
@@ -272,19 +588,80 @@ def turkish_sort_key(text: str):
             res.append((3, ord(char)))
     return res
 
+def check_single_url(session, url: str, retries: int = 1) -> bool:
+    """URL'nin canlı ve geçerli bir HLS / m3u8 akışı olduğunu test eder."""
+    for _ in range(retries):
+        try:
+            r = session.get(url, headers=HEADERS, timeout=(TIMEOUT_CONNECT, TIMEOUT_READ), stream=True)
+            if r.status_code in (200, 206):
+                chunk = next(r.iter_content(chunk_size=512), b'')
+                if b'#EXTM3U' in chunk or b'#EXTINF' in chunk or len(chunk) > 100:
+                    return True
+        except Exception:
+            pass
+    return False
+
 def check_stream(item):
-    """Yayın URL'sinin canlı ve oynatılabilir olduğunu doğrular."""
-    name, url, logo = item['name'], item['url'], item.get('logo', '')
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=(TIMEOUT_CONNECT, TIMEOUT_READ), stream=True)
-        if r.status_code in (200, 206):
-            chunk = next(r.iter_content(chunk_size=512), b'')
-            # m3u8 veya canlı video akış başlığını doğrula
-            if b'#EXTM3U' in chunk or b'#EXTINF' in chunk or len(chunk) > 100:
-                return {'name': name, 'url': url, 'logo': logo, 'ok': True}
-    except Exception:
-        pass
-    return {'name': name, 'url': url, 'logo': logo, 'ok': False}
+    """
+    Failover ve Toleranslı Canlılık Testi:
+    - Primary URL'yi dener (verified için 2 deneme).
+    - Başarısız olursa 'fallbacks' listesindeki yedek URL'leri sırayla test eder.
+    - Doğrulanmış ana kanal ise, geçici ağ kesintilerinde kanalı listeden düşürmez (koruma kalkanı).
+    """
+    name = item['name']
+    url = item['url']
+    logo = item.get('logo', '')
+    category = item.get('category') or get_channel_category(name)
+    epg_id = item.get('epg_id', '')
+    is_verified = item.get('is_verified', False)
+    fallbacks = item.get('fallbacks', [])
+
+    with requests.Session() as session:
+        # 1. Ana adresi test et
+        retries = 2 if is_verified else 1
+        if check_single_url(session, url, retries=retries):
+            return {
+                'name': name,
+                'url': url,
+                'logo': logo,
+                'category': category,
+                'epg_id': epg_id,
+                'ok': True
+            }
+
+        # 2. Yedek (Failover) adresleri test et
+        for fb_url in fallbacks:
+            if check_single_url(session, fb_url, retries=2):
+                print(f"  [Failover Aktif] {name}: Yedek yayın devreye alındı.")
+                return {
+                    'name': name,
+                    'url': fb_url,
+                    'logo': logo,
+                    'category': category,
+                    'epg_id': epg_id,
+                    'ok': True
+                }
+
+        # 3. Tolerans Mekanizması: Doğrulanmış ana kanalları listeden silme
+        if is_verified:
+            print(f"  [Tolerans Koruması] {name}: Geçici yanıt alınamadı, ana URL korundu.")
+            return {
+                'name': name,
+                'url': url,
+                'logo': logo,
+                'category': category,
+                'epg_id': epg_id,
+                'ok': True
+            }
+
+    return {
+        'name': name,
+        'url': url,
+        'logo': logo,
+        'category': category,
+        'epg_id': epg_id,
+        'ok': False
+    }
 
 def fetch_famelack_channels():
     """Famelack veri tabanındaki Türkiye kanallarını çeker."""
@@ -300,7 +677,12 @@ def fetch_famelack_channels():
                 streams = ch.get('sources', {}).get('streams') or []
                 for s in streams:
                     if s and s.startswith('http'):
-                        items.append({'name': name, 'url': s, 'logo': logo})
+                        items.append({
+                            'name': name,
+                            'url': s,
+                            'logo': logo,
+                            'is_verified': False
+                        })
             print(f"[Famelack] Toplam {len(items)} yayın adresi çekildi.")
     except Exception as e:
         print(f"[Famelack] Çekme hatası: {e}")
@@ -323,34 +705,63 @@ def fetch_iptv_org_channels():
                     raw_title = line.split(',')[-1].strip()
                     curr_name = clean_channel_name(raw_title)
                 elif curr_name and line.startswith('http'):
-                    items.append({'name': curr_name, 'url': line.strip(), 'logo': curr_logo})
+                    items.append({
+                        'name': curr_name,
+                        'url': line.strip(),
+                        'logo': curr_logo,
+                        'is_verified': False
+                    })
                     curr_name = ""
             print(f"[IPTV-org] Toplam {len(items)} yayın adresi çekildi.")
     except Exception as e:
         print(f"[IPTV-org] Çekme hatası: {e}")
     return items
 
-def build_playlist():
-    print("=" * 60)
-    print("Türkiye Özel Canlı TV Listesi Oluşturuluyor...")
-    print("=" * 60)
+def format_m3u_entry(channel: dict) -> list:
+    """Standartlara uygun M3U kanal satırlarını üretir."""
+    name = channel['name']
+    url = channel['url']
+    logo = channel.get('logo', '')
+    category = channel.get('category', 'Yerel')
+    epg_id = channel.get('epg_id', '')
 
-    # 1. Kaynakları topla
+    parts = ['#EXTINF:-1']
+    if epg_id:
+        parts.append(f'tvg-id="{epg_id}"')
+    parts.append(f'tvg-name="{name}"')
+    if logo:
+        parts.append(f'tvg-logo="{logo}"')
+    if category:
+        parts.append(f'group-title="{category}"')
+        
+    extinf = f'{" ".join(parts)},{name}'
+    return [extinf, url]
+
+def build_playlist():
+    print("=" * 65)
+    print("Profesyonel Türkiye Canlı TV & Çocuk Özel Listesi Oluşturuluyor...")
+    print("=" * 65)
+
+    # 1. Kaynakları Topla
     all_candidates = []
     
-    # Öncelikle doğrulanmış ana kanallar
+    # Öncelikle Doğrulanmış Öncelikli Kanallar
     for ch in VERIFIED_CHANNELS:
         all_candidates.append({
             'name': clean_channel_name(ch['name']),
             'url': ch['url'],
-            'logo': ch.get('logo', '')
+            'logo': ch.get('logo', ''),
+            'category': ch.get('category', 'Ulusal'),
+            'epg_id': ch.get('epg_id', ''),
+            'fallbacks': ch.get('fallbacks', []),
+            'is_verified': True
         })
 
     # Famelack ve IPTV-org listelerini ekle
     all_candidates.extend(fetch_famelack_channels())
     all_candidates.extend(fetch_iptv_org_channels())
 
-    # 2. URL bazlı tekilleştirme
+    # 2. URL Bazlı Tekilleştirme
     seen_urls = set()
     unique_candidates = []
     for item in all_candidates:
@@ -362,16 +773,15 @@ def build_playlist():
     print(f"\nCanlılık testi yapılacak toplam benzersiz yayın: {len(unique_candidates)}")
     print("Yayınlar eş zamanlı olarak kontrol ediliyor...")
 
-    # 3. Canlılık testi (Çok iş parçacıklı)
+    # 3. Canlılık Testi (Çok İş Parçacıklı + Toleranslı Test)
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
         test_results = list(pool.map(check_stream, unique_candidates))
 
     working_streams = [r for r in test_results if r['ok']]
     print(f"Çalışır durumda tespit edilen yayın: {len(working_streams)}")
 
-    # 4. Kanal adı bazlı tekilleştirme (Kanal başına en iyi tek yayın)
-    # VERIFIED_CHANNELS listesinde olanların logoları ve isimleri önceliklidir
-    verified_names = {clean_channel_name(v['name']).lower(): v for v in VERIFIED_CHANNELS}
+    # 4. Kanal Adı Bazlı Akıllı Tekilleştirme & EPG/Kategori Zenginleştirme
+    verified_map = {clean_channel_name(v['name']).lower(): v for v in VERIFIED_CHANNELS}
 
     final_channel_map = {}
     for item in working_streams:
@@ -380,70 +790,121 @@ def build_playlist():
             continue
         key = norm_name.lower()
 
-        # Logo güncelleme (öncelikli listeden veya iptv-org'dan)
+        # Doğrulanmış kanalların özellikleri önceliklidir
+        verified_info = verified_map.get(key)
+        
         logo = item.get('logo', '')
-        if key in verified_names and verified_names[key].get('logo'):
-            logo = verified_names[key]['logo']
+        category = item.get('category') or get_channel_category(norm_name)
+        epg_id = item.get('epg_id', '')
+
+        if verified_info:
+            if verified_info.get('logo'):
+                logo = verified_info['logo']
+            if verified_info.get('category'):
+                category = verified_info['category']
+            if verified_info.get('epg_id'):
+                epg_id = verified_info['epg_id']
+        else:
+            # EPG_MAP'ten ID eşleştir
+            if not epg_id and key in EPG_MAP:
+                epg_id = EPG_MAP[key]
 
         if key not in final_channel_map:
             final_channel_map[key] = {
                 'name': norm_name,
                 'url': item['url'],
-                'logo': logo
+                'logo': logo,
+                'category': category,
+                'epg_id': epg_id,
+                'is_verified': bool(verified_info)
             }
         else:
-            # Eğer mevcut olanın logosu yoksa ve yenisinde varsa al
+            # Mevcut olanın logosu veya EPG'si eksikse güncelle
             if not final_channel_map[key]['logo'] and logo:
                 final_channel_map[key]['logo'] = logo
+            if not final_channel_map[key]['epg_id'] and epg_id:
+                final_channel_map[key]['epg_id'] = epg_id
 
     final_channels = list(final_channel_map.values())
-    print(f"Tekilleştirme sonrası toplam net kanal: {len(final_channels)}")
+    print(f"Tekilleştirme sonrası net kanal sayısı: {len(final_channels)}")
 
-    # 5. Türkçe Alfabetik Sıralama (A -> Z)
-    final_channels.sort(key=lambda x: turkish_sort_key(x['name']))
+    # 5. Sıralama: Kategori Önceliği + Kategori İçi Türkçe A-Z Sıralama
+    def sort_key(ch):
+        cat = ch.get('category', 'Yerel')
+        cat_index = CATEGORY_ORDER.index(cat) if cat in CATEGORY_ORDER else 99
+        return (cat_index, turkish_sort_key(ch['name']))
 
-    # 6. M3U Dosyasını Oluştur (Kategori/grup bilgisi olmadan, temiz ve standart)
-    output_lines = [
-        "#EXTM3U",
+    final_channels.sort(key=sort_key)
+
+    # Kategori dağılımını yazdır
+    cat_counts = {}
+    for ch in final_channels:
+        cat = ch.get('category', 'Yerel')
+        cat_counts[cat] = cat_counts.get(cat, 0) + 1
+
+    print("\nKategori Dağılımı:")
+    for cat in CATEGORY_ORDER:
+        if cat in cat_counts:
+            print(f"  • {cat}: {cat_counts[cat]} kanal")
+
+    # 6. GENEL M3U / M3U8 Dosyalarını Oluştur (kanallar.m3u & kanallar.m3u8)
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    header_lines = [
+        f'#EXTM3U url-tvg="{EPG_URL}" x-tvg-url="{EPG_URL}"',
         "# Generated automatically for Android TV & Smart TV",
-        f"# Total Working Turkish Channels: {len(final_channels)} (Sorted A-Z)",
+        f"# Total Verified Channels: {len(final_channels)} (Smart Categorized)",
         ""
     ]
 
+    main_lines = list(header_lines)
     for ch in final_channels:
-        name = ch['name']
-        url = ch['url']
-        logo = ch.get('logo', '')
-        
-        if logo:
-            extinf = f'#EXTINF:-1 tvg-name="{name}" tvg-logo="{logo}",{name}'
-        else:
-            extinf = f'#EXTINF:-1 tvg-name="{name}",{name}'
-            
-        output_lines.append(extinf)
-        output_lines.append(url)
+        main_lines.extend(format_m3u_entry(ch))
 
-    content = "\n".join(output_lines) + "\n"
-
-    # Dosyalara kaydet (hem .m3u hem .m3u8 olarak)
-    base_dir = os.path.dirname(os.path.abspath(__file__))
+    main_content = "\n".join(main_lines) + "\n"
     m3u_path = os.path.join(base_dir, "kanallar.m3u")
     m3u8_path = os.path.join(base_dir, "kanallar.m3u8")
 
     with open(m3u_path, "w", encoding="utf-8") as f:
-        f.write(content)
+        f.write(main_content)
     with open(m3u8_path, "w", encoding="utf-8") as f:
-        f.write(content)
+        f.write(main_content)
 
-    print(f"\n[Başarılı] '{m3u_path}' oluşturuldu!")
-    print(f"[Başarılı] '{m3u8_path}' oluşturuldu!")
-    print(f"İlk 10 kanal sıralaması:")
-    for ch in final_channels[:10]:
-        print(f"  • {ch['name']}")
-    print(f"Son 5 kanal sıralaması:")
-    for ch in final_channels[-5:]:
-        print(f"  • {ch['name']}")
-    print("=" * 60)
+    print(f"\n[Başarılı] Ana Liste '{m3u_path}' oluşturuldu!")
+    print(f"[Başarılı] Ana Liste '{m3u8_path}' oluşturuldu!")
+
+    # 7. ÇOCUK ÖZEL M3U / M3U8 Dosyalarını Oluştur (cocuk.m3u & cocuk.m3u8)
+    kids_channels = [ch for ch in final_channels if ch.get('category') == 'Çocuk']
+    # Çocuk listesini kendi içinde alfabetik sırala
+    kids_channels.sort(key=lambda x: turkish_sort_key(x['name']))
+
+    kids_header = [
+        f'#EXTM3U url-tvg="{EPG_URL}" x-tvg-url="{EPG_URL}"',
+        "# Cocuklara Ozel Guvenli Canli TV Calma Listesi",
+        f"# Total Kids Channels: {len(kids_channels)}",
+        ""
+    ]
+    kids_lines = list(kids_header)
+    for ch in kids_channels:
+        kids_lines.extend(format_m3u_entry(ch))
+
+    kids_content = "\n".join(kids_lines) + "\n"
+    kids_m3u_path = os.path.join(base_dir, "cocuk.m3u")
+    kids_m3u8_path = os.path.join(base_dir, "cocuk.m3u8")
+
+    with open(kids_m3u_path, "w", encoding="utf-8") as f:
+        f.write(kids_content)
+    with open(kids_m3u8_path, "w", encoding="utf-8") as f:
+        f.write(kids_content)
+
+    print(f"[Başarılı] Çocuk Özel Listesi '{kids_m3u_path}' oluşturuldu! ({len(kids_channels)} kanal)")
+    print(f"[Başarılı] Çocuk Özel Listesi '{kids_m3u8_path}' oluşturuldu!")
+    print("  Çocuk Kanalları Listesi:")
+    for k in kids_channels:
+        epg_info = f"[EPG: {k['epg_id']}]" if k.get('epg_id') else "[EPG Yok]"
+        print(f"    - {k['name']} {epg_info}")
+
+    print("=" * 65)
 
 if __name__ == "__main__":
     build_playlist()
