@@ -35,7 +35,7 @@ jobs:
         run: |
           python generate_playlist.py
 
-      - name: Değişiklikleri Kaydet ve Push Et
+            - name: Değişiklikleri Kaydet ve Push Et
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -44,5 +44,6 @@ jobs:
             echo "Değişiklik yok, liste güncel."
           else
             git commit -m "chore: Canlı kanallar güncellendi [skip ci]"
+            git pull --rebase origin main
             git push
           fi
