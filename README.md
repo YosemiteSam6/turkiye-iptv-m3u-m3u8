@@ -20,7 +20,8 @@ Google TV / Android TV, Apple TV, Smart TV ve tüm mobil cihazlar için optimize
    - TV'de kanalın altında *"Şu an ne oynuyor?"*, *"Sırada ne var?"*, *"Kalan süre"* ve kumandanın Rehber tuşunda 24 saatlik yayın akışı tablosu kendiliğinden görüntülenir.
 
 4. **🗂️ Akıllı & Çapraz Kategori Gruplaması (`group-title`):**
-   - TV kumandasıyla kolay gezinme için kanallar net ve zengin kategorilere ayrılmıştır. Aynı zamanda tematik içeriğe sahip kanallar birden fazla ilgili kategoride de yer alır (örneğin CNBC-e hem Haber hem Ulusal'da; TRT 3 hem Haber hem Spor'da; A2 ve Show Max hem Ulusal hem Sinema & Dizi'de; TRT 2 hem Kültür hem Belgesel'de):
+   - TV kumandasıyla kolay gezinme için kanallar net ve zengin kategorilere ayrılmıştır. Özellikle 'Tüm Kanallar' sekmesi bulunmayan oynatıcılar için listenin başında tüm kanalları içeren A-Z grubu yer alır:
+     - ⭐ **TÜM KANALLAR (A-Z Sıralı) (153 Kanal):** Tüm yerli kanalları tek bir ekranda, alfabetik olarak listeler (24 TV, ATV, Kanal D, TRT 1, TV8, Zarok TV...).
      - 📺 **Ulusal (14 Kanal):** TRT 1, ATV, NOW, Kanal D, Star TV, TV8, TV8.5, A2, 360, CNBC-e, Kanal 7 Avrupa, Euro D, Show Max, TV 4
      - 🧒 **Çocuk (11 Kanal):** TRT Çocuk, Minika Çocuk, Minika Go, Baby TV, Disney Jr., Spacetoon Turkey, TRT Diyanet Çocuk, TRT EBA İlkokul, Ortaokul, Lise, Zarok TV
      - 📰 **Haber & Ekonomi (25 Kanal):** TRT Haber, NTV, Habertürk TV, A Haber, Haber Global, Bloomberg HT, CNBC-e, TV100, Halk TV, Tele1, TGRT Haber, Flash Haber TV, Bengütürk TV, Ekol TV, 24 TV, TRT 3 / TBMM TV, Ekoturk, DHA...
@@ -29,7 +30,7 @@ Google TV / Android TV, Apple TV, Smart TV ve tüm mobil cihazlar için optimize
      - 🎵 **Müzik (16 Kanal):** TRT Müzik, Power TV, PowerTürk TV, Power Dance, Power Love, Kral Pop TV, Dream Turk, Number 1 TV, Number 1 Damar, Number 1 Slow...
      - 🎬 **Sinema & Dizi (5 Kanal):** A2 (Dizi & Sinema), Show Max (Dizi & Sinema), BBC First Turkiye, Cine 1, Kanal Plus
      - 🏛️ **Kültür & Dini (16 Kanal):** TRT 2, TRT Müzik, TRT Türk, TRT Avaz, TRT Kurdî, TRT Genc, Diyanet TV, Semerkand TV, Vav TV, Dost TV, Lalegul TV, Cem TV, YOL TV...
-     - 🏙️ **Yerel Kanallar (58 Kanal):** Türkiye'nin dört bir yanından çalışan tüm yerel şehir televizyonları (AS TV, TV264, TV41, TV52, TV Den, Kanal 23, Kanal V...)
+     - 🏙️ **Yerel Kanallar (59 Kanal):** Türkiye'nin dört bir yanından çalışan tüm yerel şehir televizyonları (AS TV, TV264, TV41, TV52, TV Den, Kanal 23, Kanal V...)
 
 5. **🛡️ Yedekli Yayın (Failover) & Toleranslı Test:**
    - Ana kanallar ve çocuk kanalları için alternatif yayın kaynakları (failover) tanımlıdır. Birincil CDN yanıt vermezse bot otomatik olarak yedek akışı devreye sokar.

@@ -34,6 +34,7 @@ EPG_URL = "https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz"
 
 # Kategori Öncelik Sıralaması
 CATEGORY_ORDER = [
+    "TÜM KANALLAR (A-Z Sıralı)",
     "Ulusal",
     "Çocuk",
     "Haber",
@@ -990,6 +991,18 @@ def build_playlist():
                 # Oynatıcı önbellek çakışmasını önlemek için benzersiz URL son eki
                 extra_channel['url'] = ch['url'] + mapping['url_suffix']
                 extended_channels.append(extra_channel)
+
+    # 5.1. TÜM KANALLAR (A-Z Sıralı) Grubu (Kullanıcı İsteği: 'Tüm Kanallar' sekmesi olmayan oynatıcılar için)
+    # Tüm çalışan yerli kanallar tek bir grupta toplanır ve A-Z olarak listelenir.
+    # Diğer kategorilerle çakışmaması ve silinmemesi için URL'ye #all etiketi eklenir.
+    all_channels_group = []
+    for ch in final_channels:
+        item = dict(ch)
+        item['category'] = "TÜM KANALLAR (A-Z Sıralı)"
+        item['url'] = ch['url'] + "#all"
+        all_channels_group.append(item)
+
+    extended_channels = all_channels_group + extended_channels
 
     # 6. Kategorik Sıralama (Kategori Önceliği + Kategori İçi Türkçe A-Z Sıralama)
     def sort_key(ch):
