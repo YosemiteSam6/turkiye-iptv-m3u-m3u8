@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 """
 Android / Google TV & Akıllı TV - Profesyonel Türkiye Canlı TV M3U Oluşturucu
-- ⭐ TOP 50 Özel En Çok İzlenen Kanal Grubu
-- Otomatik EPG (Elektronik Program Rehberi) Entegrasyonu (epg_ripper_TR1)
-- IPTV Akıllı Kategori Gruplama (TOP 50, Ulusal, Çocuk, Haber, Spor, Belgesel, Müzik, Kültür & Dini, Yerel)
-- Çocuklara Özel İzole Liste Desteği (cocuk.m3u & cocuk.m3u8)
-- TOP 50 Özel Hafif & Hızlı Liste Desteği (top50.m3u & top50.m3u8)
-- Yedekli Yayın (Failover) & Toleranslı Canlılık Testi (Retry + Backup URL)
+- 🧒 Eksiksiz Çocuk Kanalları (11 Çalışan Çocuk Kanalı)
+- ❌ Yabancı / Uluslararası / Arapça Kanallar Tamamen Elenmiş (Sadece %100 Türkiye Kanalları)
+- 📡 Otomatik EPG (Elektronik Program Rehberi) Entegrasyonu (epg_ripper_TR1)
+- 🗂️ Temiz Kategori Gruplama (Çakışmasız, Tekilleştirilmiş: Ulusal, Çocuk, Haber, Spor, Belgesel, Müzik, Kültür & Dini, Yerel)
+- 🧒 Çocuk Özel Listesi (cocuk.m3u & cocuk.m3u8 - 11 Kanal)
+- ⭐ TOP 50 Özel Listesi (top50.m3u & top50.m3u8 - 50 Kanal)
+- 🛡️ Yedekli Yayın (Failover) & Toleranslı Canlılık Testi (Retry + Backup URL)
 """
 
 import os
@@ -30,7 +31,7 @@ HEADERS = {
 # EPG Kaynağı (Türkiye Kanalları XMLTV Rehberi)
 EPG_URL = "https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz"
 
-# Kategori Öncelik Sıralaması
+# Kategori Öncelik Sıralaması (Dünya/Yabancı kategorisi kaldırıldı)
 CATEGORY_ORDER = [
     "Ulusal",
     "Çocuk",
@@ -40,67 +41,47 @@ CATEGORY_ORDER = [
     "Müzik",
     "Sinema & Dizi",
     "Kültür & Dini",
-    "Dünya",
     "Yerel"
 ]
+
+# Yabancı / Arapça / Uluslararası Engelli Kanallar (Sadece Türkiye Kanalları Filtresi)
+BLOCKED_CHANNELS = {
+    'almahriah tv', 'al-zahra tv turkic', 'elsharq tv', 'mekameleen tv',
+    'persiana turkiye', 'sat 7 turk', 'trt arabi', 'trt world',
+    'kanal avrupa', 'luys tv', 'tyt turk', '4u tv'
+}
+
+def is_foreign_or_blocked(name: str) -> bool:
+    """Yabancı / Uluslararası / Türkiye dışı kanalları eler."""
+    if not name:
+        return True
+    n = name.lower()
+    if n in BLOCKED_CHANNELS:
+        return True
+    blocked_keywords = [
+        'almahriah', 'elsharq', 'mekameleen', 'al-zahra', 'persiana',
+        'sat 7', 'luys', 'tyt turk', 'kanal avrupa', 'trt arabi', 'trt world'
+    ]
+    return any(b in n for b in blocked_keywords)
 
 # Türkiye'de En Çok İzlenen 50 Kanal (Reyting ve Popülerlik Sıralı)
 TOP_50_RANKS = [
     # --- Ulusal Ana Kanallar ---
-    "TRT 1",
-    "ATV",
-    "NOW",
-    "Kanal D",
-    "Star TV",
-    "TV8",
-    "TV8.5",
-    "A2",
-    "360",
-    "Kanal 7 Avrupa",
-    "Euro D",
-    "Show Max",
-    "TV 4",
+    "TRT 1", "ATV", "NOW", "Kanal D", "Star TV", "TV8", "TV8.5", "A2", "360", 
+    "Kanal 7 Avrupa", "Euro D", "Show Max", "TV 4",
     # --- Popüler Çocuk Kanalları ---
-    "TRT Çocuk",
-    "Minika Çocuk",
-    "Minika Go",
-    "Disney Jr.",
-    "Spacetoon Turkey",
-    "TRT Diyanet Çocuk",
-    "TRT EBA İlkokul",
+    "TRT Çocuk", "Minika Çocuk", "Minika Go", "Disney Jr.", "Baby TV", 
+    "Spacetoon Turkey", "TRT Diyanet Çocuk", "TRT EBA İlkokul",
     # --- Ana Haber & Ekonomi Kanalları ---
-    "TRT Haber",
-    "NTV",
-    "Habertürk TV",
-    "A Haber",
-    "Haber Global",
-    "TV100",
-    "Halk TV",
-    "Tele1",
-    "TGRT Haber",
-    "Bloomberg HT",
-    "24 TV",
-    "Flash Haber TV",
-    "Bengütürk TV",
-    "Ekol TV",
-    "TRT 3 / TBMM TV",
+    "TRT Haber", "NTV", "Habertürk TV", "A Haber", "Haber Global", "TV100", 
+    "Halk TV", "Tele1", "TGRT Haber", "Bloomberg HT", "24 TV", "Flash Haber TV", 
+    "Bengütürk TV", "Ekol TV", "TRT 3 / TBMM TV",
     # --- Spor Kanalları ---
-    "TRT Spor",
-    "TRT Spor Yıldız",
-    "A Spor",
-    "Ekol Sports",
-    "FB TV",
-    "TJK TV",
+    "TRT Spor", "TRT Spor Yıldız", "A Spor", "Ekol Sports", "FB TV", "TJK TV",
     # --- Belgesel Kanalları ---
-    "TRT Belgesel",
-    "TGRT Belgesel",
+    "TRT Belgesel", "TGRT Belgesel",
     # --- Müzik Kanalları ---
-    "TRT Müzik",
-    "Power TV",
-    "PowerTurk TV",
-    "Kral Pop TV",
-    "Dream Turk",
-    "Number 1 TV",
+    "TRT Müzik", "Power TV", "PowerTurk TV", "Kral Pop TV", "Dream Turk", "Number 1 TV",
     # --- Kültür & Sanat ---
     "TRT 2"
 ]
@@ -182,7 +163,7 @@ VERIFIED_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Kanal_7_logo.svg/512px-Kanal_7_logo.svg.png"
     },
 
-    # ==================== ÇOCUK (ÖNCELİKLİ VE KORUMALI) ====================
+    # ==================== ÇOCUK (TAM VE KORUMALI) ====================
     {
         "name": "TRT Çocuk",
         "category": "Çocuk",
@@ -208,6 +189,27 @@ VERIFIED_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/9/91/Minika_GO_logosu.png/512px-Minika_GO_logosu.png"
     },
     {
+        "name": "Baby TV",
+        "category": "Çocuk",
+        "epg_id": "BABY.TV.tr",
+        "url": "https://saran-live.ercdn.net/babytv/index.m3u8",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/BabyTV_logo.svg/512px-BabyTV_logo.svg.png"
+    },
+    {
+        "name": "Disney Jr.",
+        "category": "Çocuk",
+        "epg_id": "",
+        "url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8",
+        "logo": "https://www.dsmart.com.tr/api/v1/public/images/kanallar/disneyjr.png"
+    },
+    {
+        "name": "Spacetoon Turkey",
+        "category": "Çocuk",
+        "epg_id": "SpacetoonTurkey.tr@SD",
+        "url": "https://live-tr-next.spacetoongo.com/ST_TR_NEXT/hls/h7qefeiwfbjn1.m3u8",
+        "logo": "https://upload.wikimedia.org/wikipedia/tr/2/2b/Spacetoon_logo.png"
+    },
+    {
         "name": "TRT Diyanet Çocuk",
         "category": "Çocuk",
         "epg_id": "TRT.ÇOCUK.tr",
@@ -223,11 +225,25 @@ VERIFIED_CHANNELS = [
         "logo": "https://i.imgur.com/CRBfZi4.png"
     },
     {
-        "name": "Spacetoon Turkey",
+        "name": "TRT EBA Ortaokul",
+        "category": "Çocuk",
+        "epg_id": "TRT.1.tr",
+        "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
+        "logo": "https://i.imgur.com/CRBfZi4.png"
+    },
+    {
+        "name": "TRT EBA Lise",
+        "category": "Çocuk",
+        "epg_id": "TRT.1.tr",
+        "url": "https://tv-e-okul02.medya.trt.com.tr/master.m3u8",
+        "logo": "https://i.imgur.com/vj2L2L2.png"
+    },
+    {
+        "name": "Zarok TV",
         "category": "Çocuk",
         "epg_id": "",
-        "url": "https://live-tr-next.spacetoongo.com/ST_TR_NEXT/hls/h7qefeiwfbjn1.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/tr/2/2b/Spacetoon_logo.png"
+        "url": "https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8",
+        "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/8/87/Zarok_TV_logosu.png/512px-Zarok_TV_logosu.png"
     },
 
     # ==================== HABER ====================
@@ -400,54 +416,6 @@ VERIFIED_CHANNELS = [
         "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trt2.live.trt.com.tr/master.m3u8"],
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/TRT_2_logo_2021.svg/512px-TRT_2_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT EBA",
-        "category": "Kültür & Dini",
-        "epg_id": "TRT.1.tr",
-        "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
-        "logo": "https://i.imgur.com/CRBfZi4.png"
-    },
-    {
-        "name": "TRT EBA Lise",
-        "category": "Kültür & Dini",
-        "epg_id": "TRT.1.tr",
-        "url": "https://tv-e-okul02.medya.trt.com.tr/master.m3u8",
-        "logo": "https://i.imgur.com/vj2L2L2.png"
-    },
-
-    # ==================== DÜNYA & DIŞ YAYINLAR ====================
-    {
-        "name": "TRT Türk",
-        "category": "Dünya",
-        "epg_id": "TRT.TÜRK.tr",
-        "url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
-        "fallbacks": ["https://tv-trtturk.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/TRT_T%C3%BCrk_logo_2021.svg/512px-TRT_T%C3%BCrk_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Avaz",
-        "category": "Dünya",
-        "epg_id": "TRT.AVAZ.HD.tr",
-        "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
-        "fallbacks": ["https://tv-trtavaz.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/TRT_Avaz_logo_2021.svg/512px-TRT_Avaz_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT Kurdî",
-        "category": "Dünya",
-        "epg_id": "TRT.KURDİ.tr",
-        "url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8",
-        "fallbacks": ["https://tv-trtkurdi.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TRT_Kurd%C3%AE_logo_2021.svg/512px-TRT_Kurd%C3%AE_logo_2021.svg.png"
-    },
-    {
-        "name": "TRT World",
-        "category": "Dünya",
-        "epg_id": "TRT.WORLD.HD.tr",
-        "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
-        "fallbacks": ["https://tv-trtworld.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/TRT_World_logo_2021.svg/512px-TRT_World_logo_2021.svg.png"
     }
 ]
 
@@ -522,12 +490,8 @@ EPG_MAP = {
     "dream tv": "DREAM.TV.tr",
     "tmb": "TMB.tr",
 
-    # Kültür, Dini & Dünya
+    # Kültür, Dini & Yerel
     "trt 2": "TRT.2.HD.tr",
-    "trt türk": "TRT.TÜRK.tr",
-    "trt avaz": "TRT.AVAZ.HD.tr",
-    "trt kurdî": "TRT.KURDİ.tr",
-    "trt world": "TRT.WORLD.HD.tr",
     "kon tv": "KON.TV.tr",
     "olay tv": "OLAY.TV.tr"
 }
@@ -576,6 +540,7 @@ def clean_channel_name(raw_name: str) -> str:
         "TV 100": "TV100",
         "TV 8.5": "TV8.5",
         "TV 8": "TV8",
+        "BabyTV": "Baby TV"
     }
     return name_map.get(name, name)
 
@@ -584,7 +549,7 @@ def get_channel_category(name: str) -> str:
     n = name.lower()
     
     # 1. Çocuk Kanalları
-    if any(k in n for k in ['çocuk', 'cocuk', 'minika', 'cartoon', 'disney', 'baby', 'spacetoon', 'zarok', 'animasyon', 'eba ilkokul']):
+    if any(k in n for k in ['çocuk', 'cocuk', 'minika', 'cartoon', 'disney', 'baby', 'spacetoon', 'zarok', 'animasyon', 'eba']):
         return 'Çocuk'
         
     # 2. Ulusal Kanallar
@@ -612,14 +577,10 @@ def get_channel_category(name: str) -> str:
         return 'Sinema & Dizi'
         
     # 8. Kültür & Dini
-    if any(k in n for k in ['trt 2', 'eba', 'diyanet', 'semerkand', 'dost tv', 'lalegül', 'lalegul', 'hilal', 'kudus', 'kudüs', 'berat', 'rehber', 'vav', 'meltem']):
+    if any(k in n for k in ['trt 2', 'diyanet', 'semerkand', 'dost tv', 'lalegül', 'lalegul', 'hilal', 'kudus', 'kudüs', 'berat', 'rehber', 'vav', 'meltem']):
         return 'Kültür & Dini'
         
-    # 9. Dünya / Dış Yayınlar
-    if any(k in n for k in ['trt world', 'trt arabi', 'trt avaz', 'trt kurdî', 'trt kurdi', 'persiana', 'sat 7', 'elsharq', 'mekameleen', 'almahriah', 'al-zahra', 'kanal avrupa', 'luys', 'tyt']):
-        return 'Dünya'
-        
-    # 10. Yerel (Varsayılan)
+    # 9. Yerel (Varsayılan)
     return 'Yerel'
 
 def turkish_lower(text: str) -> str:
@@ -732,7 +693,10 @@ def fetch_famelack_channels():
         if r.status_code == 200:
             data = json.loads(gzip.decompress(r.content).decode('utf-8'))
             for ch in data:
-                name = clean_channel_name(ch.get('name', ''))
+                raw_name = ch.get('name', '')
+                if is_foreign_or_blocked(raw_name):
+                    continue
+                name = clean_channel_name(raw_name)
                 logo = ch.get('logo') or ''
                 streams = ch.get('sources', {}).get('streams') or []
                 for s in streams:
@@ -743,7 +707,7 @@ def fetch_famelack_channels():
                             'logo': logo,
                             'is_verified': False
                         })
-            print(f"[Famelack] Toplam {len(items)} yayın adresi çekildi.")
+            print(f"[Famelack] Toplam {len(items)} yerli yayın adresi çekildi.")
     except Exception as e:
         print(f"[Famelack] Çekme hatası: {e}")
     return items
@@ -763,7 +727,10 @@ def fetch_iptv_org_channels():
                     m_logo = re.search(r'tvg-logo="([^"]+)"', line)
                     curr_logo = m_logo.group(1) if m_logo else ''
                     raw_title = line.split(',')[-1].strip()
-                    curr_name = clean_channel_name(raw_title)
+                    if not is_foreign_or_blocked(raw_title):
+                        curr_name = clean_channel_name(raw_title)
+                    else:
+                        curr_name = ""
                 elif curr_name and line.startswith('http'):
                     items.append({
                         'name': curr_name,
@@ -772,7 +739,7 @@ def fetch_iptv_org_channels():
                         'is_verified': False
                     })
                     curr_name = ""
-            print(f"[IPTV-org] Toplam {len(items)} yayın adresi çekildi.")
+            print(f"[IPTV-org] Toplam {len(items)} yerli yayın adresi çekildi.")
     except Exception as e:
         print(f"[IPTV-org] Çekme hatası: {e}")
     return items
@@ -799,7 +766,7 @@ def format_m3u_entry(channel: dict, custom_group: str = None) -> list:
 
 def build_playlist():
     print("=" * 65)
-    print("Profesyonel Türkiye Canlı TV (TOP 50, EPG, Kategorili) Oluşturuluyor...")
+    print("Sadece Türkiye Canlı TV (Eksiksiz Çocuk, EPG, Kategorili) Oluşturuluyor...")
     print("=" * 65)
 
     # 1. Kaynakları Topla
@@ -807,6 +774,8 @@ def build_playlist():
     
     # Öncelikle Doğrulanmış Öncelikli Kanallar
     for ch in VERIFIED_CHANNELS:
+        if is_foreign_or_blocked(ch['name']):
+            continue
         all_candidates.append({
             'name': clean_channel_name(ch['name']),
             'url': ch['url'],
@@ -817,7 +786,7 @@ def build_playlist():
             'is_verified': True
         })
 
-    # Famelack ve IPTV-org listelerini ekle
+    # Famelack ve IPTV-org listelerini ekle (Yabancı kanallardan arındırılmış)
     all_candidates.extend(fetch_famelack_channels())
     all_candidates.extend(fetch_iptv_org_channels())
 
@@ -830,7 +799,7 @@ def build_playlist():
             seen_urls.add(url)
             unique_candidates.append(item)
 
-    print(f"\nCanlılık testi yapılacak toplam benzersiz yayın: {len(unique_candidates)}")
+    print(f"\nCanlılık testi yapılacak toplam benzersiz yerli yayın: {len(unique_candidates)}")
     print("Yayınlar eş zamanlı olarak kontrol ediliyor...")
 
     # 3. Canlılık Testi (Çok İş Parçacıklı + Toleranslı Test)
@@ -846,7 +815,7 @@ def build_playlist():
     final_channel_map = {}
     for item in working_streams:
         norm_name = clean_channel_name(item['name'])
-        if not norm_name:
+        if not norm_name or is_foreign_or_blocked(norm_name):
             continue
         key = norm_name.lower()
 
@@ -886,63 +855,41 @@ def build_playlist():
                 final_channel_map[key]['epg_id'] = epg_id
 
     final_channels = list(final_channel_map.values())
-    print(f"Tekilleştirme sonrası net kanal sayısı: {len(final_channels)}")
+    print(f"Tekilleştirme sonrası net yerli kanal sayısı: {len(final_channels)}")
 
-    # 5. TOP 50 Listesini Belirle (Reyting/Popülerlik Sıralamasına Göre)
-    top_50_channels = []
-    top_50_names_lower = [clean_channel_name(n).lower() for n in TOP_50_RANKS]
-    
-    for req_name in TOP_50_RANKS:
-        req_key = clean_channel_name(req_name).lower()
-        if req_key in final_channel_map:
-            top_50_channels.append(final_channel_map[req_key])
-        else:
-            # Yakın isim eşleşmesi
-            match = next((v for k, v in final_channel_map.items() if req_key in k or k in req_key), None)
-            if match and match not in top_50_channels:
-                top_50_channels.append(match)
-
-    print(f"\n⭐ TOP 50 Grubu Başarıyla Eşleştirildi: {len(top_50_channels)} kanal")
-
-    # 6. Kategorik Sıralama (Kategori Önceliği + Kategori İçi Türkçe A-Z)
+    # 5. Kategorik Sıralama (Kategori Önceliği + Kategori İçi Türkçe A-Z Sıralama)
     def sort_key(ch):
         cat = ch.get('category', 'Yerel')
         cat_index = CATEGORY_ORDER.index(cat) if cat in CATEGORY_ORDER else 99
         return (cat_index, turkish_sort_key(ch['name']))
 
-    categorized_channels = list(final_channels)
-    categorized_channels.sort(key=sort_key)
+    final_channels.sort(key=sort_key)
 
     # Kategori dağılımını yazdır
     cat_counts = {}
-    for ch in categorized_channels:
+    for ch in final_channels:
         cat = ch.get('category', 'Yerel')
         cat_counts[cat] = cat_counts.get(cat, 0) + 1
 
     print("\nKategori Dağılımı:")
-    print(f"  • ⭐ TOP 50: {len(top_50_channels)} kanal (En Popüler)")
     for cat in CATEGORY_ORDER:
         if cat in cat_counts:
             print(f"  • {cat}: {cat_counts[cat]} kanal")
 
-    # 7. GENEL M3U / M3U8 Dosyalarını Oluştur (kanallar.m3u & kanallar.m3u8)
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    
+
+    # 6. GENEL M3U / M3U8 Dosyalarını Oluştur (kanallar.m3u & kanallar.m3u8)
+    # DİKKAT: Her kanal dosya içinde tam olarak TEK BİR KEZ ve kendi gerçek kategorisiyle yer alır!
+    # Bu sayede IPTV oynatıcılarda kategori çakışması (örneğin Çocuk kategorisinin eksik görünmesi) engellenir.
     header_lines = [
         f'#EXTM3U url-tvg="{EPG_URL}" x-tvg-url="{EPG_URL}"',
-        "# Generated automatically for Android TV & Smart TV",
-        f"# Total Working Channels: {len(final_channels)} (TOP 50 + Categorized)",
+        "# Generated automatically for Android TV & Smart TV - Turkiye Canli TV",
+        f"# Total Verified Turkish Channels: {len(final_channels)}",
         ""
     ]
 
     main_lines = list(header_lines)
-
-    # 7.1. Listenin En Başında: ⭐ TOP 50 Grubu
-    for ch in top_50_channels:
-        main_lines.extend(format_m3u_entry(ch, custom_group="TOP 50"))
-
-    # 7.2. Kategorilerine Göre Sıralı Kanallar
-    for ch in categorized_channels:
+    for ch in final_channels:
         main_lines.extend(format_m3u_entry(ch))
 
     main_content = "\n".join(main_lines) + "\n"
@@ -954,11 +901,50 @@ def build_playlist():
     with open(m3u8_path, "w", encoding="utf-8") as f:
         f.write(main_content)
 
-    print(f"\n[Başarılı] Ana Liste '{m3u_path}' oluşturuldu!")
+    print(f"\n[Başarılı] Ana Liste '{m3u_path}' oluşturuldu! ({len(final_channels)} kanal)")
     print(f"[Başarılı] Ana Liste '{m3u8_path}' oluşturuldu!")
 
+    # 7. ÇOCUK ÖZEL M3U / M3U8 Dosyalarını Oluştur (cocuk.m3u & cocuk.m3u8)
+    kids_channels = [ch for ch in final_channels if ch.get('category') == 'Çocuk']
+    kids_channels.sort(key=lambda x: turkish_sort_key(x['name']))
+
+    kids_header = [
+        f'#EXTM3U url-tvg="{EPG_URL}" x-tvg-url="{EPG_URL}"',
+        "# Cocuklara Ozel Guvenli Canli TV Calma Listesi",
+        f"# Total Kids Channels: {len(kids_channels)}",
+        ""
+    ]
+    kids_lines = list(kids_header)
+    for ch in kids_channels:
+        kids_lines.extend(format_m3u_entry(ch, custom_group="Çocuk"))
+
+    kids_content = "\n".join(kids_lines) + "\n"
+    kids_m3u_path = os.path.join(base_dir, "cocuk.m3u")
+    kids_m3u8_path = os.path.join(base_dir, "cocuk.m3u8")
+
+    with open(kids_m3u_path, "w", encoding="utf-8") as f:
+        f.write(kids_content)
+    with open(kids_m3u8_path, "w", encoding="utf-8") as f:
+        f.write(kids_content)
+
+    print(f"[Başarılı] Çocuk Özel Listesi '{kids_m3u_path}' oluşturuldu! ({len(kids_channels)} kanal)")
+    print(f"[Başarılı] Çocuk Özel Listesi '{kids_m3u8_path}' oluşturuldu!")
+    print("  Aktif Çocuk Kanalları:")
+    for k in kids_channels:
+        print(f"    - {k['name']}")
+
     # 8. TOP 50 ÖZEL M3U / M3U8 Dosyalarını Oluştur (top50.m3u & top50.m3u8)
-    # Hızlı, hafif ve sadece en popüler 50 kanalı isteyenler için izole liste
+    # Sadece en popüler 50 kanalı isteyenler için izole, hafif liste
+    top_50_channels = []
+    for req_name in TOP_50_RANKS:
+        req_key = clean_channel_name(req_name).lower()
+        if req_key in final_channel_map:
+            top_50_channels.append(final_channel_map[req_key])
+        else:
+            match = next((v for k, v in final_channel_map.items() if req_key in k or k in req_key), None)
+            if match and match not in top_50_channels:
+                top_50_channels.append(match)
+
     top50_header = [
         f'#EXTM3U url-tvg="{EPG_URL}" x-tvg-url="{EPG_URL}"',
         "# Turkiye En Cok Izlenen TOP 50 Canli TV Listesi",
@@ -980,32 +966,6 @@ def build_playlist():
 
     print(f"[Başarılı] TOP 50 Özel Listesi '{top50_m3u_path}' oluşturuldu! ({len(top_50_channels)} kanal)")
     print(f"[Başarılı] TOP 50 Özel Listesi '{top50_m3u8_path}' oluşturuldu!")
-
-    # 9. ÇOCUK ÖZEL M3U / M3U8 Dosyalarını Oluştur (cocuk.m3u & cocuk.m3u8)
-    kids_channels = [ch for ch in final_channels if ch.get('category') == 'Çocuk']
-    kids_channels.sort(key=lambda x: turkish_sort_key(x['name']))
-
-    kids_header = [
-        f'#EXTM3U url-tvg="{EPG_URL}" x-tvg-url="{EPG_URL}"',
-        "# Cocuklara Ozel Guvenli Canli TV Calma Listesi",
-        f"# Total Kids Channels: {len(kids_channels)}",
-        ""
-    ]
-    kids_lines = list(kids_header)
-    for ch in kids_channels:
-        kids_lines.extend(format_m3u_entry(ch))
-
-    kids_content = "\n".join(kids_lines) + "\n"
-    kids_m3u_path = os.path.join(base_dir, "cocuk.m3u")
-    kids_m3u8_path = os.path.join(base_dir, "cocuk.m3u8")
-
-    with open(kids_m3u_path, "w", encoding="utf-8") as f:
-        f.write(kids_content)
-    with open(kids_m3u8_path, "w", encoding="utf-8") as f:
-        f.write(kids_content)
-
-    print(f"[Başarılı] Çocuk Özel Listesi '{kids_m3u_path}' oluşturuldu! ({len(kids_channels)} kanal)")
-    print(f"[Başarılı] Çocuk Özel Listesi '{kids_m3u8_path}' oluşturuldu!")
     print("=" * 65)
 
 if __name__ == "__main__":
