@@ -12,7 +12,7 @@ Google TV / Android TV, Apple TV, Smart TV ve tüm mobil cihazlar için optimize
    - Çocuk odaları ve tabletler için sadece bu 11 kanalı içeren izole **`cocuk.m3u`** listesi mevcuttur.
 
 2. **🇹🇷 Sadece %100 Türkiye Kanalları (Yabancı Kanallardan Arındırılmış):**
-   - IPTV-org ve Famelack kaynaklarındaki Arapça, Orta Doğu ve yabancı yayınlar (Almahriah, Elsharq, Mekameleen, Persiana vb.) tamamen filtrelenmiştir.
+   - IPTV-org ve Famelack kaynaklarındaki Arapça, Orta Doğu ve yabancı yayınlar tamamen filtrelenmiştir.
    - Listede yalnızca Türkiye'ye ait ulusal, çocuk, haber, spor, belgesel, müzik ve yerel kanallar yer alır.
 
 3. **📡 Otomatik EPG (Elektronik Program Rehberi) Entegrasyonu:**
