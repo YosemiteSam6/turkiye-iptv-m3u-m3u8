@@ -113,11 +113,32 @@
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
-      background-image:
-        radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.12) 0%, transparent 45%),
-        radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
-      background-attachment: fixed;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Dalgalanan Türk Bayrağı Arka Planı (Canvas & Glassmorphic Overlay) */
+    #flag-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      pointer-events: none;
+      opacity: 0.52;
+    }
+
+    .flag-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 25%, rgba(9, 13, 22, 0.45) 0%, rgba(9, 13, 22, 0.85) 60%, #090d16 100%);
+      backdrop-filter: blur(1px);
     }
 
     .container {
@@ -126,40 +147,148 @@
       padding: 0 24px;
     }
 
-    /* Header */
+    /* Header - Türk Bayraklı Özel Tasarım */
     header {
-      padding: 30px 0;
+      padding: 16px 24px;
+      margin-top: 18px;
+      margin-bottom: 12px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--card-border);
+      background: rgba(18, 24, 38, 0.85);
+      border: 1px solid rgba(227, 10, 23, 0.4);
+      border-radius: 20px;
+      backdrop-filter: blur(24px);
+      box-shadow: 0 10px 30px -10px rgba(227, 10, 23, 0.25), 0 0 25px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    header:hover {
+      border-color: rgba(227, 10, 23, 0.65);
+      box-shadow: 0 12px 35px -8px rgba(227, 10, 23, 0.38), 0 0 30px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Header Üst Kırmızı-Beyaz Türk Bayrağı Şeridi */
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #E30A17 0%, #FFFFFF 25%, #E30A17 50%, #FFFFFF 75%, #E30A17 100%);
+      opacity: 0.95;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    /* Türk Bayrağı Amblemi */
+    .flag-emblem {
+      width: 46px;
+      height: 31px;
+      border-radius: 7px;
+      overflow: hidden;
+      box-shadow: 0 0 14px rgba(227, 10, 23, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      flex-shrink: 0;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+    }
+
+    .logo:hover .flag-emblem {
+      transform: scale(1.08) rotate(-1deg);
+      box-shadow: 0 0 20px rgba(227, 10, 23, 0.9);
+    }
+
+    .turk-flag-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .logo-titles {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-main {
       font-size: 1.25rem;
       font-weight: 800;
       letter-spacing: -0.5px;
       color: #fff;
-      text-decoration: none;
-    }
-
-    .logo span {
-      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      line-height: 1.2;
+      background: linear-gradient(135deg, #ffffff 0%, #fca5a5 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    .logo-sub {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: #f87171;
+      letter-spacing: 0.2px;
+    }
+
+    .header-badges {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Kırmızı Milli Yayın Rozeti */
+    .header-flag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      background: rgba(227, 10, 23, 0.15);
+      border: 1px solid rgba(227, 10, 23, 0.4);
+      color: #fca5a5;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .pulse-red {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+      box-shadow: 0 0 8px #ef4444;
+      animation: pulseRed 2s infinite;
+    }
+
+    @keyframes pulseRed {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.4;
+        transform: scale(1.25);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 4px 12px;
+      padding: 5px 12px;
       border-radius: 9999px;
       background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.3);
+      border: 1px solid rgba(16, 185, 129, 0.35);
       color: var(--success);
       font-size: 0.8rem;
       font-weight: 600;
@@ -589,19 +718,284 @@
         transform: translateY(0);
       }
     }
+
+    /* =========================================================
+       RESPONSIVE & MOBİL UYUMLULUK STİLLERİ
+       ========================================================= */
+    @media (max-width: 900px) {
+      .container {
+        padding: 0 20px;
+      }
+      .cat-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 14px;
+      }
+
+      /* Header Mobil */
+      header {
+        padding: 14px 16px;
+        margin-top: 12px;
+        margin-bottom: 8px;
+        border-radius: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .logo {
+        gap: 12px;
+      }
+
+      .flag-emblem {
+        width: 40px;
+        height: 27px;
+      }
+
+      .logo-main {
+        font-size: 1.15rem;
+      }
+
+      .logo-sub {
+        font-size: 0.72rem;
+      }
+
+      .header-badges {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .header-flag-pill, .badge {
+        font-size: 0.76rem;
+        padding: 4px 10px;
+      }
+
+      /* Hero Mobil */
+      .hero {
+        padding: 36px 0 24px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.85rem, 7.5vw, 2.6rem);
+        letter-spacing: -0.8px;
+        margin-bottom: 14px;
+      }
+
+      .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+        line-height: 1.55;
+      }
+
+      /* İstatistikler: Mobilde 2x2 Kompakt Grid */
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 36px;
+      }
+
+      .stat-card {
+        padding: 16px 10px;
+        border-radius: 14px;
+      }
+
+      .stat-val {
+        font-size: 1.7rem;
+      }
+
+      .stat-label {
+        font-size: 0.78rem;
+      }
+
+      /* Bölüm Başlıkları */
+      .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+      }
+
+      .section-desc {
+        font-size: 0.88rem;
+        margin-bottom: 20px;
+      }
+
+      /* Çalma Listesi Kartları Mobil */
+      .card {
+        padding: 18px 14px;
+        border-radius: 16px;
+      }
+
+      .card-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+
+      .card-title-group h3 {
+        font-size: 1.15rem;
+      }
+
+      .card-desc {
+        font-size: 0.88rem;
+        margin-bottom: 14px;
+      }
+
+      /* URL Kutusu: Mobilde Dikey Yığılma ve Kolay Tıklanabilir Buton */
+      .url-box {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+        gap: 10px;
+        background: rgba(0, 0, 0, 0.55);
+      }
+
+      .url-text {
+        font-size: 0.78rem;
+        word-break: break-all;
+        white-space: normal;
+        line-height: 1.4;
+        padding: 4px 6px;
+        text-align: center;
+      }
+
+      .copy-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+        font-size: 0.92rem;
+      }
+
+      /* Kategoriler Mobil */
+      .cat-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 40px;
+      }
+
+      .cat-card {
+        padding: 14px;
+        border-radius: 14px;
+      }
+
+      /* SSS Mobil */
+      .faq-grid {
+        gap: 12px;
+        margin-bottom: 40px;
+      }
+
+      .faq-item {
+        padding: 16px 14px;
+        border-radius: 14px;
+      }
+
+      .faq-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+
+      .faq-q {
+        font-size: 1.02rem;
+      }
+
+      .faq-badge-legal {
+        font-size: 0.72rem;
+        padding: 3px 10px;
+      }
+
+      .faq-a {
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      .legal-pillars {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin: 12px 0 10px;
+      }
+
+      .legal-pillar-card {
+        padding: 12px;
+      }
+
+      .legal-pillar-title {
+        font-size: 0.86rem;
+      }
+
+      .legal-pillar-desc {
+        font-size: 0.82rem;
+      }
+
+      .legal-callout-box {
+        padding: 12px;
+        font-size: 0.82rem;
+        margin-top: 10px;
+      }
+
+      .faq-list {
+        margin: 8px 0 8px 16px;
+        font-size: 0.85rem;
+      }
+
+      /* Toast Mobil */
+      #toast {
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      /* Footer Mobil */
+      footer {
+        padding: 30px 0;
+        margin-top: 40px;
+        font-size: 0.82rem;
+      }
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- Dalgalanan Türk Bayrağı Arka Planı (Canvas & Gradient Overlay) -->
+  <canvas id="flag-canvas" aria-hidden="true"></canvas>
+  <div class="flag-overlay" aria-hidden="true"></div>
+
   <div class="container">
     <header>
-      <a href="#" class="logo">
-        <span>🇹🇷 Türkiye Canlı TV</span>
+      <a href="#" class="logo" title="Türkiye Canlı TV - %100 Yerli & Milli IPTV">
+        <div class="flag-emblem">
+          <svg class="turk-flag-svg" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1200" height="800" fill="#E30A17" rx="80"/>
+            <circle cx="425" cy="400" r="200" fill="#ffffff"/>
+            <circle cx="475" cy="400" r="160" fill="#E30A17"/>
+            <polygon points="545.0,400.0 614.1,377.5 614.1,304.9 656.8,363.7 725.9,341.2 683.2,400.0 725.9,458.8 656.8,436.3 614.1,495.1 614.1,422.5" fill="#ffffff"/>
+          </svg>
+        </div>
+        <div class="logo-titles">
+          <span class="logo-main">TÜRKİYE CANLI TV</span>
+          <span class="logo-sub">🇹🇷 %100 Yerli & Milli IPTV</span>
+        </div>
       </a>
-      <div class="badge">
-        <div class="pulse"></div>
-        Canlı & Aktif EPG
+      <div class="header-badges">
+        <div class="header-flag-pill">
+          <div class="pulse-red"></div>
+          <span>Milli & Yasal Yayın</span>
+        </div>
+        <div class="badge">
+          <div class="pulse"></div>
+          <span>Canlı EPG</span>
+        </div>
       </div>
     </header>
 
@@ -985,6 +1379,129 @@
         }, 2200);
       });
     }
+
+    // =========================================================
+    // DALGALANAN TÜRK BAYRAĞI CANVAS ANİMASYONU
+    // =========================================================
+    (function () {
+      const canvas = document.getElementById('flag-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      const flagW = 1200;
+      const flagH = 800;
+      const offscreen = document.createElement('canvas');
+      offscreen.width = flagW;
+      offscreen.height = flagH;
+      const octx = offscreen.getContext('2d');
+
+      // Resmi Türk Bayrağı Standartlarında Çizim
+      function drawBaseFlag() {
+        // Al Zemin (Kırmızı)
+        octx.fillStyle = '#E30A17';
+        octx.fillRect(0, 0, flagW, flagH);
+
+        // Hilal Dış Çemberi (Beyaz)
+        octx.fillStyle = '#FFFFFF';
+        octx.beginPath();
+        octx.arc(425, 400, 200, 0, Math.PI * 2);
+        octx.fill();
+
+        // Hilal İç Çemberi (Kırmızı Kesme)
+        octx.fillStyle = '#E30A17';
+        octx.beginPath();
+        octx.arc(475, 400, 160, 0, Math.PI * 2);
+        octx.fill();
+
+        // 5 Köşeli Yıldız (Hilale Bakan Uçlu)
+        octx.fillStyle = '#FFFFFF';
+        octx.beginPath();
+        const cx = 645;
+        const cy = 400;
+        const R = 100;
+        const r = R * Math.sin(18 * Math.PI / 180) / Math.cos(36 * Math.PI / 180);
+        for (let i = 0; i < 10; i++) {
+          const angle = (180 + i * 36) * Math.PI / 180;
+          const rad = (i % 2 === 0) ? R : r;
+          const x = cx + rad * Math.cos(angle);
+          const y = cy + rad * Math.sin(angle);
+          if (i === 0) octx.moveTo(x, y);
+          else octx.lineTo(x, y);
+        }
+        octx.closePath();
+        octx.fill();
+      }
+
+      drawBaseFlag();
+
+      let w = 0, h = 0;
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      let time = 0;
+      let isVisible = true;
+      document.addEventListener('visibilitychange', () => {
+        isVisible = !document.hidden;
+      });
+
+      const sliceW = 4; // Dilim piksel genişliği
+
+      function animate() {
+        if (isVisible && w > 0 && h > 0) {
+          time += 0.032;
+          ctx.clearRect(0, 0, w, h);
+
+          const scale = Math.max(w / flagW, h / flagH) * 1.12;
+          const renderW = flagW * scale;
+          const renderH = flagH * scale;
+          const startX = (w - renderW) / 2;
+          const startY = (h - renderH) / 2;
+
+          const numSlices = Math.ceil(w / sliceW);
+
+          for (let i = 0; i < numSlices; i++) {
+            const dx = i * sliceW;
+            const srcX = Math.min(flagW - 2, Math.max(0, ((dx - startX) / renderW) * flagW));
+
+            // Dalgalanma formülü (Kumaş kıvrımları)
+            const wave1 = Math.sin(dx * 0.0075 - time * 1.7) * 20;
+            const wave2 = Math.sin(dx * 0.015 + time * 1.1) * 8;
+            const waveY = wave1 + wave2;
+
+            // Kumaş ışık ve gölge eğimi (Slope)
+            const slope = (Math.cos(dx * 0.0075 - time * 1.7) * 0.0075 * 20) +
+                          (Math.cos(dx * 0.015 + time * 1.1) * 0.015 * 8);
+
+            const srcSliceW = Math.max(1, (sliceW / renderW) * flagW);
+
+            ctx.drawImage(
+              offscreen,
+              srcX, 0, srcSliceW, flagH,
+              dx, startY + waveY, sliceW + 0.5, renderH
+            );
+
+            // Parlama ve gölgelendirme (İpeksi kumaş efekti)
+            if (slope > 0.035) {
+              const lightAlpha = Math.min(0.24, (slope - 0.035) * 1.2);
+              ctx.fillStyle = 'rgba(255, 255, 255, ' + lightAlpha + ')';
+              ctx.fillRect(dx, startY + waveY, sliceW + 0.5, renderH);
+            } else if (slope < -0.035) {
+              const shadowAlpha = Math.min(0.40, (-slope - 0.035) * 1.4);
+              ctx.fillStyle = 'rgba(0, 0, 0, ' + shadowAlpha + ')';
+              ctx.fillRect(dx, startY + waveY, sliceW + 0.5, renderH);
+            }
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+
+      requestAnimationFrame(animate);
+    })();
   </script>
 </body>
 
