@@ -137,7 +137,7 @@ VERIFIED_CHANNELS = [
     {
         "name": "TV8.5",
         "category": "Ulusal",
-        "epg_id": "TV8.HD.tr",
+        "epg_id": "",
         "url": "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3",
         "logo": "https://upload.wikimedia.org/wikipedia/tr/c/cf/Tv8_bucuk_logo.png"
     },
@@ -206,14 +206,14 @@ VERIFIED_CHANNELS = [
     {
         "name": "Spacetoon Turkey",
         "category": "Çocuk",
-        "epg_id": "SpacetoonTurkey.tr@SD",
+        "epg_id": "",
         "url": "https://live-tr-next.spacetoongo.com/ST_TR_NEXT/hls/h7qefeiwfbjn1.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/tr/2/2b/Spacetoon_logo.png"
     },
     {
         "name": "TRT Diyanet Çocuk",
         "category": "Çocuk",
-        "epg_id": "TRT.ÇOCUK.tr",
+        "epg_id": "",
         "url": "https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trtdiyanetcocuk.live.trt.com.tr/master.m3u8"],
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/512px-TRT_%C3%87ocuk_logo_%282021%29.svg.png"
@@ -221,21 +221,21 @@ VERIFIED_CHANNELS = [
     {
         "name": "TRT EBA İlkokul",
         "category": "Çocuk",
-        "epg_id": "TRT.1.tr",
+        "epg_id": "",
         "url": "https://tv-e-okul00.medya.trt.com.tr/master.m3u8",
         "logo": "https://i.imgur.com/CRBfZi4.png"
     },
     {
         "name": "TRT EBA Ortaokul",
         "category": "Çocuk",
-        "epg_id": "TRT.1.tr",
+        "epg_id": "",
         "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
         "logo": "https://i.imgur.com/CRBfZi4.png"
     },
     {
         "name": "TRT EBA Lise",
         "category": "Çocuk",
-        "epg_id": "TRT.1.tr",
+        "epg_id": "",
         "url": "https://tv-e-okul02.medya.trt.com.tr/master.m3u8",
         "logo": "https://i.imgur.com/vj2L2L2.png"
     },
@@ -281,7 +281,7 @@ VERIFIED_CHANNELS = [
     {
         "name": "Haber Global",
         "category": "Haber",
-        "epg_id": "HABER.GLOBAL.HD.tr",
+        "epg_id": "",
         "url": "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Haber_Global_logo.svg/512px-Haber_Global_logo.svg.png"
     },
@@ -295,28 +295,28 @@ VERIFIED_CHANNELS = [
     {
         "name": "CNBC-e",
         "category": "Haber",
-        "epg_id": "BLOOMBERG.HT.HD.tr",
+        "epg_id": "",
         "url": "https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CNBC-e_logo.svg/512px-CNBC-e_logo.svg.png"
     },
     {
         "name": "TV100",
         "category": "Haber",
-        "epg_id": "TV100.HD.tr",
+        "epg_id": "",
         "url": "https://tv.ensonhaber.com/tv100/tv100.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TV100_logosu.svg/512px-TV100_logosu.svg.png"
     },
     {
         "name": "Halk TV",
         "category": "Haber",
-        "epg_id": "HALK.TV.HD.tr",
+        "epg_id": "",
         "url": "https://halktv-live.daioncdn.net/halktv/halktv.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Halk_TV_logo.svg/512px-Halk_TV_logo.svg.png"
     },
     {
         "name": "Tele1",
         "category": "Haber",
-        "epg_id": "TELE1.HD.tr",
+        "epg_id": "",
         "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Tele1_logo.svg/512px-Tele1_logo.svg.png"
     },
@@ -375,7 +375,7 @@ VERIFIED_CHANNELS = [
     {
         "name": "TRT Spor Yıldız",
         "category": "Spor",
-        "epg_id": "TRT.SPOR.HD.tr",
+        "epg_id": "",
         "url": "https://tv-trtspor2.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trtspor2.live.trt.com.tr/master.m3u8"],
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg/512px-TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg.png"
@@ -391,7 +391,7 @@ VERIFIED_CHANNELS = [
     {
         "name": "HTSpor TV",
         "category": "Spor",
-        "epg_id": "beIN.SPORTS.HABER.HD.tr",
+        "epg_id": "",
         "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
         "logo": "https://www.htspor.com/images/manifest/social-share-logo.png"
     },
@@ -422,7 +422,7 @@ VERIFIED_CHANNELS = [
     {
         "name": "TGRT Belgesel",
         "category": "Belgesel",
-        "epg_id": "TRT.BELGESEL.HD.tr",
+        "epg_id": "",
         "url": "https://canli.tgrthaber.com/tgrtbelgesel.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/TGRT_Haber_logo.svg/512px-TGRT_Haber_logo.svg.png"
     },
@@ -441,14 +441,14 @@ VERIFIED_CHANNELS = [
     {
         "name": "BBC First Turkiye",
         "category": "Sinema & Dizi",
-        "epg_id": "SİNEMA.TV.HD.tr",
+        "epg_id": "",
         "url": "http://88.212.15.29/live/bbc_first/index.m3u8",
         "logo": "https://i.imgur.com/UBoBYUI.png"
     },
     {
         "name": "Cine 1",
         "category": "Sinema & Dizi",
-        "epg_id": "SİNEMA.TV.HD.tr",
+        "epg_id": "",
         "url": "https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3_output_0.m3u8",
         "logo": "https://i.imgur.com/agn47sQ.png"
     },
@@ -457,7 +457,7 @@ VERIFIED_CHANNELS = [
     {
         "name": "TRT 2",
         "category": "Kültür & Dini",
-        "epg_id": "TRT.2.HD.tr",
+        "epg_id": "",
         "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trt2.live.trt.com.tr/master.m3u8"],
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/TRT_2_logo_2021.svg/512px-TRT_2_logo_2021.svg.png"
@@ -485,7 +485,7 @@ VERIFIED_CHANNELS = [
     }
 ]
 
-# Dinamik Kanal EPG Haritası (XMLTV ID eşleştirmeleri)
+# Dinamik Kanal EPG Haritası (XMLTV ID eşleştirmeleri - Sadece kendi resmi EPG'si olan kanallar)
 EPG_MAP = {
     # Ulusal
     "trt 1": "TRT.1.HD.tr",
@@ -495,7 +495,6 @@ EPG_MAP = {
     "now": "FOX.HD.tr",
     "now tv": "FOX.HD.tr",
     "tv8": "TV8.HD.tr",
-    "tv8.5": "TV8.HD.tr",
     "a2": "A2.HD.tr",
     "360": "360.HD.tr",
     "show tv": "SHOW.TV.HD.tr",
@@ -510,8 +509,6 @@ EPG_MAP = {
     "trt çocuk": "TRT.ÇOCUK.HD.tr",
     "minika çocuk": "MİNİKA.ÇOCUK.tr",
     "minika go": "MİNİKA.GO.tr",
-    "trt diyanet çocuk": "TRT.ÇOCUK.tr",
-    "spacetoon turkey": "SpacetoonTurkey.tr@SD",
     "baby tv": "BABY.TV.tr",
     "cartoon network": "CARTOON.NETWORK.tr",
     "ducktv": "DUCKTV.HD.tr",
@@ -520,27 +517,25 @@ EPG_MAP = {
     "trt haber": "TRT.HABER.HD.tr",
     "a haber": "A.HABER.HD.tr",
     "ntv": "NTV.HD.tr",
-    "habertürk tv": "HABERTÜRK.tr",
-    "haber global": "HABER.GLOBAL.HD.tr",
+    "habertürk": "HABERTÜRK.HD.tr",
+    "habertürk tv": "HABERTÜRK.HD.tr",
     "bloomberg ht": "BLOOMBERG.HT.HD.tr",
-    "cnbc-e": "BLOOMBERG.HT.HD.tr",
-    "tv100": "TV100.HD.tr",
-    "halk tv": "HALK.TV.HD.tr",
-    "tele1": "TELE1.HD.tr",
     "tgrt haber": "TGRT.HABER.tr",
-    "24 tv": "24.TV.tr",
+    "24 tv": "24.TV.HD.tr",
     "bengütürk tv": "BENGÜ.TÜRK.tr",
+    "bengü türk": "BENGÜ.TÜRK.tr",
     "cnn türk": "CNN.TÜRK.HD.tr",
     "ulusal kanal": "ULUSAL.KANAL.tr",
     "akit tv": "AKİT.TV.tr",
     "a para": "A.PARA.tr",
     "ekotürk": "EKOTÜRK.tr",
+    "ülke tv": "ÜLKE.TV.HD.tr",
+    "kanal b": "KANAL.B.tr",
     "trt 3": "TRT.3.-..SPOR.tr",
     "trt 3 / tbmm tv": "TRT.3.-..SPOR.tr",
 
     # Spor
     "trt spor": "TRT.SPOR.HD.tr",
-    "trt spor yıldız": "TRT.SPOR.HD.tr",
     "a spor": "A.SPOR.HD.tr",
     "bein sports haber": "beIN.SPORTS.HABER.HD.tr",
     "fb tv": "FENERBAHÇE.TV.tr",
@@ -558,9 +553,14 @@ EPG_MAP = {
     "tmb": "TMB.tr",
 
     # Kültür, Dini & Yerel
-    "trt 2": "TRT.2.HD.tr",
+    "trt türk": "TRT.TÜRK.tr",
+    "trt avaz": "TRT.AVAZ.HD.tr",
+    "trt kurdî": "TRT.KURDİ.tr",
+    "trt kurdi": "TRT.KURDİ.tr",
     "kon tv": "KON.TV.tr",
-    "olay tv": "OLAY.TV.tr"
+    "olay tv": "OLAY.TV.tr",
+    "kanal 16": "KANAL.16.tr",
+    "line tv": "LINETV.tr"
 }
 
 def clean_channel_name(raw_name: str) -> str:
@@ -953,11 +953,11 @@ def build_playlist():
                 logo = verified_info['logo']
             if verified_info.get('category'):
                 category = verified_info['category']
-            if verified_info.get('epg_id'):
-                epg_id = verified_info['epg_id']
+            # Doğrulanmış kanalın EPG kimliği esastır (boş ise sahte/başka kanalın EPG'si atanmaz)
+            epg_id = verified_info.get('epg_id', '')
         else:
-            if not epg_id and key in EPG_MAP:
-                epg_id = EPG_MAP[key]
+            # Sadece resmi listede kendi EPG kimliği bulunan kanallar eşleştirilir
+            epg_id = EPG_MAP.get(key, '')
 
         if key not in final_channel_map:
             final_channel_map[key] = {
