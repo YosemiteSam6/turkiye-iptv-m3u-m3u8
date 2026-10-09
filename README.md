@@ -128,9 +128,18 @@ Google TV / Android TV cihazınızda Google Play Store'dan şu uygulamaları ter
 
 ## ❓ Sıkça Sorulan Sorular (SSS)
 
-- **Bu liste yasal mı?**
-  Evet, projemiz yalnızca Türkiye'de yayın yapan ulusal, kamu ve yerel televizyon kanallarının resmi internet canlı yayın akışlarını derlemektedir. Şifreli veya telif hakkı ihlali barındıran hiçbir yayın içermez.
-- **Yayınlar neden donmuyor / kesilmiyor?**
-  GitHub Actions botumuz her gün saatlik/günlük canlılık testleri yaparak çalışmayan adresleri günceller veya yedek CDN adreslerine yönlendirir.
-- **Hangi IPTV uygulamalarıyla uyumludur?**
-  Tüm M3U ve HLS destekli cihazlar: TiviMate, Televizo, OTT Navigator, IPTV Smarters Pro, GSE Smart IPTV, VLC Player, Kodi ve Apple TV oynatıcıları.
+- **🛡️ Bu liste yasal mı? (Yasal / Legal Durum ve Telif Güvencesi)**
+  **Evet, kesinlikle %100 yasaldır (legal).** Projemiz telif haklarına ve yasal mevzuata azami titizlikle bağlıdır:
+  1. **Yalnızca Resmi & Kamu Yayınları (FTA):** TRT kanalları, ulusal ve yerel televizyonların tamamı; yayıncı kuruluşların kendi resmi internet siteleri, YouTube canlı yayınları veya kamuya ücretsiz sunduğu açık HLS (`.m3u8`) akışlarıdır.
+  2. **Sıfır Korsan & Sıfır Şifreli Kanal:** Digiturk, beIN Sports, Exxen, D-Smart, Tivibu, S Sport veya şifreli/ücretli hiçbir platform yayını **KESİNLİKLE yer almaz**. Yasadışı korsan yayıncılığa tamamen karşıyız.
+  3. **Yayın Sunucusu Değil, Açık Dizin:** Sunucularımızda hiçbir görüntü barındırılmaz veya yeniden dağıtılmaz (re-stream yapılmaz). İnternette zaten kamuya açık paylaşılan yasal bağlantıları derleyen açık kaynaklı bir rehber niteliğindedir.
+  4. **5846 Sayılı FSEK & DMCA Uyumluluğu:** 5846 sayılı Fikir ve Sanat Eserleri Kanunu ile uluslararası telif normlarına tam uyumludur. Hak sahibi yayıncıların talebi halinde ilgili yayın anında listeden çıkarılır.
+
+- **⚡ Yayınlar neden donmuyor / kesilmiyor?**
+  GitHub Actions otomasyon botumuz her gün saatlik ve günlük canlılık/tolerans testleri yaparak çalışmayan adresleri günceller. Ayrıca ana kanallar için tanımlı yedek CDN (Failover) mimarisi sayesinde kesintiler önlenir.
+
+- **📱 Hangi IPTV uygulamalarıyla uyumludur?**
+  Tüm standart M3U ve HLS destekli cihazlar: TiviMate, Televizo, OTT Navigator, IPTV Smarters Pro, GSE Smart IPTV, VLC Player, Kodi, Apple TV, Smart TV (Samsung Tizen, LG webOS) ve Android TV.
+
+- **📡 Yayın akışı (EPG) nasıl çalışır?**
+  M3U başlığındaki entegre XMLTV EPG kaynağı sayesinde TiviMate ve Televizo yayın akışını otomatik indirir; 24 saatlik rehber kumandanızın rehber tuşunda kendiliğinden görünür.

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Primary Meta Tags -->
-  <title>Türkiye Canlı TV - Ücretsiz IPTV M3U & M3U8 Kanal Listesi (EPG Destekli)</title>
+  <title>Türkiye Canlı TV - Yasal IPTV M3U & M3U8 Kanal Listesi (EPG Destekli)</title>
   <meta name="title" content="Türkiye Canlı TV - Ücretsiz IPTV M3U & M3U8 Kanal Listesi (EPG Destekli)">
-  <meta name="description" content="Android TV, Smart TV, TiviMate ve Televizo için %100 yerli Türkiye canlı TV IPTV M3U / M3U8 çalma listesi. Kesintisiz ulusal, çocuk, haber, spor kanalları ve otomatik EPG yayın akışı.">
-  <meta name="keywords" content="türkiye iptv, türkiye m3u listesi, iptv m3u8 indir, tivimate türkiye, canlı tv m3u, ücretsiz iptv türkiye, epg xmltv türkiye, çocuk iptv, ulusal kanallar m3u8">
+  <meta name="description"
+    content="Android TV, Smart TV, TiviMate ve Televizo için %100 yerli Türkiye canlı TV IPTV M3U / M3U8 çalma listesi. Kesintisiz ulusal, çocuk, haber, spor kanalları ve otomatik EPG yayın akışı.">
+  <meta name="keywords"
+    content="türkiye iptv, türkiye m3u listesi, iptv m3u8 indir, tivimate türkiye, canlı tv m3u, ücretsiz iptv türkiye, epg xmltv türkiye, çocuk iptv, ulusal kanallar m3u8">
   <meta name="robots" content="index, follow">
   <meta name="author" content="YosemiteSam6">
   <link rel="canonical" href="https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/">
@@ -17,14 +20,16 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/">
   <meta property="og:title" content="Türkiye Canlı TV - Ücretsiz IPTV M3U & M3U8 Kanal Listesi">
-  <meta property="og:description" content="Android TV & Smart TV için otomatik güncellenen, EPG destekli, akıllı kategorili ve yabancı kanallardan arındırılmış Türkiye IPTV listesi.">
+  <meta property="og:description"
+    content="Android TV & Smart TV için otomatik güncellenen, EPG destekli, akıllı kategorili ve yabancı kanallardan arındırılmış Türkiye IPTV listesi.">
   <meta property="og:locale" content="tr_TR">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/">
   <meta property="twitter:title" content="Türkiye Canlı TV - Ücretsiz IPTV M3U & M3U8 Kanal Listesi">
-  <meta property="twitter:description" content="Android TV & Smart TV için otomatik güncellenen, EPG destekli Türkiye IPTV listesi.">
+  <meta property="twitter:description"
+    content="Android TV & Smart TV için otomatik güncellenen, EPG destekli Türkiye IPTV listesi.">
 
   <!-- Schema.org Structured Data (JSON-LD) for Rich Google Snippets -->
   <script type="application/ld+json">
@@ -43,7 +48,7 @@
     "url": "https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/"
   }
   </script>
-  
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -80,7 +85,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
@@ -107,7 +113,7 @@
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
-      background-image: 
+      background-image:
         radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
         radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.12) 0%, transparent 45%),
         radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
@@ -169,9 +175,20 @@
     }
 
     @keyframes pulse {
-      0% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(1.2); }
-      100% { opacity: 1; transform: scale(1); }
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(1.2);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     /* Hero */
@@ -374,25 +391,160 @@
       line-height: 1.5;
     }
 
-    /* FAQ */
+    /* FAQ Section */
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
     .faq-item {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 14px;
-      margin-bottom: 12px;
-      padding: 20px;
+      border-radius: 18px;
+      padding: 24px 28px;
+      backdrop-filter: blur(20px);
+      transition: all 0.25s ease;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(255, 255, 255, 0.16);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Highlighted Legal Card */
+    .faq-item-legal {
+      background: linear-gradient(145deg, rgba(16, 185, 129, 0.08) 0%, rgba(18, 24, 38, 0.9) 100%);
+      border: 1.5px solid rgba(16, 185, 129, 0.4);
+      box-shadow: 0 10px 35px -10px rgba(16, 185, 129, 0.22);
+      position: relative;
+    }
+
+    .faq-item-legal:hover {
+      border-color: rgba(16, 185, 129, 0.7);
+      box-shadow: 0 14px 40px -10px rgba(16, 185, 129, 0.35);
+    }
+
+    .faq-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
     }
 
     .faq-q {
       font-weight: 700;
       color: #fff;
-      font-size: 1.05rem;
-      margin-bottom: 8px;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.3px;
+    }
+
+    .faq-badge-legal {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.18);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #34d399;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .faq-badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      font-size: 0.78rem;
+      font-weight: 600;
     }
 
     .faq-a {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    .faq-a p {
+      margin-bottom: 12px;
+    }
+
+    .faq-a p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Legal Pillars Grid */
+    .legal-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+      margin: 16px 0 14px;
+    }
+
+    .legal-pillar-card {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      padding: 14px 16px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .legal-pillar-card:hover {
+      border-color: rgba(16, 185, 129, 0.35);
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .legal-pillar-title {
+      font-weight: 700;
+      color: #34d399;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legal-pillar-desc {
+      font-size: 0.86rem;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .legal-callout-box {
+      margin-top: 14px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 3px solid #10b981;
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    .faq-list {
+      margin: 10px 0 10px 22px;
+      color: #cbd5e1;
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+
+    .faq-list li {
+      margin-bottom: 6px;
     }
 
     /* Footer */
@@ -427,11 +579,19 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
@@ -454,7 +614,8 @@
         <span class="gradient-text">Türkiye Canlı TV IPTV Listesi</span>
       </h1>
       <p>
-        Google TV, Android TV, TiviMate, Televizo ve Apple TV için otomatik güncellenen, program rehberi (EPG) destekli ve yabancı yayınlardan arındırılmış %100 Türkiye televizyon kanalları.
+        Google TV, Android TV, TiviMate, Televizo ve Apple TV için otomatik güncellenen, program rehberi (EPG) destekli
+        ve yabancı yayınlardan arındırılmış %100 Türkiye televizyon kanalları.
       </p>
 
       <div class="stats-grid">
@@ -480,23 +641,27 @@
     <!-- M3U Listeleri -->
     <section>
       <h2 class="section-title">🚀 IPTV Çalma Listesi Bağlantıları</h2>
-      <p class="section-desc">TiviMate, Televizo veya IPTV Smarters uygulamanıza aşağıdaki bağlantılardan dilediğinizi ekleyin:</p>
+      <p class="section-desc">TiviMate, Televizo veya IPTV Smarters uygulamanıza aşağıdaki bağlantılardan dilediğinizi
+        ekleyin:</p>
 
       <div class="playlist-cards">
-        
+
         <!-- 1. Genel Liste -->
         <div class="card">
           <div class="card-top">
             <div class="card-title-group">
               <h3>📺 Genel Canlı TV Listesi (Tüm Kanallar)</h3>
             </div>
-            <span class="badge" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">
+            <span class="badge"
+              style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">
               Önerilen
             </span>
           </div>
-          <p class="card-desc">Tüm ulusal, haber, spor, belgesel, sinema, müzik ve yerel şehir kanallarını içeren tam liste (EPG ve akıllı kategorili).</p>
+          <p class="card-desc">Tüm ulusal, haber, spor, belgesel, sinema, müzik ve yerel şehir kanallarını içeren tam
+            liste (EPG ve akıllı kategorili).</p>
           <div class="url-box">
-            <span class="url-text" id="url-main">https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/kanallar.m3u</span>
+            <span class="url-text"
+              id="url-main">https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/kanallar.m3u</span>
             <button class="copy-btn" onclick="copyUrl('url-main', this)">
               📋 Linki Kopyala
             </button>
@@ -509,13 +674,16 @@
             <div class="card-title-group">
               <h3>🧒 Çocuk Özel Listesi (Güvenli & İzole)</h3>
             </div>
-            <span class="badge" style="background: rgba(236, 72, 153, 0.15); color: #f472b6; border-color: rgba(236, 72, 153, 0.3);">
+            <span class="badge"
+              style="background: rgba(236, 72, 153, 0.15); color: #f472b6; border-color: rgba(236, 72, 153, 0.3);">
               11 Çocuk Kanalı
             </span>
           </div>
-          <p class="card-desc">Çocuk odaları ve tabletler için sadece TRT Çocuk, Minika Çocuk, Baby TV, Disney Jr., EBA gibi 11 güvenli kanalı içerir.</p>
+          <p class="card-desc">Çocuk odaları ve tabletler için sadece TRT Çocuk, Minika Çocuk, Baby TV, Disney Jr., EBA
+            gibi 11 güvenli kanalı içerir.</p>
           <div class="url-box">
-            <span class="url-text" id="url-kids">https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/cocuk.m3u</span>
+            <span class="url-text"
+              id="url-kids">https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/cocuk.m3u</span>
             <button class="copy-btn" onclick="copyUrl('url-kids', this)">
               📋 Linki Kopyala
             </button>
@@ -528,13 +696,16 @@
             <div class="card-title-group">
               <h3>⭐ En Çok İzlenen TOP 50 Kanal</h3>
             </div>
-            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">
+            <span class="badge"
+              style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">
               Hafif & Hızlı
             </span>
           </div>
-          <p class="card-desc">Sadece Türkiye'nin en popüler ulusal, haber ve spor kanallarından oluşan hafif ve hızlı liste.</p>
+          <p class="card-desc">Sadece Türkiye'nin en popüler ulusal, haber ve spor kanallarından oluşan hafif ve hızlı
+            liste.</p>
           <div class="url-box">
-            <span class="url-text" id="url-top50">https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/top50.m3u</span>
+            <span class="url-text"
+              id="url-top50">https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/top50.m3u</span>
             <button class="copy-btn" onclick="copyUrl('url-top50', this)">
               📋 Linki Kopyala
             </button>
@@ -547,11 +718,13 @@
             <div class="card-title-group">
               <h3>📡 Doğrudan EPG (Yayın Akışı Rehberi) Adresi</h3>
             </div>
-            <span class="badge" style="background: rgba(139, 92, 246, 0.15); color: #c084fc; border-color: rgba(139, 92, 246, 0.3);">
+            <span class="badge"
+              style="background: rgba(139, 92, 246, 0.15); color: #c084fc; border-color: rgba(139, 92, 246, 0.3);">
               XMLTV GZ
             </span>
           </div>
-          <p class="card-desc">IPTV uygulamanız M3U başlığından otomatik almazsa bu adresi manuel EPG kaynağı olarak ekleyebilirsiniz.</p>
+          <p class="card-desc">IPTV uygulamanız M3U başlığından otomatik almazsa bu adresi manuel EPG kaynağı olarak
+            ekleyebilirsiniz.</p>
           <div class="url-box">
             <span class="url-text" id="url-epg">https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz</span>
             <button class="copy-btn" onclick="copyUrl('url-epg', this)">
@@ -570,24 +743,30 @@
 
       <div class="cat-grid">
         <div class="cat-card" style="border-color: rgba(99, 102, 241, 0.4); background: rgba(99, 102, 241, 0.08);">
-          <div class="cat-header"><span style="color: #a5b4fc;">⭐ TÜM KANALLAR (A-Z Sıralı)</span><span style="color: #a5b4fc;">153 Kanal</span></div>
-          <div class="cat-channels">Tüm yerli kanalları tek listede alfabetik olarak sunar (24 TV, ATV, Kanal D, TRT 1, TV8, Zarok TV...)</div>
+          <div class="cat-header"><span style="color: #a5b4fc;">⭐ TÜM KANALLAR (A-Z Sıralı)</span><span
+              style="color: #a5b4fc;">153 Kanal</span></div>
+          <div class="cat-channels">Tüm yerli kanalları tek listede alfabetik olarak sunar (24 TV, ATV, Kanal D, TRT 1,
+            TV8, Zarok TV...)</div>
         </div>
         <div class="cat-card">
           <div class="cat-header"><span>📺 Ulusal</span><span>14 Kanal</span></div>
-          <div class="cat-channels">TRT 1, ATV, NOW, Kanal D, Star TV, TV8, TV8.5, A2, 360, CNBC-e, Kanal 7, Euro D, Show Max, TV 4</div>
+          <div class="cat-channels">TRT 1, ATV, NOW, Kanal D, Star TV, TV8, TV8.5, A2, 360, CNBC-e, Kanal 7, Euro D,
+            Show Max, TV 4</div>
         </div>
         <div class="cat-card">
           <div class="cat-header"><span>🧒 Çocuk</span><span>11 Kanal</span></div>
-          <div class="cat-channels">TRT Çocuk, Minika Çocuk, Minika Go, Baby TV, Disney Jr., Spacetoon, TRT Diyanet Çocuk, TRT EBA İlkokul, Ortaokul, Lise, Zarok TV</div>
+          <div class="cat-channels">TRT Çocuk, Minika Çocuk, Minika Go, Baby TV, Disney Jr., Spacetoon, TRT Diyanet
+            Çocuk, TRT EBA İlkokul, Ortaokul, Lise, Zarok TV</div>
         </div>
         <div class="cat-card">
           <div class="cat-header"><span>📰 Haber & Ekonomi</span><span>25 Kanal</span></div>
-          <div class="cat-channels">TRT Haber, NTV, Habertürk TV, A Haber, Haber Global, Bloomberg HT, CNBC-e, TV100, Halk TV, Tele1, TGRT Haber, Flash Haber, 24 TV...</div>
+          <div class="cat-channels">TRT Haber, NTV, Habertürk TV, A Haber, Haber Global, Bloomberg HT, CNBC-e, TV100,
+            Halk TV, Tele1, TGRT Haber, Flash Haber, 24 TV...</div>
         </div>
         <div class="cat-card">
           <div class="cat-header"><span>⚽ Spor</span><span>10 Kanal</span></div>
-          <div class="cat-channels">TRT Spor, TRT Spor Yıldız, A Spor, HTSpor TV, Ekol Sports, FB TV, TJK TV, TRT 3 Spor / TBMM TV...</div>
+          <div class="cat-channels">TRT Spor, TRT Spor Yıldız, A Spor, HTSpor TV, Ekol Sports, FB TV, TJK TV, TRT 3 Spor
+            / TBMM TV...</div>
         </div>
         <div class="cat-card">
           <div class="cat-header"><span>🦁 Belgesel</span><span>4 Kanal</span></div>
@@ -595,7 +774,8 @@
         </div>
         <div class="cat-card">
           <div class="cat-header"><span>🎵 Müzik</span><span>16 Kanal</span></div>
-          <div class="cat-channels">TRT Müzik, Power TV, PowerTürk, Kral Pop TV, Dream Turk, Number 1 TV, Number 1 Damar...</div>
+          <div class="cat-channels">TRT Müzik, Power TV, PowerTürk, Kral Pop TV, Dream Turk, Number 1 TV, Number 1
+            Damar...</div>
         </div>
         <div class="cat-card">
           <div class="cat-header"><span>🎬 Sinema & Dizi</span><span>5 Kanal</span></div>
@@ -603,7 +783,8 @@
         </div>
         <div class="cat-card">
           <div class="cat-header"><span>🏛️ Kültür & Dini</span><span>16 Kanal</span></div>
-          <div class="cat-channels">TRT 2, TRT Türk, TRT Avaz, TRT Kurdî, Diyanet TV, Semerkand TV, Vav TV, Cem TV...</div>
+          <div class="cat-channels">TRT 2, TRT Türk, TRT Avaz, TRT Kurdî, Diyanet TV, Semerkand TV, Vav TV, Cem TV...
+          </div>
         </div>
       </div>
     </section>
@@ -611,30 +792,175 @@
     <!-- Sıkça Sorulan Sorular -->
     <section>
       <h2 class="section-title">❓ Sıkça Sorulan Sorular (SSS)</h2>
-      <p class="section-desc">Kurulum ve kullanım ile ilgili en çok merak edilenler:</p>
+      <p class="section-desc">Yasal durum, kurulum ve kullanım ile ilgili en çok merak edilen soruların detaylı yanıtları:</p>
 
-      <div class="faq-item">
-        <div class="faq-q">TiviMate veya Televizo'da yayın akışı (EPG) nasıl çalışır?</div>
-        <div class="faq-a">Yukarıdaki M3U linkini eklediğinizde çalma listesi başlığında yer alan EPG adresi otomatik algılanır. Kanalları gezerken alt barda yayın bilgisi ve rehber kendiliğinden görünür.</div>
-      </div>
+      <div class="faq-grid">
 
-      <div class="faq-item">
-        <div class="faq-q">Neden listede yabancı veya Arapça kanallar yok?</div>
-        <div class="faq-a">Diğer açık kaynak IPTV listelerinde bulunan Almahriah, Elsharq, Persiana gibi yabancı ve ilgisiz yayınlar filtrelenmiştir. Liste yalnızca %100 Türkiye kanallarını içerir.</div>
-      </div>
+        <!-- 1. YASAL / LEGAL ÖZEL VURGULU KART -->
+        <div class="faq-item faq-item-legal">
+          <div class="faq-header">
+            <div class="faq-q">
+              <span>🛡️ Bu IPTV listesi yasal mı? (Telif Hakları ve Yasal Durum)</span>
+            </div>
+            <span class="faq-badge-legal">
+              ✓ %100 YASAL & LEGAL
+            </span>
+          </div>
+          <div class="faq-a">
+            <p>
+              <strong>Evet, projemiz ve paylaştığımız tüm çalma listeleri KESİNLİKLE %100 YASALDIR (LEGAL).</strong> 
+              Projemiz şeffaf, telif haklarına saygılı ve kanuni gerekliliklere tam uyumlu bir açık kaynak çalışmasıdır. Listelerimizin neden yasal olduğunu açıklayan 4 temel ilkemiz:
+            </p>
 
-      <div class="faq-item">
-        <div class="faq-q">Yayınlar donarsa ne yapmalıyım?</div>
-        <div class="faq-a">Projemizdeki bot sistemi her gün canlılık ve tolerans testleri yapmaktadır. Ayrıca ana kanallarda yedekli CDN (Failover) sistemi aktiftir. Donma durumunda internet bağlantınızı kontrol edip oynatıcınızı yeniden başlatabilirsiniz.</div>
+            <div class="legal-pillars">
+              <div class="legal-pillar-card">
+                <div class="legal-pillar-title">
+                  <span>🏛️</span> 1. Resmi & Açık Yayınlar (FTA)
+                </div>
+                <div class="legal-pillar-desc">
+                  Listede yer alan TRT kanalları, kamu yayınları, ulusal televizyonlar (ATV, Kanal D, Star TV, NOW vb.), haber ve yerel kanalların tamamı; yayıncı kuruluşların kendi resmi internet siteleri, YouTube canlı yayınları veya kamuya ücretsiz sunduğu açık HLS (m3u8) akışlarıdır.
+                </div>
+              </div>
+
+              <div class="legal-pillar-card">
+                <div class="legal-pillar-title">
+                  <span>🚫</span> 2. Sıfır Korsan & Sıfır Şifreli Kanal
+                </div>
+                <div class="legal-pillar-desc">
+                  Listemizde Digiturk, beIN Sports, Exxen, D-Smart, Tivibu, S Sport veya şifreli/ücretli hiçbir platform yayını <strong>KESİNLİKLE bulunmaz ve asla bulunmayacaktır</strong>. Yasadışı korsan IPTV faaliyetlerine tamamen karşıyız.
+                </div>
+              </div>
+
+              <div class="legal-pillar-card">
+                <div class="legal-pillar-title">
+                  <span>🔗</span> 3. Yayın Barındırmaz (Re-stream Yok)
+                </div>
+                <div class="legal-pillar-desc">
+                  Bu proje bir IPTV sunucusu veya içerik dağıtımcısı değildir. Sunucularımızda hiçbir görüntü kaydedilmez veya yeniden dağıtılmaz. Tıpkı Google gibi, internette zaten halka açık paylaşılan resmi bağlantıları derleyen açık kaynaklı bir rehber (indeks) niteliğindedir.
+                </div>
+              </div>
+
+              <div class="legal-pillar-card">
+                <div class="legal-pillar-title">
+                  <span>⚖️</span> 4. FSEK & DMCA Telif Uyumluluğu
+                </div>
+                <div class="legal-pillar-desc">
+                  5846 sayılı Fikir ve Sanat Eserleri Kanunu ve uluslararası telif normlarına tam uyumludur. Hak sahibi yayıncı kuruluşların talebi durumunda ilgili yayın akışı derhal listeden çıkarılır veya güncellenir.
+                </div>
+              </div>
+            </div>
+
+            <div class="legal-callout-box">
+              💡 <strong>Kısacası:</strong> Evinizdeki standart çatı anteniyle havadan şifresiz ve ücretsiz izlediğiniz yasal televizyon kanallarını, televizyon kumandanızla konforlu izleyebilmeniz için tek bir M3U dosyasında derliyoruz. Ailenizle, çocuklarınızla gönül rahatlığıyla kullanabilirsiniz.
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. KESİNTİSİZLİK & YEDEKLİ CDN -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-q">
+              <span>⚡ Yayınlar neden donmuyor veya kesilmiyor?</span>
+            </div>
+            <span class="faq-badge-tag">🤖 Otomatik Test & Failover</span>
+          </div>
+          <div class="faq-a">
+            <p>
+              GitHub Actions otomasyon botumuz her gün düzenli aralıklarla tüm kanal akışlarını canlılık ve tolerans testlerinden geçirir. Çalışmayan veya adresi değişen yayınlar anında güncellenir.
+            </p>
+            <p>
+              Ayrıca TRT 1, TRT Çocuk, ATV gibi ana kanallar için <strong>yedekli (Failover) CDN mimarisi</strong> uygulanmıştır. Birincil CDN sunucusunda anlık yoğunluk veya bakım olduğunda, sistem otomatik olarak yedek akış kaynağını devreye sokarak yayın kesintisini önler.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. CİHAZ VE UYGULAMA UYUMLULUĞU -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-q">
+              <span>📱 Hangi IPTV uygulamaları ve cihazlarla uyumludur?</span>
+            </div>
+            <span class="faq-badge-tag">📺 Evrensel M3U / HLS</span>
+          </div>
+          <div class="faq-a">
+            <p>
+              M3U ve HLS (m3u8) formatını destekleyen dünyadaki tüm akıllı cihaz ve IPTV uygulamalarıyla %100 uyumludur:
+            </p>
+            <ul class="faq-list">
+              <li><strong>Google TV / Android TV:</strong> TiviMate IPTV Player (en çok önerilen), Televizo, OTT Navigator, IPTV Smarters Pro.</li>
+              <li><strong>Smart TV (Samsung & LG):</strong> Tizen ve webOS uygulama mağazalarındaki IBO Player, Smart IPTV, Nanomid Player.</li>
+              <li><strong>Apple Cihazları:</strong> Apple TV, iPad ve iPhone için GSE Smart IPTV, IPTVX, VLC Player.</li>
+              <li><strong>TV Box & Stick:</strong> Xiaomi Mi Box / TV Stick, Amazon Fire TV Stick, Google Chromecast.</li>
+              <li><strong>Bilgisayar:</strong> Windows, macOS ve Linux için VLC Media Player, Kodi, PotPlayer.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. OTOMATİK EPG -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-q">
+              <span>📡 TiviMate veya Televizo'da yayın akışı (EPG) nasıl çalışır?</span>
+            </div>
+            <span class="faq-badge-tag">📋 XMLTV EPG Rehberi</span>
+          </div>
+          <div class="faq-a">
+            <p>
+              Çalma listesi dosyamızın başlığında (<code>#EXTM3U</code>) doğrudan entegre XMLTV EPG kaynağı yer alır. TiviMate, Televizo veya OTT Navigator gibi modern oynatıcılar bu adresi otomatik olarak algılar ve yayın akışını arka planda indirir.
+            </p>
+            <p>
+              Kanallar arasında gezinirken alt bilgi çubuğunda <em>"Şu an ne oynuyor?"</em>, <em>"Sırada hangi program var?"</em>, kalan süre ve kumandanızın rehber tuşunda 24 saatlik yayın akışı tablosu kendiliğinden görüntülenir.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. YERLİ ODAK & YABANCI FİLTRELEME -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-q">
+              <span>🇹🇷 Neden listede yabancı veya Arapça kanallar yok?</span>
+            </div>
+            <span class="faq-badge-tag">%100 Yerli & Temiz</span>
+          </div>
+          <div class="faq-a">
+            <p>
+              İnternette dolaşan genel açık kaynak IPTV listelerinde (iptv-org vb.) yüzlerce Arapça, Orta Doğu veya ilgisiz yabancı yayın bulunmaktadır. Bu durum TV kumandasıyla kanal gezinmeyi zorlaştırır.
+            </p>
+            <p>
+              Geliştirdiğimiz özel filtreleme algoritması tüm yabancı ve ilgisiz yayınları tamamen ayıklar; yalnızca Türkiye'de yayın yapan ulusal, kamu, haber, spor, çocuk, belgesel ve yerel şehir kanallarından oluşan %100 temiz ve Türkçe bir kanal listesi sunar.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. GÜVENLİ ÇOCUK LİSTESİ -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-q">
+              <span>🧒 Çocuklar için özel güvenli bir liste var mı?</span>
+            </div>
+            <span class="faq-badge-tag">👶 Ebeveyn Korumalı</span>
+          </div>
+          <div class="faq-a">
+            <p>
+              Evet! Çocuk odaları, tabletler ve aile güvenliği için özel olarak izole edilmiş <strong><code>cocuk.m3u</code></strong> listemiz mevcuttur.
+            </p>
+            <p>
+              Bu liste yalnızca doğrulanmış ve kesintisiz çalışan 11 çocuk ve eğitim kanalını (TRT Çocuk, Minika Çocuk, Minika Go, Baby TV, Disney Jr., Spacetoon Turkey, TRT Diyanet Çocuk, TRT EBA İlkokul, Ortaokul, Lise ve Zarok TV) içerir. Haber bültenleri, yetişkin programları veya uygunsuz içerikler bu listede asla yer almaz.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <footer>
       <p>
-        Bu proje açık kaynaklıdır ve GitHub üzerinde barındırılmaktadır. 
+        Bu proje açık kaynaklıdır ve GitHub üzerinde barındırılmaktadır.
         <br><br>
-        <a href="https://github.com/YosemiteSam6/turkiye-iptv-m3u-m3u8" target="_blank" rel="noopener">GitHub Deposu</a> &bull; 
-        <a href="https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/kanallar.m3u">Ham M3U İndir</a>
+        <a href="https://github.com/YosemiteSam6/turkiye-iptv-m3u-m3u8" target="_blank" rel="noopener">GitHub Deposu</a>
+        &bull;
+        <a href="https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/kanallar.m3u">Ham M3U
+          İndir</a>
       </p>
     </footer>
   </div>
@@ -648,10 +974,10 @@
         const originalText = btn.innerText;
         btn.innerText = '✓ Kopyalandı!';
         btn.classList.add('copied');
-        
+
         const toast = document.getElementById('toast');
         toast.style.display = 'block';
-        
+
         setTimeout(() => {
           btn.innerText = originalText;
           btn.classList.remove('copied');
@@ -661,4 +987,5 @@
     }
   </script>
 </body>
+
 </html>
