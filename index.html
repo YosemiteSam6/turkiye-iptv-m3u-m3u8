@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Türkiye Canlı TV - Ücretsiz IPTV M3U & M3U8 Kanal Listesi (EPG Destekli)</title>
+  <meta name="title" content="Türkiye Canlı TV - Ücretsiz IPTV M3U & M3U8 Kanal Listesi (EPG Destekli)">
+  <meta name="description" content="Android TV, Smart TV, TiviMate ve Televizo için %100 yerli Türkiye canlı TV IPTV M3U / M3U8 çalma listesi. Kesintisiz ulusal, çocuk, haber, spor kanalları ve otomatik EPG yayın akışı.">
+  <meta name="keywords" content="türkiye iptv, türkiye m3u listesi, iptv m3u8 indir, tivimate türkiye, canlı tv m3u, ücretsiz iptv türkiye, epg xmltv türkiye, çocuk iptv, ulusal kanallar m3u8">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="YosemiteSam6">
+  <link rel="canonical" href="https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/">
+  <meta property="og:title" content="Türkiye Canlı TV - Ücretsiz IPTV M3U & M3U8 Kanal Listesi">
+  <meta property="og:description" content="Android TV & Smart TV için otomatik güncellenen, EPG destekli, akıllı kategorili ve yabancı kanallardan arındırılmış Türkiye IPTV listesi.">
+  <meta property="og:locale" content="tr_TR">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/">
+  <meta property="twitter:title" content="Türkiye Canlı TV - Ücretsiz IPTV M3U & M3U8 Kanal Listesi">
+  <meta property="twitter:description" content="Android TV & Smart TV için otomatik güncellenen, EPG destekli Türkiye IPTV listesi.">
+
+  <!-- Schema.org Structured Data (JSON-LD) for Rich Google Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Türkiye Canlı TV IPTV M3U",
+    "operatingSystem": "Android TV, Google TV, Apple TV, Smart TV, Windows, iOS, Android",
+    "applicationCategory": "EntertainmentApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "TRY"
+    },
+    "description": "Android TV ve Smart TV için otomatik güncellenen, EPG destekli, %100 yerli Türkiye canlı televizyon kanalları IPTV çalma listesi.",
+    "url": "https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/"
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Bu IPTV listesini Android TV veya TiviMate'e nasıl eklerim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TiviMate veya Televizo uygulamasında 'Çalma Listesi Ekle' seçeneğine tıklayın, M3U bağlantısı olarak kanallar.m3u adresini yapıştırın. EPG otomatik olarak tanınacaktır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kanal listesi ücretsiz mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, tüm liste tamamen ücretsiz, açık kaynaklı ve Türkiye'deki yasal canlı yayın akışlarını derlemektedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Çocuklar için özel güvenli bir liste var mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, sadece 11 çalışan çocuk ve eğitim kanalını içeren cocuk.m3u listesi mevcuttur."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --primary-glow: rgba(59, 130, 246, 0.35);
+      --accent: #8b5cf6;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --success: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo span {
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--success);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 8px var(--success);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, #93c5fd 0%, #c084fc 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 36px;
+    }
+
+    /* Stats bar */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(16px);
+      text-align: center;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    .stat-val {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+      background: linear-gradient(135deg, #fff, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Playlists Section */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .playlist-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px;
+      backdrop-filter: blur(20px);
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      border-color: rgba(147, 197, 253, 0.3);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .card-title-group h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .url-box {
+      display: flex;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 6px 6px 6px 16px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .url-text {
+      font-family: monospace;
+      font-size: 0.9rem;
+      color: #93c5fd;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .copy-btn {
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .copy-btn:hover {
+      filter: brightness(1.15);
+      transform: scale(1.02);
+    }
+
+    .copy-btn.copied {
+      background: #059669;
+    }
+
+    /* Category Grid */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .cat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .cat-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #e2e8f0;
+    }
+
+    .cat-channels {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* FAQ */
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      padding: 20px;
+    }
+
+    .faq-q {
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .faq-a {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    /* Toast */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10b981;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+      display: none;
+      z-index: 1000;
+      animation: fadeIn 0.3s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <a href="#" class="logo">
+        <span>🇹🇷 Türkiye Canlı TV</span>
+      </a>
+      <div class="badge">
+        <div class="pulse"></div>
+        Canlı & Aktif EPG
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="badge" style="margin-bottom: 16px;">
+        ⭐ Android TV & Smart TV İçin Optimize Edildi
+      </div>
+      <h1>
+        Kesintisiz, Ücretsiz & Yerli<br>
+        <span class="gradient-text">Türkiye Canlı TV IPTV Listesi</span>
+      </h1>
+      <p>
+        Google TV, Android TV, TiviMate, Televizo ve Apple TV için otomatik güncellenen, program rehberi (EPG) destekli ve yabancı yayınlardan arındırılmış %100 Türkiye televizyon kanalları.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-val">150+</div>
+          <div class="stat-label">Yerli Canlı Kanal</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">11</div>
+          <div class="stat-label">Güvenli Çocuk Kanalı</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">24 / 7</div>
+          <div class="stat-label">Otomatik EPG Rehberi</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">%100</div>
+          <div class="stat-label">Yasal & Ücretsiz</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- M3U Listeleri -->
+    <section>
+      <h2 class="section-title">🚀 IPTV Çalma Listesi Bağlantıları</h2>
+      <p class="section-desc">TiviMate, Televizo veya IPTV Smarters uygulamanıza aşağıdaki bağlantılardan dilediğinizi ekleyin:</p>
+
+      <div class="playlist-cards">
+        
+        <!-- 1. Genel Liste -->
+        <div class="card">
+          <div class="card-top">
+            <div class="card-title-group">
+              <h3>📺 Genel Canlı TV Listesi (Tüm Kanallar)</h3>
+            </div>
+            <span class="badge" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">
+              Önerilen
+            </span>
+          </div>
+          <p class="card-desc">Tüm ulusal, haber, spor, belgesel, sinema, müzik ve yerel şehir kanallarını içeren tam liste (EPG ve akıllı kategorili).</p>
+          <div class="url-box">
+            <span class="url-text" id="url-main">https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/kanallar.m3u</span>
+            <button class="copy-btn" onclick="copyUrl('url-main', this)">
+              📋 Linki Kopyala
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Çocuk Listesi -->
+        <div class="card">
+          <div class="card-top">
+            <div class="card-title-group">
+              <h3>🧒 Çocuk Özel Listesi (Güvenli & İzole)</h3>
+            </div>
+            <span class="badge" style="background: rgba(236, 72, 153, 0.15); color: #f472b6; border-color: rgba(236, 72, 153, 0.3);">
+              11 Çocuk Kanalı
+            </span>
+          </div>
+          <p class="card-desc">Çocuk odaları ve tabletler için sadece TRT Çocuk, Minika Çocuk, Baby TV, Disney Jr., EBA gibi 11 güvenli kanalı içerir.</p>
+          <div class="url-box">
+            <span class="url-text" id="url-kids">https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/cocuk.m3u</span>
+            <button class="copy-btn" onclick="copyUrl('url-kids', this)">
+              📋 Linki Kopyala
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. TOP 50 Listesi -->
+        <div class="card">
+          <div class="card-top">
+            <div class="card-title-group">
+              <h3>⭐ En Çok İzlenen TOP 50 Kanal</h3>
+            </div>
+            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">
+              Hafif & Hızlı
+            </span>
+          </div>
+          <p class="card-desc">Sadece Türkiye'nin en popüler ulusal, haber ve spor kanallarından oluşan hafif ve hızlı liste.</p>
+          <div class="url-box">
+            <span class="url-text" id="url-top50">https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/top50.m3u</span>
+            <button class="copy-btn" onclick="copyUrl('url-top50', this)">
+              📋 Linki Kopyala
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. EPG Kaynağı -->
+        <div class="card">
+          <div class="card-top">
+            <div class="card-title-group">
+              <h3>📡 Doğrudan EPG (Yayın Akışı Rehberi) Adresi</h3>
+            </div>
+            <span class="badge" style="background: rgba(139, 92, 246, 0.15); color: #c084fc; border-color: rgba(139, 92, 246, 0.3);">
+              XMLTV GZ
+            </span>
+          </div>
+          <p class="card-desc">IPTV uygulamanız M3U başlığından otomatik almazsa bu adresi manuel EPG kaynağı olarak ekleyebilirsiniz.</p>
+          <div class="url-box">
+            <span class="url-text" id="url-epg">https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz</span>
+            <button class="copy-btn" onclick="copyUrl('url-epg', this)">
+              📋 Linki Kopyala
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Kategoriler -->
+    <section>
+      <h2 class="section-title">📑 Düzenli & Akıllı Kategori Dağılımı</h2>
+      <p class="section-desc">Tüm yayınlar TV kumandasıyla kolay gezinme için çakışmasız gruplara ayrılmıştır:</p>
+
+      <div class="cat-grid">
+        <div class="cat-card">
+          <div class="cat-header"><span>📺 Ulusal</span><span>14 Kanal</span></div>
+          <div class="cat-channels">TRT 1, ATV, NOW, Kanal D, Star TV, TV8, TV8.5, A2, 360, CNBC-e, Kanal 7, Euro D, Show Max, TV 4</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-header"><span>🧒 Çocuk</span><span>11 Kanal</span></div>
+          <div class="cat-channels">TRT Çocuk, Minika Çocuk, Minika Go, Baby TV, Disney Jr., Spacetoon, TRT Diyanet Çocuk, TRT EBA İlkokul, Ortaokul, Lise, Zarok TV</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-header"><span>📰 Haber & Ekonomi</span><span>25 Kanal</span></div>
+          <div class="cat-channels">TRT Haber, NTV, Habertürk TV, A Haber, Haber Global, Bloomberg HT, CNBC-e, TV100, Halk TV, Tele1, TGRT Haber, Flash Haber, 24 TV...</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-header"><span>⚽ Spor</span><span>10 Kanal</span></div>
+          <div class="cat-channels">TRT Spor, TRT Spor Yıldız, A Spor, HTSpor TV, Ekol Sports, FB TV, TJK TV, TRT 3 Spor / TBMM TV...</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-header"><span>🦁 Belgesel</span><span>4 Kanal</span></div>
+          <div class="cat-channels">TRT Belgesel, TGRT Belgesel, TRT 2 (Kültür & Belgesel), Ciftci TV</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-header"><span>🎵 Müzik</span><span>16 Kanal</span></div>
+          <div class="cat-channels">TRT Müzik, Power TV, PowerTürk, Kral Pop TV, Dream Turk, Number 1 TV, Number 1 Damar...</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-header"><span>🎬 Sinema & Dizi</span><span>5 Kanal</span></div>
+          <div class="cat-channels">A2 (Dizi & Sinema), Show Max, BBC First Turkiye, Cine 1, Kanal Plus</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-header"><span>🏛️ Kültür & Dini</span><span>16 Kanal</span></div>
+          <div class="cat-channels">TRT 2, TRT Türk, TRT Avaz, TRT Kurdî, Diyanet TV, Semerkand TV, Vav TV, Cem TV...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sıkça Sorulan Sorular -->
+    <section>
+      <h2 class="section-title">❓ Sıkça Sorulan Sorular (SSS)</h2>
+      <p class="section-desc">Kurulum ve kullanım ile ilgili en çok merak edilenler:</p>
+
+      <div class="faq-item">
+        <div class="faq-q">TiviMate veya Televizo'da yayın akışı (EPG) nasıl çalışır?</div>
+        <div class="faq-a">Yukarıdaki M3U linkini eklediğinizde çalma listesi başlığında yer alan EPG adresi otomatik algılanır. Kanalları gezerken alt barda yayın bilgisi ve rehber kendiliğinden görünür.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Neden listede yabancı veya Arapça kanallar yok?</div>
+        <div class="faq-a">Diğer açık kaynak IPTV listelerinde bulunan Almahriah, Elsharq, Persiana gibi yabancı ve ilgisiz yayınlar filtrelenmiştir. Liste yalnızca %100 Türkiye kanallarını içerir.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Yayınlar donarsa ne yapmalıyım?</div>
+        <div class="faq-a">Projemizdeki bot sistemi her gün canlılık ve tolerans testleri yapmaktadır. Ayrıca ana kanallarda yedekli CDN (Failover) sistemi aktiftir. Donma durumunda internet bağlantınızı kontrol edip oynatıcınızı yeniden başlatabilirsiniz.</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Bu proje açık kaynaklıdır ve GitHub üzerinde barındırılmaktadır. 
+        <br><br>
+        <a href="https://github.com/YosemiteSam6/turkiye-iptv-m3u-m3u8" target="_blank" rel="noopener">GitHub Deposu</a> &bull; 
+        <a href="https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/kanallar.m3u">Ham M3U İndir</a>
+      </p>
+    </footer>
+  </div>
+
+  <div id="toast">Bağlantı Panoya Kopyalandı!</div>
+
+  <script>
+    function copyUrl(elementId, btn) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = btn.innerText;
+        btn.innerText = '✓ Kopyalandı!';
+        btn.classList.add('copied');
+        
+        const toast = document.getElementById('toast');
+        toast.style.display = 'block';
+        
+        setTimeout(() => {
+          btn.innerText = originalText;
+          btn.classList.remove('copied');
+          toast.style.display = 'none';
+        }, 2200);
+      });
+    }
+  </script>
+</body>
+</html>

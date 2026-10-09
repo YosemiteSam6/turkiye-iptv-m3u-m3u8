@@ -106,6 +106,7 @@ Google TV / Android TV cihazınızda Google Play Store'dan şu uygulamaları ter
 
 | Dosya | Açıklama |
 | :--- | :--- |
+| `index.html` | Web tarayıcıları ve arama motorları için SEO uyumlu landing page (GitHub Pages) |
 | `kanallar.m3u` | Tüm Türkiye kanallarının yer aldığı ana M3U çalma listesi (EPG + Kategorili) |
 | `kanallar.m3u8` | Ana listenin UTF-8 HLS alternatifi |
 | `cocuk.m3u` | Sadece 11 çocuk kanalını barındıran ebeveyn korumalı özel liste |
@@ -114,3 +115,21 @@ Google TV / Android TV cihazınızda Google Play Store'dan şu uygulamaları ter
 | `top50.m3u8` | TOP 50 listesinin UTF-8 HLS alternatifi |
 | `generate_playlist.py` | Filtreleme, Failover, Tolerans, EPG ve Kategori motoru |
 | `.github/workflows/update.yml` | Günlük otomatik test ve güncelleme iş akışı |
+
+---
+
+## 🌐 Canlı Web Sitesi (GitHub Pages)
+
+Çalma listesi bağlantılarını tek tıkla kopyalamak ve mobil / TV tarayıcısından hızlıca erişmek için web sitesini ziyaret edebilirsiniz:
+👉 **[https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/](https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/)**
+
+---
+
+## ❓ Sıkça Sorulan Sorular (SSS)
+
+- **Bu liste yasal mı?**
+  Evet, projemiz yalnızca Türkiye'de yayın yapan ulusal, kamu ve yerel televizyon kanallarının resmi internet canlı yayın akışlarını derlemektedir. Şifreli veya telif hakkı ihlali barındıran hiçbir yayın içermez.
+- **Yayınlar neden donmuyor / kesilmiyor?**
+  GitHub Actions botumuz her gün saatlik/günlük canlılık testleri yaparak çalışmayan adresleri günceller veya yedek CDN adreslerine yönlendirir.
+- **Hangi IPTV uygulamalarıyla uyumludur?**
+  Tüm M3U ve HLS destekli cihazlar: TiviMate, Televizo, OTT Navigator, IPTV Smarters Pro, GSE Smart IPTV, VLC Player, Kodi ve Apple TV oynatıcıları.
