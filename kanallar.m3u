@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz"
 # Generated automatically for Android TV & Smart TV - Turkiye Canli TV
-# Total Verified Turkish Channels: 315
+# Total Verified Turkish Channels: 309
 
 #EXTINF:-1 tvg-id="24.TV.tr" tvg-name="24 TV" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="TÜM KANALLAR (A-Z Sıralı)",24 TV
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8#all
@@ -146,8 +146,6 @@ https://tv.kanalb.tr/hls/kanalb/index.m3u8#all
 https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3#all
 #EXTINF:-1 tvg-name="Kanal Firat" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Firat
 https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Kanal Hayat" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Hayat
-https://tbn02a.ltnschedule.com/hls/nx21i.m3u8#all
 #EXTINF:-1 tvg-name="Kanal Plus" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Plus
 https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal Urfa" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Urfa
@@ -170,8 +168,6 @@ https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m
 https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Lalegul TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Lalegul TV
 https://lbl.netmedya.net/hls/lalegultv.m3u8#all
-#EXTINF:-1 tvg-name="Life TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Life TV
-https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8#all
 #EXTINF:-1 tvg-id="LINETV.tr" tvg-name="Line TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Line TV
 https://edge2.taksimbilisim.com/linetv/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Malatya Vuslat TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Malatya Vuslat TV
@@ -284,8 +280,6 @@ https://tv-trtspor2.medya.trt.com.tr/master.m3u8#all
 https://tv-trtturk.medya.trt.com.tr/master.m3u8#all
 #EXTINF:-1 tvg-name="TurkHaber TV" group-title="TÜM KANALLAR (A-Z Sıralı)",TurkHaber TV
 https://edge2.taksimbilisim.com/turkhaber/bant1/playlist.m3u8#all
-#EXTINF:-1 tvg-name="TV 264" group-title="TÜM KANALLAR (A-Z Sıralı)",TV 264
-https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8#all
 #EXTINF:-1 tvg-name="TV 4" group-title="TÜM KANALLAR (A-Z Sıralı)",TV 4
 https://turkmedya-live.ercdn.net/tv4/tv4.m3u8#all
 #EXTINF:-1 tvg-name="TV 41" group-title="TÜM KANALLAR (A-Z Sıralı)",TV 41
@@ -488,8 +482,6 @@ https://panel.5gtvhosting.com/hls/cemtv/cemtv.m3u8
 https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="Dost TV" group-title="Kültür & Dini",Dost TV
 https://dost.stream.emsal.im/tv/live.m3u8
-#EXTINF:-1 tvg-name="Kanal Hayat" group-title="Kültür & Dini",Kanal Hayat
-https://tbn02a.ltnschedule.com/hls/nx21i.m3u8
 #EXTINF:-1 tvg-name="Lalegul TV" group-title="Kültür & Dini",Lalegul TV
 https://lbl.netmedya.net/hls/lalegultv.m3u8
 #EXTINF:-1 tvg-name="Meltem TV" group-title="Kültür & Dini",Meltem TV
@@ -596,8 +588,6 @@ https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u
 https://edge2.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Konya Olay TV" group-title="Yerel",Konya Olay TV
 https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8
-#EXTINF:-1 tvg-name="Life TV" group-title="Yerel",Life TV
-https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8
 #EXTINF:-1 tvg-id="LINETV.tr" tvg-name="Line TV" group-title="Yerel",Line TV
 https://edge2.taksimbilisim.com/linetv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Malatya Vuslat TV" group-title="Yerel",Malatya Vuslat TV
@@ -620,8 +610,6 @@ https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
 #EXTINF:-1 tvg-name="Ton TV" group-title="Yerel",Ton TV
 https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8
-#EXTINF:-1 tvg-name="TV 264" group-title="Yerel",TV 264
-https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="TV 41" group-title="Yerel",TV 41
 https://live.artidijitalmedya.com/artidijital_tv41/tv41/playlist.m3u8
 #EXTINF:-1 tvg-name="TV 52" group-title="Yerel",TV 52
