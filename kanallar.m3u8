@@ -154,8 +154,6 @@ https://edge2.taksimbilisim.com/kanalurfa/bant1/playlist.m3u8#all
 https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Karadeniz TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Karadeniz TV
 https://panel.5gtvhosting.com/hls/karadeniztv/karadeniztv.m3u8#all
-#EXTINF:-1 tvg-name="Kay TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Kay TV
-https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kent Turk" group-title="TÜM KANALLAR (A-Z Sıralı)",Kent Turk
 https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8#all
 #EXTINF:-1 tvg-name="KN Music TV" tvg-logo="https://www.knmusictv.com/wp-content/uploads/2026/01/LOGO2112.png" group-title="TÜM KANALLAR (A-Z Sıralı)",KN Music TV
@@ -168,6 +166,8 @@ https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m
 https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Lalegul TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Lalegul TV
 https://lbl.netmedya.net/hls/lalegultv.m3u8#all
+#EXTINF:-1 tvg-name="Life TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Life TV
+https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8#all
 #EXTINF:-1 tvg-id="LINETV.tr" tvg-name="Line TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Line TV
 https://edge2.taksimbilisim.com/linetv/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Malatya Vuslat TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Malatya Vuslat TV
@@ -580,14 +580,14 @@ https://edge2.taksimbilisim.com/kanalurfa/bant1/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8
 #EXTINF:-1 tvg-name="Karadeniz TV" group-title="Yerel",Karadeniz TV
 https://panel.5gtvhosting.com/hls/karadeniztv/karadeniztv.m3u8
-#EXTINF:-1 tvg-name="Kay TV" group-title="Yerel",Kay TV
-https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
 #EXTINF:-1 tvg-name="Kent Turk" group-title="Yerel",Kent Turk
 https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8
 #EXTINF:-1 tvg-name="Kocaeli TV" group-title="Yerel",Kocaeli TV
 https://edge2.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Konya Olay TV" group-title="Yerel",Konya Olay TV
 https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8
+#EXTINF:-1 tvg-name="Life TV" group-title="Yerel",Life TV
+https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8
 #EXTINF:-1 tvg-id="LINETV.tr" tvg-name="Line TV" group-title="Yerel",Line TV
 https://edge2.taksimbilisim.com/linetv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Malatya Vuslat TV" group-title="Yerel",Malatya Vuslat TV
