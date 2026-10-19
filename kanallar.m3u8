@@ -21,7 +21,7 @@ https://edge1.taksimbilisim.com/altastv/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Anadolu Net TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Anadolu Net TV
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Aras TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Aras TV
-https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8#all
+http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8#all
 #EXTINF:-1 tvg-name="AS TV" group-title="TÜM KANALLAR (A-Z Sıralı)",AS TV
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8#all
 #EXTINF:-1 tvg-id="ATV.HD.tr" tvg-name="ATV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ATV_logo.svg/512px-ATV_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",ATV
@@ -32,17 +32,17 @@ https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8#all
 https://saran-live.ercdn.net/babytv/index.m3u8#all
 #EXTINF:-1 tvg-name="BBC First Turkiye" tvg-logo="https://i.imgur.com/UBoBYUI.png" group-title="TÜM KANALLAR (A-Z Sıralı)",BBC First Turkiye
 http://88.212.15.29/live/bbc_first/index.m3u8#all
-#EXTINF:-1 tvg-name="beIN Sports 1 Turk" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/27/BeinSports1.svg/revision/latest?cb=20230910184457" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports 1 Turk
+#EXTINF:-1 tvg-name="beIN Sports 1 Turk" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports 1 Turk
 https://andro.mangeinde4.lat/checklist/androstreamlivebs1.m3u8#all
-#EXTINF:-1 tvg-name="beIN Sports 2 Turk" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/40/BeinSports2.svg/revision/latest?cb=20230910185720" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports 2 Turk
+#EXTINF:-1 tvg-name="beIN Sports 2 Turk" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports 2 Turk
 https://andro.mangeinde4.lat/checklist/androstreamlivebs2.m3u8#all
-#EXTINF:-1 tvg-name="beIN Sports 3 Turk" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/5/53/BeIN_Sports_3_2017_Rectangle.png/revision/latest/scale-to-width-down/1000?cb=20251213114000" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports 3 Turk
+#EXTINF:-1 tvg-name="beIN Sports 3 Turk" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports 3 Turk
 https://andro.mangeinde4.lat/checklist/androstreamlivebs3.m3u8#all
-#EXTINF:-1 tvg-name="beIN Sports 4 Turk" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/9/96/Logo_bein_sports_4.png/revision/latest/scale-to-width-down/1000?cb=20251213115820" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports 4 Turk
+#EXTINF:-1 tvg-name="beIN Sports 4 Turk" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports 4 Turk
 https://andro.mangeinde4.lat/checklist/androstreamlivebs4.m3u8#all
-#EXTINF:-1 tvg-name="beIN Sports 5 Turk" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/1/14/BeIN%2Bsports%2B5.png/revision/latest/scale-to-width-down/1000?cb=20251214104942" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports 5 Turk
+#EXTINF:-1 tvg-name="beIN Sports 5 Turk" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports 5 Turk
 https://andro.mangeinde4.lat/checklist/androstreamlivebs5.m3u8#all
-#EXTINF:-1 tvg-id="beIN.SPORTS.HABER.HD.tr" tvg-name="beIN Sports Haber" tvg-logo="https://i.imgur.com/QWo0x7S.jpg" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports Haber
+#EXTINF:-1 tvg-id="beIN.SPORTS.HABER.HD.tr" tvg-name="beIN Sports Haber" group-title="TÜM KANALLAR (A-Z Sıralı)",beIN Sports Haber
 https://andro.mangeinde4.lat/checklist/androstreamlivebsh.m3u8#all
 #EXTINF:-1 tvg-id="BENGÜ.TÜRK.tr" tvg-name="Bengütürk TV" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/8/8c/Beng%C3%BCt%C3%BCrk_TV_logosu.png/512px-Beng%C3%BCt%C3%BCrk_TV_logosu.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Bengütürk TV
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8#all
@@ -90,8 +90,6 @@ https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8#all
 https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8#all
 #EXTINF:-1 tvg-name="Ekoturk" group-title="TÜM KANALLAR (A-Z Sıralı)",Ekoturk
 https://cdn.ekoturk.net/hls/master.m3u8#all
-#EXTINF:-1 tvg-name="Erciyes TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Erciyes TV
-https://live.artidijitalmedya.com/artidijital_erciyestv/erciyestv/playlist.m3u8#all
 #EXTINF:-1 tvg-name="ERTV" group-title="TÜM KANALLAR (A-Z Sıralı)",ERTV
 https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Erzurum Web TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Erzurum Web TV
@@ -158,6 +156,8 @@ https://tv.kanalb.tr/hls/kanalb/index.m3u8#all
 https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3#all
 #EXTINF:-1 tvg-name="Kanal Firat" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Firat
 https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8#all
+#EXTINF:-1 tvg-name="Kanal Hayat" tvg-logo="https://i.imgur.com/eikZj19.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Hayat
+https://tbn02a.ltnschedule.com/hls/nx21i.m3u8#all
 #EXTINF:-1 tvg-name="Kanal Plus" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Plus
 https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal Urfa" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Urfa
@@ -168,8 +168,6 @@ https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8#all
 https://panel.5gtvhosting.com/hls/karadeniztv/karadeniztv.m3u8#all
 #EXTINF:-1 tvg-name="Kay TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Kay TV
 https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Kent Turk" group-title="TÜM KANALLAR (A-Z Sıralı)",Kent Turk
-https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8#all
 #EXTINF:-1 tvg-name="KN Music TV" tvg-logo="https://www.knmusictv.com/wp-content/uploads/2026/01/LOGO2112.png" group-title="TÜM KANALLAR (A-Z Sıralı)",KN Music TV
 https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8#all
 #EXTINF:-1 tvg-name="Kocaeli TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Kocaeli TV
@@ -294,6 +292,8 @@ https://tv-trtspor2.medya.trt.com.tr/master.m3u8#all
 https://tv-trtturk.medya.trt.com.tr/master.m3u8#all
 #EXTINF:-1 tvg-name="TurkHaber TV" group-title="TÜM KANALLAR (A-Z Sıralı)",TurkHaber TV
 https://edge2.taksimbilisim.com/turkhaber/bant1/playlist.m3u8#all
+#EXTINF:-1 tvg-name="TV 264" tvg-logo="https://i.imgur.com/tudXdOZ.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TV 264
+https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8#all
 #EXTINF:-1 tvg-name="TV 4" group-title="TÜM KANALLAR (A-Z Sıralı)",TV 4
 https://turkmedya-live.ercdn.net/tv4/tv4.m3u8#all
 #EXTINF:-1 tvg-name="TV 41" group-title="TÜM KANALLAR (A-Z Sıralı)",TV 41
@@ -420,17 +420,17 @@ https://edge2.taksimbilisim.com/turkhaber/bant1/playlist.m3u8
 https://tv.ensonhaber.com/tv100/tv100.m3u8
 #EXTINF:-1 tvg-id="A.SPOR.HD.tr" tvg-name="A Spor" tvg-logo="https://i.imgur.com/ZhkZzLf.png" group-title="Spor",A Spor
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
-#EXTINF:-1 tvg-name="beIN Sports 1 Turk" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/27/BeinSports1.svg/revision/latest?cb=20230910184457" group-title="Spor",beIN Sports 1 Turk
+#EXTINF:-1 tvg-name="beIN Sports 1 Turk" group-title="Spor",beIN Sports 1 Turk
 https://andro.mangeinde4.lat/checklist/androstreamlivebs1.m3u8
-#EXTINF:-1 tvg-name="beIN Sports 2 Turk" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/40/BeinSports2.svg/revision/latest?cb=20230910185720" group-title="Spor",beIN Sports 2 Turk
+#EXTINF:-1 tvg-name="beIN Sports 2 Turk" group-title="Spor",beIN Sports 2 Turk
 https://andro.mangeinde4.lat/checklist/androstreamlivebs2.m3u8
-#EXTINF:-1 tvg-name="beIN Sports 3 Turk" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/5/53/BeIN_Sports_3_2017_Rectangle.png/revision/latest/scale-to-width-down/1000?cb=20251213114000" group-title="Spor",beIN Sports 3 Turk
+#EXTINF:-1 tvg-name="beIN Sports 3 Turk" group-title="Spor",beIN Sports 3 Turk
 https://andro.mangeinde4.lat/checklist/androstreamlivebs3.m3u8
-#EXTINF:-1 tvg-name="beIN Sports 4 Turk" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/9/96/Logo_bein_sports_4.png/revision/latest/scale-to-width-down/1000?cb=20251213115820" group-title="Spor",beIN Sports 4 Turk
+#EXTINF:-1 tvg-name="beIN Sports 4 Turk" group-title="Spor",beIN Sports 4 Turk
 https://andro.mangeinde4.lat/checklist/androstreamlivebs4.m3u8
-#EXTINF:-1 tvg-name="beIN Sports 5 Turk" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/1/14/BeIN%2Bsports%2B5.png/revision/latest/scale-to-width-down/1000?cb=20251214104942" group-title="Spor",beIN Sports 5 Turk
+#EXTINF:-1 tvg-name="beIN Sports 5 Turk" group-title="Spor",beIN Sports 5 Turk
 https://andro.mangeinde4.lat/checklist/androstreamlivebs5.m3u8
-#EXTINF:-1 tvg-id="beIN.SPORTS.HABER.HD.tr" tvg-name="beIN Sports Haber" tvg-logo="https://i.imgur.com/QWo0x7S.jpg" group-title="Spor",beIN Sports Haber
+#EXTINF:-1 tvg-id="beIN.SPORTS.HABER.HD.tr" tvg-name="beIN Sports Haber" group-title="Spor",beIN Sports Haber
 https://andro.mangeinde4.lat/checklist/androstreamlivebsh.m3u8
 #EXTINF:-1 tvg-name="Bric ve Satranc TV" tvg-logo="https://i.imgur.com/TXDV1ty.png" group-title="Spor",Bric ve Satranc TV
 http://139.162.182.79/live/test/index.m3u8
@@ -508,6 +508,8 @@ https://panel.5gtvhosting.com/hls/cemtv/cemtv.m3u8
 https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="Dost TV" tvg-logo="https://dosttv.com/wp-content/uploads/2022/02/dost_logo.png" group-title="Kültür & Dini",Dost TV
 https://dost.stream.emsal.im/tv/live.m3u8
+#EXTINF:-1 tvg-name="Kanal Hayat" tvg-logo="https://i.imgur.com/eikZj19.png" group-title="Kültür & Dini",Kanal Hayat
+https://tbn02a.ltnschedule.com/hls/nx21i.m3u8
 #EXTINF:-1 tvg-name="Lalegul TV" group-title="Kültür & Dini",Lalegul TV
 https://lbl.netmedya.net/hls/lalegultv.m3u8
 #EXTINF:-1 tvg-name="Meltem TV" group-title="Kültür & Dini",Meltem TV
@@ -541,7 +543,7 @@ https://edge1.taksimbilisim.com/altastv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Anadolu Net TV" group-title="Yerel",Anadolu Net TV
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
 #EXTINF:-1 tvg-name="Aras TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="Yerel",Aras TV
-https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8
+http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
 #EXTINF:-1 tvg-name="AS TV" group-title="Yerel",AS TV
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
 #EXTINF:-1 tvg-name="ATV Alanya" group-title="Yerel",ATV Alanya
@@ -562,8 +564,6 @@ https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist
 https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8
 #EXTINF:-1 tvg-name="Edessa TV" group-title="Yerel",Edessa TV
 https://canli.edessatv.com/hls/stream.m3u8
-#EXTINF:-1 tvg-name="Erciyes TV" group-title="Yerel",Erciyes TV
-https://live.artidijitalmedya.com/artidijital_erciyestv/erciyestv/playlist.m3u8
 #EXTINF:-1 tvg-name="ERTV" group-title="Yerel",ERTV
 https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8
 #EXTINF:-1 tvg-name="Erzurum Web TV" group-title="Yerel",Erzurum Web TV
@@ -608,8 +608,6 @@ https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8
 https://panel.5gtvhosting.com/hls/karadeniztv/karadeniztv.m3u8
 #EXTINF:-1 tvg-name="Kay TV" group-title="Yerel",Kay TV
 https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
-#EXTINF:-1 tvg-name="Kent Turk" group-title="Yerel",Kent Turk
-https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8
 #EXTINF:-1 tvg-name="Kocaeli TV" group-title="Yerel",Kocaeli TV
 https://edge2.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Konya Olay TV" group-title="Yerel",Konya Olay TV
@@ -638,6 +636,8 @@ https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
 #EXTINF:-1 tvg-name="Ton TV" group-title="Yerel",Ton TV
 https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8
+#EXTINF:-1 tvg-name="TV 264" tvg-logo="https://i.imgur.com/tudXdOZ.png" group-title="Yerel",TV 264
+https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="TV 41" group-title="Yerel",TV 41
 https://live.artidijitalmedya.com/artidijital_tv41/tv41/playlist.m3u8
 #EXTINF:-1 tvg-name="TV 52" group-title="Yerel",TV 52
