@@ -20,7 +20,7 @@ https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8#all
 https://edge1.taksimbilisim.com/altastv/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Anadolu Net TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Anadolu Net TV
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Aras TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Aras TV
+#EXTINF:-1 tvg-name="Aras TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Aras TV
 https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8#all
 #EXTINF:-1 tvg-name="AS TV" group-title="TÜM KANALLAR (A-Z Sıralı)",AS TV
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8#all
@@ -504,7 +504,7 @@ https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
 https://edge1.taksimbilisim.com/altastv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Anadolu Net TV" group-title="Yerel",Anadolu Net TV
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
-#EXTINF:-1 tvg-name="Aras TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="Yerel",Aras TV
+#EXTINF:-1 tvg-name="Aras TV" group-title="Yerel",Aras TV
 https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8
 #EXTINF:-1 tvg-name="AS TV" group-title="Yerel",AS TV
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
