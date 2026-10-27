@@ -146,8 +146,6 @@ https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.
 https://edge2.taksimbilisim.com/kanalurfa/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal V" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal V
 https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Karadeniz TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Karadeniz TV
-https://panel.5gtvhosting.com/hls/karadeniztv/karadeniztv.m3u8#all
 #EXTINF:-1 tvg-name="Kay TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Kay TV
 https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kent Turk" group-title="TÜM KANALLAR (A-Z Sıralı)",Kent Turk
@@ -216,6 +214,8 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d91
 https://canli.sercemtv.com.tr/hls/0/stream.m3u8#all
 #EXTINF:-1 tvg-name="Show Max" group-title="TÜM KANALLAR (A-Z Sıralı)",Show Max
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8#all
+#EXTINF:-1 tvg-name="Sonmez TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Sonmez TV
+https://sonmeztv.ozelip.com.tr:3826/live/sonmeztvlive.m3u8#all
 #EXTINF:-1 tvg-name="Spacetoon Turkey" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/2/2b/Spacetoon_logo.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Spacetoon Turkey
 https://live-tr-next.spacetoongo.com/ST_TR_NEXT/hls/h7qefeiwfbjn1.m3u8#all
 #EXTINF:-1 tvg-id="STAR.TV.HD.tr" tvg-name="Star TV" tvg-logo="https://i.imgur.com/9O3DHRB.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Star TV
@@ -564,8 +564,6 @@ https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u
 https://edge2.taksimbilisim.com/kanalurfa/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal V" group-title="Yerel",Kanal V
 https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8
-#EXTINF:-1 tvg-name="Karadeniz TV" group-title="Yerel",Karadeniz TV
-https://panel.5gtvhosting.com/hls/karadeniztv/karadeniztv.m3u8
 #EXTINF:-1 tvg-name="Kay TV" group-title="Yerel",Kay TV
 https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
 #EXTINF:-1 tvg-name="Kent Turk" group-title="Yerel",Kent Turk
@@ -588,6 +586,8 @@ https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
 #EXTINF:-1 tvg-name="Ruha TV" group-title="Yerel",Ruha TV
 https://ruhatv.radyotelekom.com.tr:3515/live/ruhatvlive.m3u8
+#EXTINF:-1 tvg-name="Sonmez TV" group-title="Yerel",Sonmez TV
+https://sonmeztv.ozelip.com.tr:3826/live/sonmeztvlive.m3u8
 #EXTINF:-1 tvg-name="Sun RTV" group-title="Yerel",Sun RTV
 https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
 #EXTINF:-1 tvg-name="Tempo TV" group-title="Yerel",Tempo TV
