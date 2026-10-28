@@ -126,8 +126,6 @@ https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8#all
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 3" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 3
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Kanal 33" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 33
-https://edge2.taksimbilisim.com/kanal33/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 34" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 34
 https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 58" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 58
@@ -146,6 +144,8 @@ https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.
 https://edge2.taksimbilisim.com/kanalurfa/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal V" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal V
 https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8#all
+#EXTINF:-1 tvg-name="Karadeniz TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Karadeniz TV
+https://panel.5gtvhosting.com/hls/karadeniztv/karadeniztv.m3u8#all
 #EXTINF:-1 tvg-name="Kay TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Kay TV
 https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kent Turk" group-title="TÜM KANALLAR (A-Z Sıralı)",Kent Turk
@@ -552,8 +552,6 @@ https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 3" group-title="Yerel",Kanal 3
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8
-#EXTINF:-1 tvg-name="Kanal 33" group-title="Yerel",Kanal 33
-https://edge2.taksimbilisim.com/kanal33/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 34" group-title="Yerel",Kanal 34
 https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 58" group-title="Yerel",Kanal 58
@@ -564,6 +562,8 @@ https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u
 https://edge2.taksimbilisim.com/kanalurfa/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal V" group-title="Yerel",Kanal V
 https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8
+#EXTINF:-1 tvg-name="Karadeniz TV" group-title="Yerel",Karadeniz TV
+https://panel.5gtvhosting.com/hls/karadeniztv/karadeniztv.m3u8
 #EXTINF:-1 tvg-name="Kay TV" group-title="Yerel",Kay TV
 https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8
 #EXTINF:-1 tvg-name="Kent Turk" group-title="Yerel",Kent Turk
