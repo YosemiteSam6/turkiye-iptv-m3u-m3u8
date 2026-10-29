@@ -138,8 +138,6 @@ https://tv.kanalb.tr/hls/kanalb/index.m3u8#all
 https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3#all
 #EXTINF:-1 tvg-name="Kanal Firat" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Firat
 https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Kanal Plus" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Plus
-https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal Urfa" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Urfa
 https://edge2.taksimbilisim.com/kanalurfa/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal V" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal V
@@ -206,6 +204,8 @@ https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8#all
 https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8#all
 #EXTINF:-1 tvg-name="PowerTurk TV" group-title="TÜM KANALLAR (A-Z Sıralı)",PowerTurk TV
 https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8#all
+#EXTINF:-1 tvg-name="RTG int." tvg-logo="https://i.imgur.com/ZpUNou4.png" group-title="TÜM KANALLAR (A-Z Sıralı)",RTG int.
+http://213.91.179.28:8000/play/a0bw#all
 #EXTINF:-1 tvg-name="Ruha TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Ruha TV
 https://ruhatv.radyotelekom.com.tr:3515/live/ruhatvlive.m3u8#all
 #EXTINF:-1 tvg-name="Semerkand TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Semerkand TV
@@ -460,8 +460,6 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8#dizi
 http://88.212.15.29/live/bbc_first/index.m3u8
 #EXTINF:-1 tvg-name="Cine 1" tvg-logo="https://i.imgur.com/agn47sQ.png" group-title="Sinema & Dizi",Cine 1
 https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3_output_0.m3u8
-#EXTINF:-1 tvg-name="Kanal Plus" group-title="Sinema & Dizi",Kanal Plus
-https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.m3u8
 #EXTINF:-1 tvg-name="Show Max (Dizi & Sinema)" group-title="Sinema & Dizi",Show Max (Dizi & Sinema)
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8#dizi
 #EXTINF:-1 tvg-name="Cem TV" group-title="Kültür & Dini",Cem TV
@@ -584,6 +582,8 @@ https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playli
 https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
 #EXTINF:-1 tvg-name="OlayTurk TV" group-title="Yerel",OlayTurk TV
 https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
+#EXTINF:-1 tvg-name="RTG int." tvg-logo="https://i.imgur.com/ZpUNou4.png" group-title="Yerel",RTG int.
+http://213.91.179.28:8000/play/a0bw
 #EXTINF:-1 tvg-name="Ruha TV" group-title="Yerel",Ruha TV
 https://ruhatv.radyotelekom.com.tr:3515/live/ruhatvlive.m3u8
 #EXTINF:-1 tvg-name="Sonmez TV" group-title="Yerel",Sonmez TV
