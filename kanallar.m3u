@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz"
 # Generated automatically for Android TV & Smart TV - Turkiye Canli TV
-# Total Verified Turkish Channels: 303
+# Total Verified Turkish Channels: 307
 
 #EXTINF:-1 tvg-id="24.TV.tr" tvg-name="24 TV" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="TÜM KANALLAR (A-Z Sıralı)",24 TV
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8#all
@@ -126,6 +126,8 @@ https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8#all
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 3" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 3
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8#all
+#EXTINF:-1 tvg-name="Kanal 33" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 33
+https://edge2.taksimbilisim.com/kanal33/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 34" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 34
 https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 58" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 58
@@ -138,6 +140,8 @@ https://tv.kanalb.tr/hls/kanalb/index.m3u8#all
 https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3#all
 #EXTINF:-1 tvg-name="Kanal Firat" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Firat
 https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8#all
+#EXTINF:-1 tvg-name="Kanal Plus" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Plus
+https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal Urfa" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal Urfa
 https://edge2.taksimbilisim.com/kanalurfa/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal V" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal V
@@ -460,6 +464,8 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8#dizi
 http://88.212.15.29/live/bbc_first/index.m3u8
 #EXTINF:-1 tvg-name="Cine 1" tvg-logo="https://i.imgur.com/agn47sQ.png" group-title="Sinema & Dizi",Cine 1
 https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3_output_0.m3u8
+#EXTINF:-1 tvg-name="Kanal Plus" group-title="Sinema & Dizi",Kanal Plus
+https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.m3u8
 #EXTINF:-1 tvg-name="Show Max (Dizi & Sinema)" group-title="Sinema & Dizi",Show Max (Dizi & Sinema)
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8#dizi
 #EXTINF:-1 tvg-name="Cem TV" group-title="Kültür & Dini",Cem TV
@@ -550,6 +556,8 @@ https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 3" group-title="Yerel",Kanal 3
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8
+#EXTINF:-1 tvg-name="Kanal 33" group-title="Yerel",Kanal 33
+https://edge2.taksimbilisim.com/kanal33/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 34" group-title="Yerel",Kanal 34
 https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 58" group-title="Yerel",Kanal 58
