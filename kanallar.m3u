@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz"
 # Generated automatically for Android TV & Smart TV - Turkiye Canli TV
-# Total Verified Turkish Channels: 307
+# Total Verified Turkish Channels: 305
 
 #EXTINF:-1 tvg-id="24.TV.tr" tvg-name="24 TV" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="TÜM KANALLAR (A-Z Sıralı)",24 TV
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8#all
@@ -36,8 +36,8 @@ http://88.212.15.29/live/bbc_first/index.m3u8#all
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8#all
 #EXTINF:-1 tvg-name="Bi Kanal" group-title="TÜM KANALLAR (A-Z Sıralı)",Bi Kanal
 https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8#all
-#EXTINF:-1 tvg-name="Bir TV" tvg-logo="https://birtv.tv/assets/upload/637f83951df60.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Bir TV
-https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8#all
+#EXTINF:-1 tvg-name="Bir TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Bir TV
+https://edge2.taksimbilisim.com/birtv/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-id="BLOOMBERG.HT.HD.tr" tvg-name="Bloomberg HT" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bloomberg_HT_logo.svg/512px-Bloomberg_HT_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Bloomberg HT
 https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8#all
 #EXTINF:-1 tvg-name="Bodrum Kent TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Bodrum Kent TV
@@ -46,6 +46,8 @@ https://edge2.taksimbilisim.com/bodrumkenttv/bant1/playlist.m3u8#all
 http://139.162.182.79/live/test/index.m3u8#all
 #EXTINF:-1 tvg-name="BRTV" group-title="TÜM KANALLAR (A-Z Sıralı)",BRTV
 https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8#all
+#EXTINF:-1 tvg-id="CARTOON.NETWORK.tr" tvg-name="Cartoon Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Cartoon Network
+http://176.65.153.40:6002/play/a013/index.m3u8#all
 #EXTINF:-1 tvg-name="Cay TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Cay TV
 https://edge.taksimbilisim.com/caytv/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Cem TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Cem TV
@@ -126,8 +128,6 @@ https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8#all
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 3" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 3
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Kanal 33" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 33
-https://edge2.taksimbilisim.com/kanal33/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 34" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 34
 https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 58" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 58
@@ -218,8 +218,6 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d91
 https://canli.sercemtv.com.tr/hls/0/stream.m3u8#all
 #EXTINF:-1 tvg-name="Show Max" group-title="TÜM KANALLAR (A-Z Sıralı)",Show Max
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8#all
-#EXTINF:-1 tvg-name="Sonmez TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Sonmez TV
-https://sonmeztv.ozelip.com.tr:3826/live/sonmeztvlive.m3u8#all
 #EXTINF:-1 tvg-name="Spacetoon Turkey" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/2/2b/Spacetoon_logo.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Spacetoon Turkey
 https://live-tr-next.spacetoongo.com/ST_TR_NEXT/hls/h7qefeiwfbjn1.m3u8#all
 #EXTINF:-1 tvg-id="STAR.TV.HD.tr" tvg-name="Star TV" tvg-logo="https://i.imgur.com/9O3DHRB.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Star TV
@@ -332,6 +330,8 @@ https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&c
 https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3
 #EXTINF:-1 tvg-id="BABY.TV.tr" tvg-name="Baby TV" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/BabyTV_logo.svg/512px-BabyTV_logo.svg.png" group-title="Çocuk",Baby TV
 https://saran-live.ercdn.net/babytv/index.m3u8
+#EXTINF:-1 tvg-id="CARTOON.NETWORK.tr" tvg-name="Cartoon Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="Çocuk",Cartoon Network
+http://176.65.153.40:6002/play/a013/index.m3u8
 #EXTINF:-1 tvg-name="Disney Jr." tvg-logo="https://www.dsmart.com.tr/api/v1/public/images/kanallar/disneyjr.png" group-title="Çocuk",Disney Jr.
 https://saran-live.ercdn.net/disneyjunior/index.m3u8
 #EXTINF:-1 tvg-id="MİNİKA.ÇOCUK.tr" tvg-name="Minika Çocuk" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/8/87/Minika_%C3%87ocuk_logosu.png/512px-Minika_%C3%87ocuk_logosu.png" group-title="Çocuk",Minika Çocuk
@@ -512,8 +512,8 @@ https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
 https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8
 #EXTINF:-1 tvg-name="Bi Kanal" group-title="Yerel",Bi Kanal
 https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8
-#EXTINF:-1 tvg-name="Bir TV" tvg-logo="https://birtv.tv/assets/upload/637f83951df60.png" group-title="Yerel",Bir TV
-https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
+#EXTINF:-1 tvg-name="Bir TV" group-title="Yerel",Bir TV
+https://edge2.taksimbilisim.com/birtv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Bodrum Kent TV" group-title="Yerel",Bodrum Kent TV
 https://edge2.taksimbilisim.com/bodrumkenttv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="BRTV" group-title="Yerel",BRTV
@@ -556,8 +556,6 @@ https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 3" group-title="Yerel",Kanal 3
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8
-#EXTINF:-1 tvg-name="Kanal 33" group-title="Yerel",Kanal 33
-https://edge2.taksimbilisim.com/kanal33/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 34" group-title="Yerel",Kanal 34
 https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 58" group-title="Yerel",Kanal 58
@@ -594,8 +592,6 @@ https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
 http://213.91.179.28:8000/play/a0bw
 #EXTINF:-1 tvg-name="Ruha TV" group-title="Yerel",Ruha TV
 https://ruhatv.radyotelekom.com.tr:3515/live/ruhatvlive.m3u8
-#EXTINF:-1 tvg-name="Sonmez TV" group-title="Yerel",Sonmez TV
-https://sonmeztv.ozelip.com.tr:3826/live/sonmeztvlive.m3u8
 #EXTINF:-1 tvg-name="Sun RTV" group-title="Yerel",Sun RTV
 https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
 #EXTINF:-1 tvg-name="Tempo TV" group-title="Yerel",Tempo TV
