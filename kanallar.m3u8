@@ -28,8 +28,6 @@ https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8#all
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8#all
 #EXTINF:-1 tvg-name="ATV Alanya" group-title="TÜM KANALLAR (A-Z Sıralı)",ATV Alanya
 https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8#all
-#EXTINF:-1 tvg-name="ATV Avrupa" tvg-logo="https://i.tmgrup.com.tr/aav/site/v1/i/atv-avrupa-logo.png" group-title="TÜM KANALLAR (A-Z Sıralı)",ATV Avrupa
-https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8#all
 #EXTINF:-1 tvg-id="BABY.TV.tr" tvg-name="Baby TV" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/BabyTV_logo.svg/512px-BabyTV_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Baby TV
 https://saran-live.ercdn.net/babytv/index.m3u8#all
 #EXTINF:-1 tvg-name="BBC First Turkiye" tvg-logo="https://i.imgur.com/UBoBYUI.png" group-title="TÜM KANALLAR (A-Z Sıralı)",BBC First Turkiye
@@ -262,6 +260,8 @@ https://tv-e-okul00.medya.trt.com.tr/master.m3u8#all
 https://tv-e-okul02.medya.trt.com.tr/master.m3u8#all
 #EXTINF:-1 tvg-name="TRT EBA Ortaokul" tvg-logo="https://i.imgur.com/CRBfZi4.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT EBA Ortaokul
 https://tv-e-okul01.medya.trt.com.tr/master.m3u8#all
+#EXTINF:-1 tvg-name="TRT Genc" tvg-logo="https://i.imgur.com/fCHQYWS.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT Genc
+https://tv-trtgenc.medya.trt.com.tr/master.m3u8#all
 #EXTINF:-1 tvg-id="TRT.HABER.HD.tr" tvg-name="TRT Haber" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Haber_logo_2021.svg/512px-TRT_Haber_logo_2021.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT Haber
 https://tv-trthaber.medya.trt.com.tr/master.m3u8#all
 #EXTINF:-1 tvg-id="TRT.KURDİ.tr" tvg-name="TRT Kurdî" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TRT_Kurd%C3%AE_logo_2021.svg/512px-TRT_Kurd%C3%AE_logo_2021.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT Kurdî
@@ -488,6 +488,8 @@ https://canli.sercemtv.com.tr/hls/0/stream.m3u8
 https://tv-trt2.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRT.AVAZ.HD.tr" tvg-name="TRT Avaz" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/TRT_Avaz_logo_2021.svg/512px-TRT_Avaz_logo_2021.svg.png" group-title="Kültür & Dini",TRT Avaz
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-name="TRT Genc" tvg-logo="https://i.imgur.com/fCHQYWS.png" group-title="Kültür & Dini",TRT Genc
+https://tv-trtgenc.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRT.KURDİ.tr" tvg-name="TRT Kurdî" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TRT_Kurd%C3%AE_logo_2021.svg/512px-TRT_Kurd%C3%AE_logo_2021.svg.png" group-title="Kültür & Dini",TRT Kurdî
 https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRT.MÜZİK.tr" tvg-name="TRT Müzik" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/TRT_M%C3%BCzik_logo_2021.svg/512px-TRT_M%C3%BCzik_logo_2021.svg.png" group-title="Kültür & Dini",TRT Müzik
@@ -512,8 +514,6 @@ http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
 #EXTINF:-1 tvg-name="ATV Alanya" group-title="Yerel",ATV Alanya
 https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8
-#EXTINF:-1 tvg-name="ATV Avrupa" tvg-logo="https://i.tmgrup.com.tr/aav/site/v1/i/atv-avrupa-logo.png" group-title="Yerel",ATV Avrupa
-https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8
 #EXTINF:-1 tvg-name="Bi Kanal" group-title="Yerel",Bi Kanal
 https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8
 #EXTINF:-1 tvg-name="Bir TV" group-title="Yerel",Bir TV
