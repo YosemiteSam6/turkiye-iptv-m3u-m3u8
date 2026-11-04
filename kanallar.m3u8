@@ -97,7 +97,7 @@ https://yayin30.haber100.com/live/finansturk/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Flash Haber TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Flash_Haber_logosu.png/512px-Flash_Haber_logosu.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Flash Haber TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Fortuna TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Fortuna TV
-https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8#all
+https://edge2.taksimbilisim.com/ftvturk/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="FRT TV" group-title="TÜM KANALLAR (A-Z Sıralı)",FRT TV
 https://edge1.taksimbilisim.com/frttv/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Haber Global" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Haber_Global_logo.svg/512px-Haber_Global_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Haber Global
@@ -120,8 +120,6 @@ https://stream.ilketv.com.tr/hls/ilkecanli.m3u8#all
 https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 15" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 15
 https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Kanal 19" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 19
-https://live.euromediacenter.com/kanal19/tracks-v1a1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 23" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 23
 https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 26" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 26
@@ -212,6 +210,8 @@ https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8#all
 https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8#all
 #EXTINF:-1 tvg-name="RTG int." tvg-logo="https://i.imgur.com/ZpUNou4.png" group-title="TÜM KANALLAR (A-Z Sıralı)",RTG int.
 http://213.91.179.28:8000/play/a0bw#all
+#EXTINF:-1 tvg-name="Ruha TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Ruha TV
+https://ruhatv.radyotelekom.com.tr:3515/live/ruhatvlive.m3u8#all
 #EXTINF:-1 tvg-name="Semerkand TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Semerkand TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Sercem TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Sercem TV
@@ -543,7 +543,7 @@ https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8
 #EXTINF:-1 tvg-name="ETV Kayseri" group-title="Yerel",ETV Kayseri
 https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8
 #EXTINF:-1 tvg-name="Fortuna TV" group-title="Yerel",Fortuna TV
-https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
+https://edge2.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="FRT TV" group-title="Yerel",FRT TV
 https://edge1.taksimbilisim.com/frttv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Hunat TV" group-title="Yerel",Hunat TV
@@ -554,8 +554,6 @@ https://edge1.taksimbilisim.com/iceltv/bant1/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 15" group-title="Yerel",Kanal 15
 https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8
-#EXTINF:-1 tvg-name="Kanal 19" group-title="Yerel",Kanal 19
-https://live.euromediacenter.com/kanal19/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 23" group-title="Yerel",Kanal 23
 https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
 #EXTINF:-1 tvg-name="Kanal 26" group-title="Yerel",Kanal 26
@@ -598,6 +596,8 @@ https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
 #EXTINF:-1 tvg-name="RTG int." tvg-logo="https://i.imgur.com/ZpUNou4.png" group-title="Yerel",RTG int.
 http://213.91.179.28:8000/play/a0bw
+#EXTINF:-1 tvg-name="Ruha TV" group-title="Yerel",Ruha TV
+https://ruhatv.radyotelekom.com.tr:3515/live/ruhatvlive.m3u8
 #EXTINF:-1 tvg-name="Sonmez TV" group-title="Yerel",Sonmez TV
 https://sonmeztv.ozelip.com.tr:3826/live/sonmeztvlive.m3u8
 #EXTINF:-1 tvg-name="Sun RTV" group-title="Yerel",Sun RTV
