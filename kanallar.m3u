@@ -120,14 +120,14 @@ https://stream.ilketv.com.tr/hls/ilkecanli.m3u8#all
 https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 15" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 15
 https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8#all
+#EXTINF:-1 tvg-name="Kanal 19" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 19
+https://live.euromediacenter.com/kanal19/tracks-v1a1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 23" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 23
 https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 26" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 26
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 3" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 3
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Kanal 33" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 33
-https://edge2.taksimbilisim.com/kanal33/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 34" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 34
 https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Kanal 58" group-title="TÜM KANALLAR (A-Z Sıralı)",Kanal 58
@@ -554,14 +554,14 @@ https://edge1.taksimbilisim.com/iceltv/bant1/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 15" group-title="Yerel",Kanal 15
 https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8
+#EXTINF:-1 tvg-name="Kanal 19" group-title="Yerel",Kanal 19
+https://live.euromediacenter.com/kanal19/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 23" group-title="Yerel",Kanal 23
 https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8
 #EXTINF:-1 tvg-name="Kanal 26" group-title="Yerel",Kanal 26
 https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 3" group-title="Yerel",Kanal 3
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8
-#EXTINF:-1 tvg-name="Kanal 33" group-title="Yerel",Kanal 33
-https://edge2.taksimbilisim.com/kanal33/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 34" group-title="Yerel",Kanal 34
 https://live.euromediacenter.com/kanal34/tracks-v1a1/playlist.m3u8
 #EXTINF:-1 tvg-name="Kanal 58" group-title="Yerel",Kanal 58
