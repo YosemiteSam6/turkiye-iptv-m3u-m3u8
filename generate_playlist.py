@@ -21,6 +21,9 @@ import unicodedata
 from datetime import datetime, timezone, timedelta
 from concurrent.futures import ThreadPoolExecutor
 import requests
+import urllib3
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # İstek ve Zaman Aşımı Ayarları (Toleranslı Test)
 TIMEOUT_CONNECT = 3.5
@@ -62,7 +65,7 @@ def is_foreign_or_blocked(name: str) -> bool:
     if n in BLOCKED_CHANNELS:
         return True
     blocked_keywords = [
-        'almahriah', 'elsharq', 'mekameleen', 'al-zahra', 'persiana',
+        'almahriah', 'elsharq', 'mekameleen', 'al-zahra', 'al zahra', 'persiana',
         'sat 7', 'luys', 'tyt turk', 'kanal avrupa', 'trt arabi', 'trt world'
     ]
     return any(b in n for b in blocked_keywords)
@@ -368,6 +371,20 @@ VERIFIED_CHANNELS = [
         "url": "https://tv-trt3.live.trt.com.tr/master.m3u8",
         "logo": "https://i.imgur.com/JrWFwBd.png"
     },
+    {
+        "name": "TVNET",
+        "category": "Haber",
+        "epg_id": "TVNET.tr",
+        "url": "https://tvnet-live.lg.mncdn.com/tvnet-live/tvnet/playlist.m3u8",
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tvnet-tr.png"
+    },
+    {
+        "name": "Ülke TV",
+        "category": "Haber",
+        "epg_id": "ÜLKE.TV.HD.tr",
+        "url": "https://livetv.radyotvonline.net/kanal7live/ulketv/playlist.m3u8",
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/ulke-tv-tr.png"
+    },
 
     # ==================== SPOR ====================
     {
@@ -573,7 +590,14 @@ EPG_MAP = {
     "kon tv": "KON.TV.tr",
     "olay tv": "OLAY.TV.tr",
     "kanal 16": "KANAL.16.tr",
-    "line tv": "LINETV.tr"
+    "line tv": "LINETV.tr",
+
+    # Yeni Eklenen Popüler Kanallar
+    "trt 4k": "TRT.4K.tr",
+    "tabii": "TABİİ.tr",
+    "krt": "KRT.tr",
+    "krt tv": "KRT.tr",
+    "tvnet": "TVNET.tr"
 }
 
 # Statik ve Doğrulanmış Kanal Logoları Kütüphanesi
@@ -595,7 +619,19 @@ STATIC_LOGOS = {
     "frt tv": "https://s.gercekfethiye.com/dosya/logo/svg/logo-ana.svg",
     "malatya vuslat tv": "https://vuslattv.com.tr/uploads/logo/logo_66bdb4352c7ab7-60769650.png",
     "ruha tv": "https://ruhatv.com.tr/kunye_dosyalar/kunye_logo.png",
-    "karadeniz tv": "https://upload.wikimedia.org/wikipedia/tr/b/bb/Karadeniz_TV_logosu.png"
+    "karadeniz tv": "https://upload.wikimedia.org/wikipedia/tr/b/bb/Karadeniz_TV_logosu.png",
+    "krt tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/krt-tr.png",
+    "krt": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/krt-tr.png",
+    "tvnet": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tvnet-tr.png",
+    "ülke tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/ulke-tv-tr.png",
+    "ulke tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/ulke-tv-tr.png",
+    "trt 4k": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuf0VbbCYUyd_hUcaxw_iOtp84-aGKdfkvog&s",
+    "tabii": "https://cms-tabii-assets.tabii.com/thumbnails/23963_781e9dee-cbd8-491a-b166-0b1df25b3bd0_720.jpeg",
+    "dmax": "https://upload.wikimedia.org/wikipedia/commons/2/25/DMAX_Logo_16_05_2011.jpg",
+    "tlc": "https://upload.wikimedia.org/wikipedia/commons/9/92/Tlc_logo_discovery.jpg",
+    "euro d": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/euro-d-tr.png",
+    "show türk": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/show-turk-tr.png",
+    "atv avrupa": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/atv-avrupa-tr.png"
 }
 
 def clean_channel_name(raw_name: str) -> str:
@@ -620,37 +656,189 @@ def clean_channel_name(raw_name: str) -> str:
         "A2TV": "A2",
         "AHaber": "A Haber",
         "ASpor": "A Spor",
+        "ASPOR": "A Spor",
+        "A SPOR": "A Spor",
+        "A HABER": "A Haber",
+        "A PARA": "A Para",
+        "AKIT TV": "Akit TV",
+        "ALANYA ATV": "ATV Alanya",
+        "ANADOLUNET TV": "Anadolu Net TV",
+        "BENGU TURK": "Bengütürk TV",
+        "BENGÜ TÜRK": "Bengütürk TV",
+        "Benguturk TV": "Bengütürk TV",
+        "BEYAZ TV": "Beyaz TV",
+        "BIR TV": "Bir TV",
+        "BİR TV": "Bir TV",
+        "BODRUM KENT TV": "Bodrum Kent TV",
+        "BURSA LiNE TV": "Line TV",
+        "CAY TV": "Çay TV",
+        "Cay TV": "Çay TV",
+        "CINE 1": "Cine 1",
+        "Ciftci TV": "Çiftçi TV",
+        "ÇİFTÇİ TV": "Çiftçi TV",
+        "CNN TURK": "CNN Türk",
+        "DENiZ POSTASI TV": "Deniz Postasi TV",
+        "DiYANET TV": "Diyanet TV",
+        "DIYANET TV": "Diyanet TV",
+        "DOST TV": "Dost TV",
+        "Dream Turk": "Dream Türk",
+        "DREAM TURK": "Dream Türk",
+        "EKOL TV": "Ekol TV",
+        "Ekoturk": "Ekotürk",
+        "EKOTURK": "Ekotürk",
+        "ER TV": "ERTV",
+        "ERCİYES TV": "Erciyes TV",
+        "ES TV": "ES TV",
+        "ETV KAYSERi": "ETV Kayseri",
+        "EURO D": "Euro D",
+        "EURO D HD SS": "Euro D",
+        "EUROSTAR": "Eurostar",
+        "FB TV": "FB TV",
+        "GRT GAZİANTEP TV": "Gaziantep GRT TV",
+        "GUNEYDOGU TV": "Güneydoğu TV",
+        "GURBET 24 TV": "Gurbet 24 TV",
+        "HABER 61": "Haber61 TV",
+        "HABER GLOBAL": "Haber Global",
+        "HABER TURK": "Habertürk TV",
+        "HABERTURK": "Habertürk TV",
         "Haberturk": "Habertürk TV",
         "Haberturk TV": "Habertürk TV",
-        "Kanal 7 (Turkiye)": "Kanal 7",
-        "Kanal D (Turkiye)": "Kanal D",
-        "Star TV (Turkiye)": "Star TV",
-        "TV8 (Turkiye)": "TV8",
-        "Benguturk TV": "Bengütürk TV",
-        "Tele 1": "Tele1",
-        "Tele1 TV": "Tele1",
-        "TRT 1 (1440p)": "TRT 1",
-        "TRT Haber (720p)": "TRT Haber",
-        "TRT Spor Yildiz": "TRT Spor Yıldız",
-        "TRT Cocuk": "TRT Çocuk",
+        "HALK TV": "Halk TV",
+        "HT Spor": "HTSpor TV",
+        "HT SPOR": "HTSpor TV",
+        "HTSpor TV": "HTSpor TV",
+        "HUNAT TV": "Hunat TV",
+        "iCEL TV": "Icel TV",
+        "KANAL 12": "Kanal 12",
+        "KANAL 15": "Kanal 15",
+        "KANAL 19": "Kanal 19",
+        "KANAL 23": "Kanal 23",
+        "KANAL 26": "Kanal 26",
+        "KANAL 3": "Kanal 3",
+        "KANAL 32": "Kanal 32",
+        "KANAL 33": "Kanal 33",
+        "KANAL 34": "Kanal 34",
+        "KANAL 53": "Kanal 53",
+        "KANAL 58": "Kanal 58",
+        "KANAL 68": "Kanal 68",
+        "KANAL 7": "Kanal 7",
+        "KANAL 7 (Turkiye)": "Kanal 7",
+        "KANAL 7 AVRUPA": "Kanal 7 Avrupa",
+        "KANAL ADA": "Kanal Ada",
+        "KANAL B": "Kanal B",
+        "KANAL D": "Kanal D",
+        "KANAL D (Turkiye)": "Kanal D",
+        "KANAL D HD": "Kanal D",
+        "KANAL FIRAT": "Kanal Fırat",
+        "Kanal Firat": "Kanal Fırat",
+        "KANAL PLUS": "Kanal Plus",
+        "KANAL URFA": "Kanal Urfa",
+        "KANAL Z": "Kanal Z",
+        "KARDELEN TV": "Kardelen TV",
+        "KAY TV": "Kay TV",
+        "KOCAELİ TV": "Kocaeli TV",
+        "KRAL POP": "Kral Pop TV",
+        "KRAL POP TV FHD": "Kral Pop TV",
+        "KRT": "KRT TV",
+        "KTV KONYA": "KTV Konya",
+        "Lalegul TV": "Lalegül TV",
+        "LALEGUL TV": "Lalegül TV",
+        "LIFE TV": "Life TV",
+        "LİFE TV": "Life TV",
+        "MAVi KARADENiZ TV": "MaviKaradeniz TV",
+        "MELTEM TV": "Meltem TV",
+        "MERCAN TV": "Mercan TV",
         "Minika Cocuk": "Minika Çocuk",
         "Minika Go": "Minika Go",
-        "TRT Diyanet Cocuk": "TRT Diyanet Çocuk",
-        "TRT Muzik": "TRT Müzik",
-        "TRT Turk": "TRT Türk",
+        "MINIKA GO": "Minika Go",
+        "MUGLA TÜRK TV": "Muğla Türk TV",
         "NOW TV": "NOW",
+        "NR 1 TV": "Number 1 TV",
+        "NR 1 DAMAR": "Number 1 Damar",
+        "NR 1 TURK": "Number 1 Türk",
+        "NR1 TV": "Number 1 TV",
+        "NR1 DAMAR": "Number 1 Damar",
+        "NR1 TURK": "Number 1 Türk",
+        "NR1 ASK": "Number 1 Ask",
+        "NR1 DANCE": "Number 1 Dance",
+        "ORDU BEL TV": "Ordu Bel TV",
+        "POWER TURK": "PowerTurk TV",
+        "POWER TURK SLOW": "PowerTurk Slow",
+        "POWER TURK TAPTAZE": "PowerTurk Taptaze",
+        "POWER TV AKUSTiK": "PowerTurk Akustik",
+        "REHBER TV": "Rehber TV",
+        "RIZE TURK HD": "Rize Türk TV",
+        "SEMERKAND TV": "Semerkand TV",
+        "SHOW TURK": "Show Türk",
+        "SHOW TV": "Show TV",
+        "SHOW TV HD": "Show TV",
+        "SPORTS TV": "Sports TV",
+        "STAR TV": "Star TV",
+        "STAR TV (Turkiye)": "Star TV",
+        "STAR TV HD": "Star TV",
+        "SUN TV": "Sun RTV",
+        "TABII TV": "Tabii",
+        "Tabii TV HD": "Tabii",
+        "TELE 1": "Tele1",
+        "Tele 1": "Tele1",
+        "Tele1 TV": "Tele1",
+        "TELE1": "Tele1",
+        "TEMPO TV": "Tempo TV",
+        "TEVE 2": "Teve2",
+        "TEVE2": "Teve2",
+        "TGRT HABER": "TGRT Haber",
+        "TGRT HABER HD": "TGRT Haber",
+        "TH TURK HABER TV": "TurkHaber TV",
+        "TIVI 6": "Tivi 6",
+        "TJK TV": "TJK TV",
+        "TON TV": "Ton TV",
+        "TRAKYA TÜRK TV": "Trakya Türk TV",
+        "TRT 1 (1440p)": "TRT 1",
+        "TRT 4K": "TRT 4K",
+        "TRT AVAZ": "TRT Avaz",
+        "TRT COCUK": "TRT Çocuk",
+        "TRT Cocuk": "TRT Çocuk",
+        "TRT COCUK DIYANET": "TRT Diyanet Çocuk",
+        "TRT Diyanet Cocuk": "TRT Diyanet Çocuk",
+        "TRT DİYANET ÇOCUK": "TRT Diyanet Çocuk",
+        "TRT EBA ORTAKUL": "TRT EBA Ortaokul",
+        "TRT Haber (720p)": "TRT Haber",
+        "TRT HABER": "TRT Haber",
+        "TRT KURDI": "TRT Kurdî",
+        "TRT MUZIK": "TRT Müzik",
+        "TRT Muzik": "TRT Müzik",
+        "TRT MÜZiK": "TRT Müzik",
+        "TRT Spor Yildiz": "TRT Spor Yıldız",
+        "TRT SPOR": "TRT Spor",
+        "TRT SPOR YILDIZ": "TRT Spor Yıldız",
+        "TRT Turk": "TRT Türk",
+        "TRT TURK": "TRT Türk",
+        "TRT TÜRK": "TRT Türk",
+        "TRT1": "TRT 1",
+        "TURKHABER": "TurkHaber TV",
         "TV 100": "TV100",
-        "TV 8.5": "TV8.5",
+        "TV 4": "TV 4",
+        "TV 41": "TV 41",
+        "TV 52": "TV 52",
         "TV 8": "TV8",
-        "BabyTV": "Baby TV",
-        "HTSpor TV": "HTSpor TV",
-        "HT Spor": "HTSpor TV",
-        "Dream Turk": "Dream Türk",
-        "Ciftci TV": "Çiftçi TV",
-        "Cay TV": "Çay TV",
-        "Lalegul TV": "Lalegül TV",
-        "Kanal Firat": "Kanal Fırat",
-        "Ekoturk": "Ekotürk"
+        "TV 8 (Turkiye)": "TV8",
+        "TV 8.5": "TV8.5",
+        "TV 8 INT": "TV8 Int",
+        "TV 8bucuk": "TV8.5",
+        "TV 264": "TV 264",
+        "TV4": "TV 4",
+        "TV8 (Turkiye)": "TV8",
+        "TVNET": "TVNET",
+        "TV NET": "TVNET",
+        "ULKE TV": "Ülke TV",
+        "ÜLKE TV": "Ülke TV",
+        "UR FANATiK TV": "Urfa Natik TV",
+        "VAN GOLU TV": "Van Gölü TV",
+        "VUSLAT TV": "Malatya Vuslat TV",
+        "Zarok TV Kürtçe": "Zarok TV",
+        "24": "24 TV",
+        "360 TV": "360",
+        "BabyTV": "Baby TV"
     }
     return name_map.get(name, name)
 
@@ -663,7 +851,7 @@ def get_channel_category(name: str) -> str:
         return 'Çocuk'
         
     # 2. Ulusal Kanallar
-    if n in ['trt 1', 'atv', 'kanal d', 'star tv', 'now', 'tv8', 'tv8.5', 'show tv', 'show max', 'kanal 7', 'kanal 7 avrupa', 'a2', 'teve2', 'beyaz tv', '360', 'tlc', 'euro d', 'tv 4']:
+    if n in ['trt 1', 'atv', 'kanal d', 'star tv', 'now', 'tv8', 'tv8.5', 'show tv', 'show max', 'kanal 7', 'kanal 7 avrupa', 'a2', 'teve2', 'beyaz tv', '360', 'tlc', 'euro d', 'tv 4', 'trt 4k']:
         return 'Ulusal'
         
     # 3. Spor
@@ -671,7 +859,7 @@ def get_channel_category(name: str) -> str:
         return 'Spor'
         
     # 4. Haber & Ekonomi
-    if any(k in n for k in ['haber', 'news', 'bloomberg', 'finans', 'dha', 'tele1', 'halk tv', '24 tv', 'tv100', 'bengütürk', 'ekotürk', 'ekoturk', 'ulusal kanal', 'tbmm', 'cnbc-e', 'cnbce', 'kanal b', 'ilke']):
+    if any(k in n for k in ['haber', 'news', 'bloomberg', 'finans', 'dha', 'tele1', 'halk tv', '24 tv', 'tv100', 'bengütürk', 'ekotürk', 'ekoturk', 'ulusal kanal', 'tbmm', 'cnbc-e', 'cnbce', 'kanal b', 'ilke', 'krt', 'tvnet', 'ülke tv', 'ulke tv']):
         return 'Haber'
         
     # 5. Belgesel
@@ -679,15 +867,15 @@ def get_channel_category(name: str) -> str:
         return 'Belgesel'
         
     # 6. Müzik
-    if any(k in n for k in ['müzik', 'muzik', 'music', 'power', 'kral', 'dream', 'nr1', 'number 1', 'damar', 'pop', 'akustik', 'slow', 'dance']):
+    if any(k in n for k in ['müzik', 'muzik', 'music', 'power', 'kral', 'dream', 'nr1', 'nr 1', 'number 1', 'damar', 'pop', 'akustik', 'slow', 'dance', 'arabesk']):
         return 'Müzik'
         
     # 7. Sinema & Dizi
-    if any(k in n for k in ['sinema', 'cinema', 'film', 'dizi', 'bbc first', 'cine 1', 'cine1', 'kanal plus']):
+    if any(k in n for k in ['sinema', 'cinema', 'film', 'dizi', 'bbc first', 'cine 1', 'cine1', 'kanal plus', 'tabii', 'screen', 'moviesmart']):
         return 'Sinema & Dizi'
         
     # 8. Kültür & Dini
-    if any(k in n for k in ['trt 2', 'diyanet', 'semerkand', 'dost tv', 'lalegül', 'lalegul', 'hilal', 'kudus', 'kudüs', 'berat', 'rehber', 'vav', 'meltem', 'trt avaz', 'trt kurdî', 'trt kurdi', 'trt türk', 'cem tv', 'kanal hayat', 'yol tv', 'trt genc']):
+    if any(k in n for k in ['trt 2', 'diyanet', 'semerkand', 'dost tv', 'lalegül', 'lalegul', 'hilal', 'kudus', 'kudüs', 'berat', 'rehber', 'vav', 'meltem', 'trt avaz', 'trt kurdî', 'trt kurdi', 'trt türk', 'cem tv', 'kanal hayat', 'yol tv', 'trt genc', 'kabe', 'quran', 'madinah', 'makkah']):
         return 'Kültür & Dini'
         
     # 9. Yerel (Varsayılan)
@@ -776,7 +964,7 @@ def check_single_url(session, url: str, retries: int = 1) -> bool:
     """URL'nin canlı ve geçerli bir HLS / m3u8 akışı olduğunu test eder."""
     for _ in range(retries):
         try:
-            r = session.get(url, headers=HEADERS, timeout=(TIMEOUT_CONNECT, TIMEOUT_READ), stream=True)
+            r = session.get(url, headers=HEADERS, timeout=(TIMEOUT_CONNECT, TIMEOUT_READ), stream=True, verify=False)
             if r.status_code in (200, 206):
                 chunk = next(r.iter_content(chunk_size=512), b'')
                 if b'#EXTM3U' in chunk or b'#EXTINF' in chunk or len(chunk) > 100:
@@ -846,6 +1034,65 @@ def check_stream(item):
         'epg_id': epg_id,
         'ok': False
     }
+
+def fetch_onureroz_channels():
+    """OnurEroz Türkiye listelerindeki (index.m3u & tv2.m3u) güncel kanalları ve alternatif yedek adreslerini çeker."""
+    urls = [
+        'https://onureroz.com/indirmeler/turk/index.m3u',
+        'https://onureroz.com/indirmeler/turk/tv2.m3u'
+    ]
+    items = []
+    logo_map = {}
+    for playlist_url in urls:
+        try:
+            r = requests.get(playlist_url, headers=HEADERS, timeout=10)
+            if r.status_code == 200:
+                lines = r.text.splitlines()
+                curr_name = ""
+                curr_logo = ""
+                curr_group = ""
+                curr_epg = ""
+                fallbacks = []
+                for line in lines:
+                    if line.startswith('#EXTINF'):
+                        m_name = re.findall(r',([^,]+)$', line)
+                        raw_title = m_name[0].strip() if m_name else ''
+                        m_logo = re.search(r'tvg-logo="([^"]+)"', line)
+                        curr_logo = m_logo.group(1).strip() if m_logo else ''
+                        m_group = re.search(r'group-title="([^"]+)"', line)
+                        curr_group = m_group.group(1).strip() if m_group else ''
+                        m_epg = re.search(r'tvg-id="([^"]+)"', line)
+                        curr_epg = m_epg.group(1).strip() if m_epg and m_epg.group(1) != 'ext' else ''
+
+                        # Yedek, Yedek2, Yedek3 ... adreslerini failover listesine al
+                        y_urls = re.findall(r'Yedek\d*="([^"]+)"', line)
+                        fallbacks = [y for y in y_urls if y.startswith('http')]
+
+                        if not is_foreign_or_blocked(raw_title):
+                            curr_name = clean_channel_name(raw_title)
+                            if curr_name and curr_logo:
+                                logo_map[curr_name.lower()] = curr_logo
+                                norm_key = curr_name.lower().replace('ç','c').replace('ğ','g').replace('ı','i').replace('ö','o').replace('ş','s').replace('ü','u')
+                                logo_map[norm_key] = curr_logo
+                        else:
+                            curr_name = ""
+                    elif curr_name and line.startswith('http'):
+                        items.append({
+                            'name': curr_name,
+                            'url': line.strip(),
+                            'logo': curr_logo,
+                            'category': curr_group or get_channel_category(curr_name),
+                            'epg_id': curr_epg,
+                            'fallbacks': fallbacks,
+                            'is_verified': False
+                        })
+                        curr_name = ""
+                        curr_epg = ""
+                        fallbacks = []
+                print(f"[OnurEroz] '{playlist_url.split('/')[-1]}' listesinden {len(items)} yayın çekildi.")
+        except Exception as e:
+            print(f"[OnurEroz] Çekme hatası ({playlist_url}): {e}")
+    return items, logo_map
 
 def fetch_famelack_channels():
     """Famelack veri tabanındaki Türkiye kanallarını çeker."""
@@ -954,13 +1201,19 @@ def build_playlist():
             'is_verified': True
         })
 
-    # IPTV-org ve Famelack listelerini ekle (Logolu yayınlar öncelikli olsun diye IPTV-org önce eklenir)
+    # OnurEroz, IPTV-org ve Famelack listelerini ekle (Tüm zengin yerli kaynaklar)
+    onur_candidates, onur_logo_map = fetch_onureroz_channels()
     iptv_candidates, iptv_logo_map = fetch_iptv_org_channels()
     famelack_candidates = fetch_famelack_channels()
+
+    # Birleşik logo haritası (IPTV-org + OnurEroz)
+    combined_logo_map = {**iptv_logo_map, **onur_logo_map}
+
+    all_candidates.extend(onur_candidates)
     all_candidates.extend(iptv_candidates)
     all_candidates.extend(famelack_candidates)
 
-    # 2. URL Bazlı Tekilleştirme (Logo ve EPG korumalı)
+    # 2. URL Bazlı Tekilleştirme (Logo, Failover ve EPG korumalı)
     seen_urls = {}
     for item in all_candidates:
         url = item['url']
@@ -972,6 +1225,12 @@ def build_playlist():
                 seen_urls[url]['logo'] = item['logo']
             if not seen_urls[url].get('epg_id') and item.get('epg_id'):
                 seen_urls[url]['epg_id'] = item['epg_id']
+            if item.get('fallbacks'):
+                existing_fb = seen_urls[url].get('fallbacks', [])
+                for fb in item['fallbacks']:
+                    if fb not in existing_fb and fb != url:
+                        existing_fb.append(fb)
+                seen_urls[url]['fallbacks'] = existing_fb
 
     unique_candidates = list(seen_urls.values())
 
@@ -1014,16 +1273,16 @@ def build_playlist():
             # Sadece resmi listede kendi EPG kimliği bulunan kanallar eşleştirilir
             epg_id = EPG_MAP.get(key, '')
 
-        # Logo çözümleme hiyerarşisi: Verified -> Akış Logosu -> Statik Kütüphane -> IPTV-org Logo Haritası
+        # Logo çözümleme hiyerarşisi: Verified -> Akış Logosu -> Statik Kütüphane -> Birleşik Logo Haritası
         if not logo:
             if key in STATIC_LOGOS:
                 logo = STATIC_LOGOS[key]
             elif norm_key in STATIC_LOGOS:
                 logo = STATIC_LOGOS[norm_key]
-            elif key in iptv_logo_map:
-                logo = iptv_logo_map[key]
-            elif norm_key in iptv_logo_map:
-                logo = iptv_logo_map[norm_key]
+            elif key in combined_logo_map:
+                logo = combined_logo_map[key]
+            elif norm_key in combined_logo_map:
+                logo = combined_logo_map[norm_key]
 
         if key not in final_channel_map:
             final_channel_map[key] = {
@@ -1048,10 +1307,10 @@ def build_playlist():
                 ch['logo'] = STATIC_LOGOS[key]
             elif norm_key in STATIC_LOGOS:
                 ch['logo'] = STATIC_LOGOS[norm_key]
-            elif key in iptv_logo_map:
-                ch['logo'] = iptv_logo_map[key]
-            elif norm_key in iptv_logo_map:
-                ch['logo'] = iptv_logo_map[norm_key]
+            elif key in combined_logo_map:
+                ch['logo'] = combined_logo_map[key]
+            elif norm_key in combined_logo_map:
+                ch['logo'] = combined_logo_map[norm_key]
 
     final_channels = list(final_channel_map.values())
     print(f"Tekilleştirme sonrası net yerli kanal sayısı: {len(final_channels)}")
