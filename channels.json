@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-08 22:14:10 (TSİ)",
-  "total_unique_channels": 207,
-  "total_extended_entries": 459,
+  "updated_at": "2026-11-08 22:43:30 (TSİ)",
+  "total_unique_channels": 204,
+  "total_extended_entries": 441,
   "total_kids_channels": 12,
   "total_top50_channels": 50,
   "category_counts": {
-    "TÜM KANALLAR (A-Z Sıralı)": 207,
+    "TÜM KANALLAR (A-Z Sıralı)": 204,
     "TOP 50": 50,
     "Çocuk": 12,
     "Haber": 27,
     "Spor": 9,
     "Belgesel": 4,
-    "Müzik": 21,
-    "Sinema & Dizi": 5,
+    "Müzik": 22,
+    "Sinema & Dizi": 10,
     "Kültür & Dini": 17,
-    "Yerel": 87
+    "Yerel": 86
   },
   "epg_source": "https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz",
   "playlists": {
@@ -516,7 +516,7 @@
     },
     {
       "name": "Beyaz TV",
-      "category": "ULUSAL",
+      "category": "TOP 50",
       "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/beyaz-tv-tr.png",
       "epg_id": "BEYAZ.TV.HD.tr",
       "url": "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8",
@@ -540,7 +540,7 @@
     },
     {
       "name": "Tivi 6",
-      "category": "ULUSAL",
+      "category": "TOP 50",
       "logo": "https://i.ibb.co/9H3DMWz/tivi6.png",
       "epg_id": "",
       "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
@@ -624,14 +624,6 @@
       "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EKA%3C/text%3E%3C/svg%3E",
       "epg_id": "",
       "url": "http://145.239.58.133:28008/kanalada/kanalada/sec-f5-v1-a1.m3u8?app=supersatforum",
-      "is_verified": false
-    },
-    {
-      "name": "Kanal Plus",
-      "category": "Sinema & Dizi",
-      "logo": "",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -789,7 +781,7 @@
     {
       "name": "DAMAR TV",
       "category": "Müzik",
-      "logo": "",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EDT%3C/text%3E%3C/svg%3E",
       "epg_id": "",
       "url": "https://tvsms.club/tv.php?kanal=damar&file=.m3u8",
       "is_verified": false
@@ -797,7 +789,7 @@
     {
       "name": "ARABESK TV",
       "category": "Müzik",
-      "logo": "",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EAT%3C/text%3E%3C/svg%3E",
       "epg_id": "",
       "url": "https://tvsms.club/tv.php?kanal=arabeskyeni&file=.m3u8",
       "is_verified": false
@@ -805,7 +797,7 @@
     {
       "name": "SILA TV",
       "category": "Yerel",
-      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EFT%3C/text%3E%3C/svg%3E",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EST%3C/text%3E%3C/svg%3E",
       "epg_id": "",
       "url": "https://tvsms.club/tv.php?kanal=silatv&file=.m3u8",
       "is_verified": false
@@ -813,7 +805,7 @@
     {
       "name": "ZEYNO TV",
       "category": "Yerel",
-      "logo": "",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EZT%3C/text%3E%3C/svg%3E",
       "epg_id": "",
       "url": "https://tvsms.club/tv.php?kanal=zeynotv&file=.m3u8",
       "is_verified": false
@@ -821,7 +813,7 @@
     {
       "name": "EZO TV",
       "category": "Yerel",
-      "logo": "",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EET%3C/text%3E%3C/svg%3E",
       "epg_id": "",
       "url": "https://tvsms.club/tvz.php?kanal=ezo&file=.m3u8",
       "is_verified": false
@@ -829,7 +821,7 @@
     {
       "name": "TOP POP TV",
       "category": "Müzik",
-      "logo": "",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3ETPT%3C/text%3E%3C/svg%3E",
       "epg_id": "",
       "url": "https://tvsms.club/tvz.php?kanal=toppop&file=.m3u8",
       "is_verified": false
@@ -837,7 +829,7 @@
     {
       "name": "A VİVA TV",
       "category": "Yerel",
-      "logo": "",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EAVT%3C/text%3E%3C/svg%3E",
       "epg_id": "",
       "url": "https://tvsms.club/tv.php?kanal=vivatv&file=.m3u8",
       "is_verified": false
@@ -845,7 +837,7 @@
     {
       "name": "ARMA TV",
       "category": "Yerel",
-      "logo": "",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EAT%3C/text%3E%3C/svg%3E",
       "epg_id": "",
       "url": "https://tvsms.club/tvz.php?kanal=arma&file=.m3u8",
       "is_verified": false
@@ -853,7 +845,7 @@
     {
       "name": "GENC SMS TV",
       "category": "Yerel",
-      "logo": "",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EGST%3C/text%3E%3C/svg%3E",
       "epg_id": "",
       "url": "https://tvsms.club/tv.php?kanal=genctv&file=.m3u8",
       "is_verified": false
