@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz"
 # Generated automatically for Android TV & Smart TV - Turkiye Canli TV
-# Total Verified Turkish Channels: 313
+# Total Verified Turkish Channels: 311
 
 #EXTINF:-1 tvg-id="24.TV.tr" tvg-name="24 TV" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="TÜM KANALLAR (A-Z Sıralı)",24 TV
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8#all
@@ -92,12 +92,10 @@ https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8#all
 https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8#all
 #EXTINF:-1 tvg-id="FENERBAHÇE.TV.tr" tvg-name="FB TV" tvg-logo="https://i.imgur.com/qBVqtYd.png" group-title="TÜM KANALLAR (A-Z Sıralı)",FB TV
 http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Finans Turk TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Finans Turk TV
-https://yayin30.haber100.com/live/finansturk/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Flash Haber TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Flash_Haber_logosu.png/512px-Flash_Haber_logosu.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Flash Haber TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Fortuna TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Fortuna TV
-https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8#all
+https://edge2.taksimbilisim.com/ftvturk/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="FRT TV" group-title="TÜM KANALLAR (A-Z Sıralı)",FRT TV
 https://edge1.taksimbilisim.com/frttv/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Haber Global" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Haber_Global_logo.svg/512px-Haber_Global_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Haber Global
@@ -374,8 +372,6 @@ https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
 https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
 #EXTINF:-1 tvg-name="Ekoturk" group-title="Haber",Ekoturk
 https://cdn.ekoturk.net/hls/master.m3u8
-#EXTINF:-1 tvg-name="Finans Turk TV" group-title="Haber",Finans Turk TV
-https://yayin30.haber100.com/live/finansturk/playlist.m3u8
 #EXTINF:-1 tvg-name="Flash Haber TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Flash_Haber_logosu.png/512px-Flash_Haber_logosu.png" group-title="Haber",Flash Haber TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="Haber Global" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Haber_Global_logo.svg/512px-Haber_Global_logo.svg.png" group-title="Haber",Haber Global
@@ -547,7 +543,7 @@ https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8
 #EXTINF:-1 tvg-name="ETV Kayseri" group-title="Yerel",ETV Kayseri
 https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8
 #EXTINF:-1 tvg-name="Fortuna TV" group-title="Yerel",Fortuna TV
-https://edge.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
+https://edge2.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="FRT TV" group-title="Yerel",FRT TV
 https://edge1.taksimbilisim.com/frttv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Hunat TV" group-title="Yerel",Hunat TV
