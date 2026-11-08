@@ -456,7 +456,7 @@ VERIFIED_CHANNELS = [
         "category": "Sinema & Dizi",
         "epg_id": "",
         "url": "https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3_output_0.m3u8",
-        "logo": "https://i.imgur.com/agn47sQ.png"
+        "logo": "https://cine1.com.tr/img/cine1loogo.png"
     },
 
     # ==================== KÜLTÜR & DİNİ ====================
@@ -576,6 +576,28 @@ EPG_MAP = {
     "line tv": "LINETV.tr"
 }
 
+# Statik ve Doğrulanmış Kanal Logoları Kütüphanesi
+STATIC_LOGOS = {
+    "show max": "https://www.showmax.com.tr/assets/dist/images/base/logo.svg",
+    "kanal b": "https://www.kanalb.com.tr/assets/images/logo/1683624355Kanal_B_logosu.png",
+    "cem tv": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Cem_TV_logo.png",
+    "cine 1": "https://cine1.com.tr/img/cine1loogo.png",
+    "as tv": "https://www.astv.com.tr/static/2026/07/06/astv-logo-1783346167-699-x80.jpeg",
+    "bodrum kent tv": "https://static.daktilo.com/sites/1600/uploads/2024/07/27/social.png",
+    "erciyes tv": "https://s.erciyestv.com.tr/dosya/logo/erciyes-tv-og.jpg",
+    "kanal urfa": "https://www.kanalurfa.com/upload/masaustu.png",
+    "bi kanal": "http://www.bikanal.com/uploads/banners/01K6DG6S1EPCZN7DQH406HGMES.webp",
+    "sonmez tv": "https://www.astv.com.tr/static/2026/07/06/astv-logo-1783346167-699-x80.jpeg",
+    "dost tv": "https://dosttv.com/wp-content/uploads/2020/09/dost-tv-logo.png",
+    "bir tv": "https://birtv.com.tr/wp-content/uploads/2022/10/bir-tv-logo.png",
+    "tbmm tv": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/TBMM_TV_logosu.png/512px-TBMM_TV_logosu.png",
+    "trt 3 / tbmm tv": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/TBMM_TV_logosu.png/512px-TBMM_TV_logosu.png",
+    "frt tv": "https://s.gercekfethiye.com/dosya/logo/svg/logo-ana.svg",
+    "malatya vuslat tv": "https://vuslattv.com.tr/uploads/logo/logo_66bdb4352c7ab7-60769650.png",
+    "ruha tv": "https://ruhatv.com.tr/kunye_dosyalar/kunye_logo.png",
+    "karadeniz tv": "https://upload.wikimedia.org/wikipedia/tr/b/bb/Karadeniz_TV_logosu.png"
+}
+
 def clean_channel_name(raw_name: str) -> str:
     """Kanal adlarındaki gereksiz etiketleri temizler ve standartlaştırır."""
     if not raw_name:
@@ -583,10 +605,10 @@ def clean_channel_name(raw_name: str) -> str:
     name = raw_name.strip()
     
     patterns = [
-        r'\s*\((?:1080p|720p|576p|480p|360p|1440p|4k|hd|sd)\)',
-        r'\s*\[(?:Not 24/7|Geo-blocked|Blocked)\]',
+        r'\s*\((?:1080p|720p|576p|480p|360p|1440p|4k|hd|sd|\d+p\w*)\)',
+        r'\s*\[.*?\]',
         r'\s*\((?:Turkiye|Turkey|TR)\)',
-        r'\b(?:1080p|720p|576p|480p|360p|1440p)\b',
+        r'\b(?:1080p|720p|576p|480p|360p|1440p|\d+p\w*)\b',
         r'\bSD\b',
     ]
     for p in patterns:
@@ -622,7 +644,13 @@ def clean_channel_name(raw_name: str) -> str:
         "TV 8": "TV8",
         "BabyTV": "Baby TV",
         "HTSpor TV": "HTSpor TV",
-        "HT Spor": "HTSpor TV"
+        "HT Spor": "HTSpor TV",
+        "Dream Turk": "Dream Türk",
+        "Ciftci TV": "Çiftçi TV",
+        "Cay TV": "Çay TV",
+        "Lalegul TV": "Lalegül TV",
+        "Kanal Firat": "Kanal Fırat",
+        "Ekoturk": "Ekotürk"
     }
     return name_map.get(name, name)
 
@@ -848,9 +876,10 @@ def fetch_famelack_channels():
     return items
 
 def fetch_iptv_org_channels():
-    """IPTV-org Türkiye listesindeki kanalları çeker."""
+    """IPTV-org Türkiye listesindeki kanalları ve logo haritasını çeker."""
     url = 'https://iptv-org.github.io/iptv/countries/tr.m3u'
     items = []
+    logo_map = {}
     try:
         r = requests.get(url, headers=HEADERS, timeout=10)
         if r.status_code == 200:
@@ -860,10 +889,14 @@ def fetch_iptv_org_channels():
             for line in lines:
                 if line.startswith('#EXTINF'):
                     m_logo = re.search(r'tvg-logo="([^"]+)"', line)
-                    curr_logo = m_logo.group(1) if m_logo else ''
+                    curr_logo = m_logo.group(1).strip() if m_logo and m_logo.group(1) else ''
                     raw_title = line.split(',')[-1].strip()
                     if not is_foreign_or_blocked(raw_title):
                         curr_name = clean_channel_name(raw_title)
+                        if curr_name and curr_logo:
+                            logo_map[curr_name.lower()] = curr_logo
+                            norm_key = curr_name.lower().replace('ç','c').replace('ğ','g').replace('ı','i').replace('ö','o').replace('ş','s').replace('ü','u')
+                            logo_map[norm_key] = curr_logo
                     else:
                         curr_name = ""
                 elif curr_name and line.startswith('http'):
@@ -874,10 +907,10 @@ def fetch_iptv_org_channels():
                         'is_verified': False
                     })
                     curr_name = ""
-            print(f"[IPTV-org] Toplam {len(items)} yerli yayın adresi çekildi.")
+            print(f"[IPTV-org] Toplam {len(items)} yerli yayın adresi ve {len(logo_map)} logo çekildi.")
     except Exception as e:
         print(f"[IPTV-org] Çekme hatası: {e}")
-    return items
+    return items, logo_map
 
 def format_m3u_entry(channel: dict, custom_group: str = None) -> list:
     """Standartlara uygun M3U kanal satırlarını üretir."""
@@ -921,18 +954,26 @@ def build_playlist():
             'is_verified': True
         })
 
-    # Famelack ve IPTV-org listelerini ekle (Yabancı kanallardan arındırılmış)
-    all_candidates.extend(fetch_famelack_channels())
-    all_candidates.extend(fetch_iptv_org_channels())
+    # IPTV-org ve Famelack listelerini ekle (Logolu yayınlar öncelikli olsun diye IPTV-org önce eklenir)
+    iptv_candidates, iptv_logo_map = fetch_iptv_org_channels()
+    famelack_candidates = fetch_famelack_channels()
+    all_candidates.extend(iptv_candidates)
+    all_candidates.extend(famelack_candidates)
 
-    # 2. URL Bazlı Tekilleştirme
-    seen_urls = set()
-    unique_candidates = []
+    # 2. URL Bazlı Tekilleştirme (Logo ve EPG korumalı)
+    seen_urls = {}
     for item in all_candidates:
         url = item['url']
         if url not in seen_urls:
-            seen_urls.add(url)
-            unique_candidates.append(item)
+            seen_urls[url] = item
+        else:
+            # URL çakışmasında eğer mevcut kayıtta logo yoksa ama bu kayıtta varsa logoyu aktar
+            if not seen_urls[url].get('logo') and item.get('logo'):
+                seen_urls[url]['logo'] = item['logo']
+            if not seen_urls[url].get('epg_id') and item.get('epg_id'):
+                seen_urls[url]['epg_id'] = item['epg_id']
+
+    unique_candidates = list(seen_urls.values())
 
     print(f"\nCanlılık testi yapılacak toplam benzersiz yerli yayın: {len(unique_candidates)}")
     print("Yayınlar eş zamanlı olarak kontrol ediliyor...")
@@ -953,6 +994,7 @@ def build_playlist():
         if not norm_name or is_foreign_or_blocked(norm_name):
             continue
         key = norm_name.lower()
+        norm_key = key.replace('ç','c').replace('ğ','g').replace('ı','i').replace('ö','o').replace('ş','s').replace('ü','u')
 
         # Doğrulanmış kanalların özellikleri önceliklidir
         verified_info = verified_map.get(key)
@@ -972,6 +1014,17 @@ def build_playlist():
             # Sadece resmi listede kendi EPG kimliği bulunan kanallar eşleştirilir
             epg_id = EPG_MAP.get(key, '')
 
+        # Logo çözümleme hiyerarşisi: Verified -> Akış Logosu -> Statik Kütüphane -> IPTV-org Logo Haritası
+        if not logo:
+            if key in STATIC_LOGOS:
+                logo = STATIC_LOGOS[key]
+            elif norm_key in STATIC_LOGOS:
+                logo = STATIC_LOGOS[norm_key]
+            elif key in iptv_logo_map:
+                logo = iptv_logo_map[key]
+            elif norm_key in iptv_logo_map:
+                logo = iptv_logo_map[norm_key]
+
         if key not in final_channel_map:
             final_channel_map[key] = {
                 'name': norm_name,
@@ -986,6 +1039,19 @@ def build_playlist():
                 final_channel_map[key]['logo'] = logo
             if not final_channel_map[key]['epg_id'] and epg_id:
                 final_channel_map[key]['epg_id'] = epg_id
+
+    # Kanal haritasında kalan boş logolar için ek zenginleştirme güvencesi
+    for key, ch in final_channel_map.items():
+        if not ch.get('logo'):
+            norm_key = key.replace('ç','c').replace('ğ','g').replace('ı','i').replace('ö','o').replace('ş','s').replace('ü','u')
+            if key in STATIC_LOGOS:
+                ch['logo'] = STATIC_LOGOS[key]
+            elif norm_key in STATIC_LOGOS:
+                ch['logo'] = STATIC_LOGOS[norm_key]
+            elif key in iptv_logo_map:
+                ch['logo'] = iptv_logo_map[key]
+            elif norm_key in iptv_logo_map:
+                ch['logo'] = iptv_logo_map[norm_key]
 
     final_channels = list(final_channel_map.values())
     print(f"Tekilleştirme sonrası net yerli kanal sayısı: {len(final_channels)}")

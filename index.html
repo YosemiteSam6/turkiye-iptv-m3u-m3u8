@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
 
   <!-- Google Search Console Doğrulama -->
   <meta name="google-site-verification" content="googlea40abf6b27798e82" />
@@ -1414,6 +1415,19 @@
       return top50Names.includes(name.toLowerCase());
     }
 
+    function getFallbackLogoSvg(name) {
+      const clean = (name || 'TV').replace(/[^a-zA-Z0-9çğıöşüÇĞİÖŞÜ ]/g, '').trim();
+      const words = clean.split(/\s+/).filter(Boolean);
+      let initials = '';
+      if (words.length === 1) {
+        initials = words[0].slice(0, 3).toUpperCase();
+      } else if (words.length >= 2) {
+        initials = (words[0][0] + words[1][0] + (words[2] ? words[2][0] : '')).slice(0, 3).toUpperCase();
+      }
+      if (!initials) initials = 'TV';
+      return `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><rect width="80" height="80" rx="14" fill="%23eff6ff" stroke="%23bfdbfe" stroke-width="2"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-weight="800" font-size="20" fill="%232563eb">${initials}</text></svg>`;
+    }
+
     function displayChannelGrid(list) {
       const container = document.getElementById('channel-list-container');
       const countLabel = document.getElementById('channel-count-text');
@@ -1425,12 +1439,14 @@
       }
 
       container.innerHTML = list.map(c => {
-        const logo = c.logo || 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/TRT_1_logo_2021.svg/512px-TRT_1_logo_2021.svg.png';
+        const safeName = (c.name || 'Kanal').replace(/'/g, "\\'").replace(/"/g, "&quot;");
+        const fallback = getFallbackLogoSvg(c.name);
+        const logo = (c.logo && c.logo.trim()) ? c.logo.trim() : fallback;
         return `
           <div class="channel-item-card">
-            <img class="channel-thumb-logo" src="${logo}" alt="${c.name}" loading="lazy" onerror="this.src='https://i.imgur.com/agn47sQ.png'">
+            <img class="channel-thumb-logo" src="${logo}" alt="${safeName}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src=getFallbackLogoSvg('${safeName}');">
             <div class="channel-text-wrap">
-              <div class="channel-item-name" title="${c.name}">${c.name}</div>
+              <div class="channel-item-name" title="${safeName}">${safeName}</div>
               <div class="channel-item-category">${c.category || 'Yerel'}</div>
             </div>
             <button class="channel-copy-icon-btn" onclick="copyStreamDirect('${c.url}')" title="Yayın Adresini Kopyala">

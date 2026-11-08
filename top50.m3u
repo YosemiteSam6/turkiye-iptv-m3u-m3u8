@@ -52,7 +52,7 @@ https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
 https://tele1-live.ercdn.net/tele1/tele1.m3u8
 #EXTINF:-1 tvg-id="TGRT.HABER.tr" tvg-name="TGRT Haber" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/TGRT_Haber_logo.svg/512px-TGRT_Haber_logo.svg.png" group-title="TOP 50",TGRT Haber
 https://canli.tgrthaber.com/tgrt.m3u8
-#EXTINF:-1 tvg-name="Show Max" group-title="TOP 50",Show Max
+#EXTINF:-1 tvg-name="Show Max" tvg-logo="https://www.showmax.com.tr/assets/dist/images/base/logo.svg" group-title="TOP 50",Show Max
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8
 #EXTINF:-1 tvg-id="MİNİKA.ÇOCUK.tr" tvg-name="Minika Çocuk" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/8/87/Minika_%C3%87ocuk_logosu.png/512px-Minika_%C3%87ocuk_logosu.png" group-title="TOP 50",Minika Çocuk
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
@@ -80,25 +80,25 @@ https://turkmedya-live.ercdn.net/tv24/tv24.m3u8
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 #EXTINF:-1 tvg-name="Ekol TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ekol_TV_logosu.png/512px-Ekol_TV_logosu.png" group-title="TOP 50",Ekol TV
 https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
-#EXTINF:-1 tvg-name="TJK TV" group-title="TOP 50",TJK TV
+#EXTINF:-1 tvg-name="TJK TV" tvg-logo="https://i.imgur.com/3zHdkYG.png" group-title="TOP 50",TJK TV
 https://tjktv-live.tjk.org/tjktv.m3u8
 #EXTINF:-1 tvg-name="TRT Diyanet Çocuk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/512px-TRT_%C3%87ocuk_logo_%282021%29.svg.png" group-title="TOP 50",TRT Diyanet Çocuk
 https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="BABY.TV.tr" tvg-name="Baby TV" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/BabyTV_logo.svg/512px-BabyTV_logo.svg.png" group-title="TOP 50",Baby TV
 https://saran-live.ercdn.net/babytv/index.m3u8
-#EXTINF:-1 tvg-name="PowerTurk TV" group-title="TOP 50",PowerTurk TV
-https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="POWER.TV.HD.tr" tvg-name="Power TV" group-title="TOP 50",Power TV
+#EXTINF:-1 tvg-name="PowerTurk TV" tvg-logo="https://i.imgur.com/9OPoXQG.png" group-title="TOP 50",PowerTurk TV
+https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
+#EXTINF:-1 tvg-id="POWER.TV.HD.tr" tvg-name="Power TV" tvg-logo="https://i.imgur.com/XSL1gd7.png" group-title="TOP 50",Power TV
 https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="Kral Pop TV" tvg-logo="https://i.imgur.com/ch365lh.png" group-title="TOP 50",Kral Pop TV
 https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
-#EXTINF:-1 tvg-name="Dream Turk" tvg-logo="https://i.imgur.com/vJ8VaZi.png" group-title="TOP 50",Dream Turk
+#EXTINF:-1 tvg-name="Dream Türk" tvg-logo="https://i.imgur.com/vJ8VaZi.png" group-title="TOP 50",Dream Türk
 https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
-#EXTINF:-1 tvg-name="Number 1 TV" group-title="TOP 50",Number 1 TV
+#EXTINF:-1 tvg-name="Number 1 TV" tvg-logo="https://i.imgur.com/02cDIBi.png" group-title="TOP 50",Number 1 TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="TGRT Belgesel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/TGRT_Haber_logo.svg/512px-TGRT_Haber_logo.svg.png" group-title="TOP 50",TGRT Belgesel
 https://canli.tgrthaber.com/tgrtbelgesel.m3u8
 #EXTINF:-1 tvg-name="Euro D" tvg-logo="https://i.imgur.com/x9kHsXo.png" group-title="TOP 50",Euro D
 https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
-#EXTINF:-1 tvg-name="TV 4" group-title="TOP 50",TV 4
+#EXTINF:-1 tvg-name="TV 4" tvg-logo="https://i.imgur.com/UpsQsbd.png" group-title="TOP 50",TV 4
 https://turkmedya-live.ercdn.net/tv4/tv4.m3u8
