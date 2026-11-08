@@ -1113,7 +1113,7 @@
     <section class="explorer-card">
       <div class="section-header">
         <h2 class="section-title">🔎 Canlı Kanal Arama & Önizleme</h2>
-        <p class="section-subtitle">Listede bulunan 154 çalışan yerli kanalı anında arayın veya kategoriye göre filtreleyin:</p>
+        <p class="section-subtitle" id="channel-explorer-subtitle">Listede bulunan çalışan yerli kanalları anında arayın veya kategoriye göre filtreleyin:</p>
       </div>
 
       <div class="search-wrapper">
@@ -1123,7 +1123,7 @@
       </div>
 
       <div class="category-chips-row">
-        <button class="category-chip-btn active" onclick="selectCategory('ALL', this)">Tümü (154)</button>
+        <button class="category-chip-btn active" id="all-channels-chip-btn" onclick="selectCategory('ALL', this)">Tümü</button>
         <button class="category-chip-btn" onclick="selectCategory('TOP 50', this)">🏆 TOP 50</button>
         <button class="category-chip-btn" onclick="selectCategory('Çocuk', this)">🧒 Çocuk</button>
         <button class="category-chip-btn" onclick="selectCategory('Haber', this)">📰 Haber</button>
@@ -1359,6 +1359,10 @@
         if (res.ok) {
           const data = await res.json();
           allLiveChannels = data.channels || [];
+          const allBtn = document.getElementById('all-channels-chip-btn');
+          if (allBtn) allBtn.innerText = `Tümü (${allLiveChannels.length})`;
+          const sub = document.getElementById('channel-explorer-subtitle');
+          if (sub) sub.innerText = `Listede bulunan ${allLiveChannels.length} çalışan yerli kanalı anında arayın veya kategoriye göre filtreleyin:`;
           displayChannelGrid(allLiveChannels);
         } else {
           loadFallbackLiveChannels();
@@ -1370,15 +1374,15 @@
 
     function loadFallbackLiveChannels() {
       allLiveChannels = [
-        { name: "Diyanet TV", category: "TOP 50", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Diyanet_TV_logo.svg/960px-Diyanet_TV_logo.svg.png", url: "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8" },
-        { name: "TRT 1", category: "TOP 50", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/TRT_1_logo_2021.svg/512px-TRT_1_logo_2021.svg.png", url: "https://tv-trt1.medya.trt.com.tr/master.m3u8" },
-        { name: "ATV", category: "TOP 50", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ATV_logo.svg/512px-ATV_logo.svg.png", url: "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8" },
+        { name: "Diyanet TV", category: "TOP 50", logo: "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/diyanet-tv-tr.png", url: "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8" },
+        { name: "TRT 1", category: "TOP 50", logo: "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-1-tr.png", url: "https://tv-trt1.medya.trt.com.tr/master.m3u8" },
+        { name: "ATV", category: "TOP 50", logo: "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/atv-tr.png", url: "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8" },
         { name: "NOW", category: "TOP 50", logo: "https://i.imgur.com/5EYjWK7.png", url: "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8" },
         { name: "Kanal D", category: "TOP 50", logo: "https://i.imgur.com/9o1atM6.png", url: "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3" },
-        { name: "TRT Çocuk", category: "Çocuk", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/TRT_%C3%87ocuk_logo_2021.svg/512px-TRT_%C3%87ocuk_logo_2021.svg.png", url: "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8" },
-        { name: "TRT Haber", category: "Haber", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Haber_logo_2021.svg/512px-TRT_Haber_logo_2021.svg.png", url: "https://tv-trthaber.medya.trt.com.tr/master.m3u8" },
-        { name: "TRT Spor", category: "Spor", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TRT_Spor_logo_2021.svg/512px-TRT_Spor_logo_2021.svg.png", url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8" },
-        { name: "TRT Belgesel", category: "Belgesel", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/TRT_Belgesel_logo_2021.svg/512px-TRT_Belgesel_logo_2021.svg.png", url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8" }
+        { name: "TRT Çocuk", category: "Çocuk", logo: "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-cocuk-tr.png", url: "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8" },
+        { name: "TRT Haber", category: "Haber", logo: "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-haber-tr.png", url: "https://tv-trthaber.medya.trt.com.tr/master.m3u8" },
+        { name: "TRT Spor", category: "Spor", logo: "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-spor-tr.png", url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8" },
+        { name: "TRT Belgesel", category: "Belgesel", logo: "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-belgesel-tr.png", url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8" }
       ];
       displayChannelGrid(allLiveChannels);
     }
@@ -1390,11 +1394,26 @@
       applyChannelFilter();
     }
 
+    function matchesCategory(c, selected) {
+      if (selected === 'ALL') return true;
+      if (selected === 'TOP 50') {
+        return checkIsTop50(c.name) || (c.category && c.category.toUpperCase() === 'TOP 50') || (c.category && c.category.toUpperCase() === 'ULUSAL');
+      }
+      if (!c.category) return false;
+      const cat = c.category.trim().toLowerCase();
+      const sel = selected.trim().toLowerCase();
+      if (cat === sel) return true;
+      if (sel === 'sinema & dizi' && (cat.includes('sinema') || cat.includes('dizi') || cat.includes('film'))) return true;
+      if (sel === 'müzik' && (cat.includes('müzik') || cat.includes('muzik') || cat.includes('music'))) return true;
+      if (sel === 'kültür & dini' && (cat.includes('kültür') || cat.includes('kultur') || cat.includes('dini') || cat.includes('dini'))) return true;
+      if (sel === 'çocuk' && (cat.includes('çocuk') || cat.includes('cocuk') || cat.includes('kids'))) return true;
+      return false;
+    }
+
     function applyChannelFilter() {
       const q = document.getElementById('channel-search-box').value.toLowerCase().trim();
       const filtered = allLiveChannels.filter(ch => {
-        const matchesCat = (selectedCat === 'ALL') ||
-          (selectedCat === 'TOP 50' ? checkIsTop50(ch.name) : ch.category === selectedCat);
+        const matchesCat = matchesCategory(ch, selectedCat);
         const matchesQuery = !q || ch.name.toLowerCase().includes(q) || (ch.category && ch.category.toLowerCase().includes(q));
         return matchesCat && matchesQuery;
       });
@@ -1425,7 +1444,8 @@
         initials = (words[0][0] + words[1][0] + (words[2] ? words[2][0] : '')).slice(0, 3).toUpperCase();
       }
       if (!initials) initials = 'TV';
-      return `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><rect width="80" height="80" rx="14" fill="%23eff6ff" stroke="%23bfdbfe" stroke-width="2"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-weight="800" font-size="20" fill="%232563eb">${initials}</text></svg>`;
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><rect width="80" height="80" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-weight="800" font-size="20" fill="#2563eb">${initials}</text></svg>`;
+      return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
     }
 
     function displayChannelGrid(list) {
@@ -1444,7 +1464,7 @@
         const logo = (c.logo && c.logo.trim()) ? c.logo.trim() : fallback;
         return `
           <div class="channel-item-card">
-            <img class="channel-thumb-logo" src="${logo}" alt="${safeName}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src=getFallbackLogoSvg('${safeName}');">
+            <img class="channel-thumb-logo" src="${logo}" alt="${safeName}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src=getFallbackLogoSvg(this.alt);">
             <div class="channel-text-wrap">
               <div class="channel-item-name" title="${safeName}">${safeName}</div>
               <div class="channel-item-category">${c.category || 'Yerel'}</div>

@@ -1,0 +1,6 @@
+# Türkiye Canlı TV M3U & M3U8 - Robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://yosemitesam6.github.io/turkiye-iptv-m3u-m3u8/sitemap.xml
+

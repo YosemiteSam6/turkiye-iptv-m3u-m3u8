@@ -66,7 +66,8 @@ def is_foreign_or_blocked(name: str) -> bool:
         return True
     blocked_keywords = [
         'almahriah', 'elsharq', 'mekameleen', 'al-zahra', 'al zahra', 'persiana',
-        'sat 7', 'luys', 'tyt turk', 'kanal avrupa', 'trt arabi', 'trt world'
+        'sat 7', 'luys', 'tyt turk', 'kanal avrupa', 'trt arabi', 'trt world',
+        'tagesschau', 'ndr', 'wdr', 'zdf', 'ard', 'dw '
     ]
     return any(b in n for b in blocked_keywords)
 
@@ -105,7 +106,7 @@ VERIFIED_CHANNELS = [
         "epg_id": "TRT.1.HD.tr",
         "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trt1.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/TRT_1_logo_2021.svg/512px-TRT_1_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-1-tr.png"
     },
     {
         "name": "ATV",
@@ -113,7 +114,7 @@ VERIFIED_CHANNELS = [
         "epg_id": "ATV.HD.tr",
         "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8",
         "fallbacks": ["https://trkvz-live.ercdn.net/atv/atv.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ATV_logo.svg/512px-ATV_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/atv-tr.png"
     },
     {
         "name": "Kanal D",
@@ -141,14 +142,14 @@ VERIFIED_CHANNELS = [
         "category": "Ulusal",
         "epg_id": "TV8.HD.tr",
         "url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
-        "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/6/68/Tv8_Yeni_Logo.png/960px-Tv8_Yeni_Logo.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tv8-tr.png"
     },
     {
         "name": "TV8.5",
         "category": "Ulusal",
         "epg_id": "",
         "url": "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3",
-        "logo": "https://upload.wikimedia.org/wikipedia/tr/c/cf/Tv8_bucuk_logo.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tv85-tr.png"
     },
     {
         "name": "A2",
@@ -170,7 +171,7 @@ VERIFIED_CHANNELS = [
         "category": "Ulusal",
         "epg_id": "KANAL.7.HD.tr",
         "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Kanal_7_logo.svg/512px-Kanal_7_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/kanal-7-avrupa-tr.png"
     },
 
     # ==================== ÇOCUK (TAM VE KORUMALI) ====================
@@ -180,7 +181,7 @@ VERIFIED_CHANNELS = [
         "epg_id": "TRT.ÇOCUK.HD.tr",
         "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trtcocuk.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/TRT_%C3%87ocuk_logo_2021.svg/512px-TRT_%C3%87ocuk_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-cocuk-tr.png"
     },
     {
         "name": "Minika Çocuk",
@@ -188,7 +189,7 @@ VERIFIED_CHANNELS = [
         "epg_id": "MİNİKA.ÇOCUK.tr",
         "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8",
         "fallbacks": ["https://trkvz-live.ercdn.net/minikacocuk/minikacocuk.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/8/87/Minika_%C3%87ocuk_logosu.png/512px-Minika_%C3%87ocuk_logosu.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/minika-cocuk-tr.png"
     },
     {
         "name": "Minika Go",
@@ -196,14 +197,14 @@ VERIFIED_CHANNELS = [
         "epg_id": "MİNİKA.GO.tr",
         "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8",
         "fallbacks": ["https://trkvz-live.ercdn.net/minikago/minikago.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/9/91/Minika_GO_logosu.png/512px-Minika_GO_logosu.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/minika-go-tr.png"
     },
     {
         "name": "Baby TV",
         "category": "Çocuk",
         "epg_id": "BABY.TV.tr",
         "url": "https://saran-live.ercdn.net/babytv/index.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/BabyTV_logo.svg/512px-BabyTV_logo.svg.png"
+        "logo": "https://i.imgur.com/02kCsqR.png"
     },
     {
         "name": "Disney Jr.",
@@ -217,7 +218,7 @@ VERIFIED_CHANNELS = [
         "category": "Çocuk",
         "epg_id": "",
         "url": "https://live-tr-next.spacetoongo.com/ST_TR_NEXT/hls/h7qefeiwfbjn1.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/tr/2/2b/Spacetoon_logo.png"
+        "logo": "https://spacetoon.com/logo.png"
     },
     {
         "name": "TRT Diyanet Çocuk",
@@ -225,7 +226,7 @@ VERIFIED_CHANNELS = [
         "epg_id": "",
         "url": "https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trtdiyanetcocuk.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/512px-TRT_%C3%87ocuk_logo_%282021%29.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-cocuk-tr.png"
     },
     {
         "name": "TRT EBA İlkokul",
@@ -253,7 +254,7 @@ VERIFIED_CHANNELS = [
         "category": "Çocuk",
         "epg_id": "",
         "url": "https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/8/87/Zarok_TV_logosu.png/512px-Zarok_TV_logosu.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/zarok-tv-tr.png"
     },
 
     # ==================== HABER ====================
@@ -263,7 +264,7 @@ VERIFIED_CHANNELS = [
         "epg_id": "TRT.HABER.HD.tr",
         "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trthaber.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Haber_logo_2021.svg/512px-TRT_Haber_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-haber-tr.png"
     },
     {
         "name": "A Haber",
@@ -271,91 +272,91 @@ VERIFIED_CHANNELS = [
         "epg_id": "A.HABER.HD.tr",
         "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
         "fallbacks": ["https://trkvz-live.ercdn.net/ahaber/ahaber.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Ahaber_Logo.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/a-haber-tr.png"
     },
     {
         "name": "NTV",
         "category": "Haber",
         "epg_id": "NTV.HD.tr",
         "url": "https://dogus.daioncdn.net/ntv/ntv_720p.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/NTV_logo.svg/512px-NTV_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/ntv-tr.png"
     },
     {
         "name": "Habertürk TV",
         "category": "Haber",
         "epg_id": "HABERTÜRK.tr",
         "url": "https://tv.ensonhaber.com/haberturk/haberturk.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Habert%C3%BCrk_TV_logo.svg/512px-Habert%C3%BCrk_TV_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/haberturk-tr.png"
     },
     {
         "name": "Haber Global",
         "category": "Haber",
         "epg_id": "",
         "url": "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Haber_Global_logo.svg/512px-Haber_Global_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/haber-global-tr.png"
     },
     {
         "name": "Bloomberg HT",
         "category": "Haber",
         "epg_id": "BLOOMBERG.HT.HD.tr",
         "url": "https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bloomberg_HT_logo.svg/512px-Bloomberg_HT_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/bloomberg-ht-tr.png"
     },
     {
         "name": "CNBC-e",
         "category": "Haber",
         "epg_id": "",
         "url": "https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CNBC-e_logo.svg/512px-CNBC-e_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/cnbc-e-tr.png"
     },
     {
         "name": "TV100",
         "category": "Haber",
         "epg_id": "",
         "url": "https://tv.ensonhaber.com/tv100/tv100.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TV100_logosu.svg/512px-TV100_logosu.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tv100-tr.png"
     },
     {
         "name": "Halk TV",
         "category": "Haber",
         "epg_id": "",
         "url": "https://halktv-live.daioncdn.net/halktv/halktv.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Halk_TV_logo.svg/512px-Halk_TV_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/halk-tv-tr.png"
     },
     {
         "name": "Tele1",
         "category": "Haber",
         "epg_id": "",
         "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Tele1_logo.svg/512px-Tele1_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tele1-tr.png"
     },
     {
         "name": "TGRT Haber",
         "category": "Haber",
         "epg_id": "TGRT.HABER.tr",
         "url": "https://canli.tgrthaber.com/tgrt.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/TGRT_Haber_logo.svg/512px-TGRT_Haber_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tgrt-haber-tr.png"
     },
     {
         "name": "Flash Haber TV",
         "category": "Haber",
         "epg_id": "",
         "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Flash_Haber_logosu.png/512px-Flash_Haber_logosu.png"
+        "logo": "https://i.imgur.com/8FO41es.png"
     },
     {
         "name": "Bengütürk TV",
         "category": "Haber",
         "epg_id": "BENGÜ.TÜRK.tr",
         "url": "https://tv.ensonhaber.com/benguturk/benguturk.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/8/8c/Beng%C3%BCt%C3%BCrk_TV_logosu.png/512px-Beng%C3%BCt%C3%BCrk_TV_logosu.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/bengu-turk-tr.png"
     },
     {
         "name": "Ekol TV",
         "category": "Haber",
         "epg_id": "",
         "url": "https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ekol_TV_logosu.png/512px-Ekol_TV_logosu.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/ekoturk-tr.png"
     },
     {
         "name": "24 TV",
@@ -393,7 +394,7 @@ VERIFIED_CHANNELS = [
         "epg_id": "TRT.SPOR.HD.tr",
         "url": "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trtspor1.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/TRT_Spor_logo_2021.svg/512px-TRT_Spor_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-spor-tr.png"
     },
     {
         "name": "TRT Spor Yıldız",
@@ -401,7 +402,7 @@ VERIFIED_CHANNELS = [
         "epg_id": "",
         "url": "https://tv-trtspor2.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trtspor2.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg/512px-TRT_Spor_Y%C4%B1ld%C4%B1z_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-spor-yildiz-tr.png"
     },
     {
         "name": "A Spor",
@@ -423,7 +424,7 @@ VERIFIED_CHANNELS = [
         "category": "Spor",
         "epg_id": "",
         "url": "https://ekoltv-live.ercdn.net/ekolsport/ekolsport.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ekol_TV_logosu.png/512px-Ekol_TV_logosu.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/ekoturk-tr.png"
     },
     {
         "name": "FB TV",
@@ -440,14 +441,14 @@ VERIFIED_CHANNELS = [
         "epg_id": "TRT.BELGESEL.HD.tr",
         "url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trtbelgesel.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/TRT_Belgesel_logo_2021.svg/512px-TRT_Belgesel_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-belgesel-tr.png"
     },
     {
         "name": "TGRT Belgesel",
         "category": "Belgesel",
         "epg_id": "",
         "url": "https://canli.tgrthaber.com/tgrtbelgesel.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/TGRT_Haber_logo.svg/512px-TGRT_Haber_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tgrt-haber-tr.png"
     },
 
     # ==================== MÜZİK ====================
@@ -457,7 +458,7 @@ VERIFIED_CHANNELS = [
         "epg_id": "TRT.MÜZİK.tr",
         "url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trtmuzik.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/TRT_M%C3%BCzik_logo_2021.svg/512px-TRT_M%C3%BCzik_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-muzik-tr.png"
     },
 
     # ==================== SİNEMA & DİZİ ====================
@@ -475,6 +476,14 @@ VERIFIED_CHANNELS = [
         "url": "https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3_output_0.m3u8",
         "logo": "https://cine1.com.tr/img/cine1loogo.png"
     },
+    {
+        "name": "Kanal Plus",
+        "category": "Sinema & Dizi",
+        "epg_id": "",
+        "url": "https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.m3u8",
+        "fallbacks": [],
+        "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%2090%22%20width%3D%22160%22%20height%3D%2290%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22gplus%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f172a%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%231e293b%22%2F%3E%3C%2Fdefs%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22url(%23gplus)%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%2244%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2219%22%20fill%3D%22%23ffffff%22%20letter-spacing%3D%222%22%3EKANAL%3C%2Ftext%3E%3Ctext%20x%3D%2282%25%22%20y%3D%2252%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2228%22%20fill%3D%22%2338bdf8%22%3E%2B%3C%2Ftext%3E%3C%2Fsvg%3E"
+    },
 
     # ==================== KÜLTÜR & DİNİ ====================
     {
@@ -483,35 +492,48 @@ VERIFIED_CHANNELS = [
         "epg_id": "",
         "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trt2.live.trt.com.tr/master.m3u8"],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/TRT_2_logo_2021.svg/512px-TRT_2_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-2-tr.png"
     },
     {
         "name": "TRT Türk",
         "category": "Kültür & Dini",
         "epg_id": "TRT.TÜRK.tr",
         "url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/TRT_T%C3%BCrk_logo_2021.svg/512px-TRT_T%C3%BCrk_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-turk-tr.png"
     },
     {
         "name": "TRT Avaz",
         "category": "Kültür & Dini",
         "epg_id": "TRT.AVAZ.HD.tr",
         "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/TRT_Avaz_logo_2021.svg/512px-TRT_Avaz_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-avaz-tr.png"
     },
     {
         "name": "TRT Kurdî",
         "category": "Kültür & Dini",
         "epg_id": "TRT.KURDİ.tr",
         "url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TRT_Kurd%C3%AE_logo_2021.svg/512px-TRT_Kurd%C3%AE_logo_2021.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-kurdi-tr.png"
     },
     {
         "name": "Diyanet TV",
         "category": "Kültür & Dini",
         "epg_id": "",
         "url": "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Diyanet_TV_logo.svg/960px-Diyanet_TV_logo.svg.png"
+        "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/diyanet-tv-tr.png"
+    },
+
+    # ==================== YEREL ====================
+    {
+        "name": "Kanal 19",
+        "category": "Yerel",
+        "epg_id": "",
+        "url": "https://live.euromediacenter.com/kanal19/tracks-v1a1/mono.m3u8",
+        "fallbacks": [
+            "https://live.euromediacenter.com/kanal19/tracks-v1a1/playlist.m3u8",
+            "https://live.euromediacenter.com/kanal19/playlist.m3u8"
+        ],
+        "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%2090%22%20width%3D%22160%22%20height%3D%2290%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g19%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23b91c1c%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23dc2626%22%2F%3E%3C%2Fdefs%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22url(%23g19)%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2236%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2216%22%20fill%3D%22%23ffffff%22%20letter-spacing%3D%223%22%3EKANAL%3C%2Ftext%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2268%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2230%22%20fill%3D%22%23fef08a%22%3E19%3C%2Ftext%3E%3C%2Fsvg%3E"
     }
 ]
 
@@ -604,7 +626,7 @@ EPG_MAP = {
 STATIC_LOGOS = {
     "show max": "https://www.showmax.com.tr/assets/dist/images/base/logo.svg",
     "kanal b": "https://www.kanalb.com.tr/assets/images/logo/1683624355Kanal_B_logosu.png",
-    "cem tv": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Cem_TV_logo.png",
+    "cem tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/cem-tv-tr.png",
     "cine 1": "https://cine1.com.tr/img/cine1loogo.png",
     "as tv": "https://www.astv.com.tr/static/2026/07/06/astv-logo-1783346167-699-x80.jpeg",
     "bodrum kent tv": "https://static.daktilo.com/sites/1600/uploads/2024/07/27/social.png",
@@ -614,24 +636,35 @@ STATIC_LOGOS = {
     "sonmez tv": "https://www.astv.com.tr/static/2026/07/06/astv-logo-1783346167-699-x80.jpeg",
     "dost tv": "https://dosttv.com/wp-content/uploads/2020/09/dost-tv-logo.png",
     "bir tv": "https://birtv.com.tr/wp-content/uploads/2022/10/bir-tv-logo.png",
-    "tbmm tv": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/TBMM_TV_logosu.png/512px-TBMM_TV_logosu.png",
-    "trt 3 / tbmm tv": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/TBMM_TV_logosu.png/512px-TBMM_TV_logosu.png",
+    "tbmm tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tbmm-tv-tr.png",
+    "trt 3 / tbmm tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tbmm-tv-tr.png",
     "frt tv": "https://s.gercekfethiye.com/dosya/logo/svg/logo-ana.svg",
     "malatya vuslat tv": "https://vuslattv.com.tr/uploads/logo/logo_66bdb4352c7ab7-60769650.png",
     "ruha tv": "https://ruhatv.com.tr/kunye_dosyalar/kunye_logo.png",
-    "karadeniz tv": "https://upload.wikimedia.org/wikipedia/tr/b/bb/Karadeniz_TV_logosu.png",
+    "karadeniz tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/mavi-karadeniz-tr.png",
     "krt tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/krt-tr.png",
     "krt": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/krt-tr.png",
     "tvnet": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tvnet-tr.png",
     "ülke tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/ulke-tv-tr.png",
     "ulke tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/ulke-tv-tr.png",
-    "trt 4k": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuf0VbbCYUyd_hUcaxw_iOtp84-aGKdfkvog&s",
+    "trt 4k": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/trt-4k-tr.png",
     "tabii": "https://cms-tabii-assets.tabii.com/thumbnails/23963_781e9dee-cbd8-491a-b166-0b1df25b3bd0_720.jpeg",
-    "dmax": "https://upload.wikimedia.org/wikipedia/commons/2/25/DMAX_Logo_16_05_2011.jpg",
-    "tlc": "https://upload.wikimedia.org/wikipedia/commons/9/92/Tlc_logo_discovery.jpg",
+    "dmax": "https://img-tlctv.mncdn.com/logo-dmax.png",
+    "tlc": "https://img-tlctv.mncdn.com/logo.png",
     "euro d": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/euro-d-tr.png",
     "show türk": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/show-turk-tr.png",
-    "atv avrupa": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/atv-avrupa-tr.png"
+    "atv avrupa": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/atv-avrupa-tr.png",
+    "kanal 19": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%2090%22%20width%3D%22160%22%20height%3D%2290%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g19%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23b91c1c%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23dc2626%22%2F%3E%3C%2Fdefs%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22url(%23g19)%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2236%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2216%22%20fill%3D%22%23ffffff%22%20letter-spacing%3D%223%22%3EKANAL%3C%2Ftext%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2268%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2230%22%20fill%3D%22%23fef08a%22%3E19%3C%2Ftext%3E%3C%2Fsvg%3E",
+    "kanal 19 tv": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%2090%22%20width%3D%22160%22%20height%3D%2290%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g19%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23b91c1c%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23dc2626%22%2F%3E%3C%2Fdefs%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22url(%23g19)%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2236%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2216%22%20fill%3D%22%23ffffff%22%20letter-spacing%3D%223%22%3EKANAL%3C%2Ftext%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2268%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2230%22%20fill%3D%22%23fef08a%22%3E19%3C%2Ftext%3E%3C%2Fsvg%3E",
+    "kanal plus": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%2090%22%20width%3D%22160%22%20height%3D%2290%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22gplus%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f172a%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%231e293b%22%2F%3E%3C%2Fdefs%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22url(%23gplus)%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%2244%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2219%22%20fill%3D%22%23ffffff%22%20letter-spacing%3D%222%22%3EKANAL%3C%2Ftext%3E%3Ctext%20x%3D%2282%25%22%20y%3D%2252%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2228%22%20fill%3D%22%2338bdf8%22%3E%2B%3C%2Ftext%3E%3C%2Fsvg%3E",
+    "kanalplus": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%2090%22%20width%3D%22160%22%20height%3D%2290%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22gplus%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f172a%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%231e293b%22%2F%3E%3C%2Fdefs%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22url(%23gplus)%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%2244%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2219%22%20fill%3D%22%23ffffff%22%20letter-spacing%3D%222%22%3EKANAL%3C%2Ftext%3E%3Ctext%20x%3D%2282%25%22%20y%3D%2252%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2228%22%20fill%3D%22%2338bdf8%22%3E%2B%3C%2Ftext%3E%3C%2Fsvg%3E",
+    "kanal+": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%2090%22%20width%3D%22160%22%20height%3D%2290%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22gplus%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f172a%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%231e293b%22%2F%3E%3C%2Fdefs%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22url(%23gplus)%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%2244%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2219%22%20fill%3D%22%23ffffff%22%20letter-spacing%3D%222%22%3EKANAL%3C%2Ftext%3E%3Ctext%20x%3D%2282%25%22%20y%3D%2252%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2228%22%20fill%3D%22%2338bdf8%22%3E%2B%3C%2Ftext%3E%3C%2Fsvg%3E",
+    "number 1 turk": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/nr1-turk-tr.png",
+    "number 1 türk": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/nr1-turk-tr.png",
+    "rehber tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/rehber-tv-tr.png",
+    "cartoon network": "https://www.cartoonnetwork.com.tr/static/img/cn-logo.png",
+    "fx": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/fx-tr.png",
+    "tbmm tv": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tbmm-tv-tr.png"
 }
 
 def clean_channel_name(raw_name: str) -> str:
@@ -712,6 +745,10 @@ def clean_channel_name(raw_name: str) -> str:
         "KANAL 12": "Kanal 12",
         "KANAL 15": "Kanal 15",
         "KANAL 19": "Kanal 19",
+        "KANAL19": "Kanal 19",
+        "KANAL 19 TV": "Kanal 19",
+        "KANAL 19 CORUM": "Kanal 19",
+        "KANAL 19 ÇORUM": "Kanal 19",
         "KANAL 23": "Kanal 23",
         "KANAL 26": "Kanal 26",
         "KANAL 3": "Kanal 3",
@@ -732,6 +769,11 @@ def clean_channel_name(raw_name: str) -> str:
         "KANAL FIRAT": "Kanal Fırat",
         "Kanal Firat": "Kanal Fırat",
         "KANAL PLUS": "Kanal Plus",
+        "KANAL+": "Kanal Plus",
+        "KANAL +": "Kanal Plus",
+        "KANALPLUS": "Kanal Plus",
+        "KANAL PLUS SiNEMA": "Kanal Plus",
+        "KANAL PLUS SİNEMA": "Kanal Plus",
         "KANAL URFA": "Kanal Urfa",
         "KANAL Z": "Kanal Z",
         "KARDELEN TV": "Kardelen TV",
@@ -880,6 +922,72 @@ def get_channel_category(name: str) -> str:
         
     # 9. Yerel (Varsayılan)
     return 'Yerel'
+
+def normalize_category(group_name: str, channel_name: str) -> str:
+    """Kategori adını standart ve temiz Türkçe kategorilere dönüştürür."""
+    if not group_name:
+        return get_channel_category(channel_name)
+    g_up = group_name.strip().upper()
+    if any(k in g_up for k in ['ÇOCUK', 'COCUK', 'KIDS']):
+        return 'Çocuk'
+    if any(k in g_up for k in ['HABER', 'NEWS']):
+        return 'Haber'
+    if any(k in g_up for k in ['SPOR', 'SPORT']):
+        return 'Spor'
+    if any(k in g_up for k in ['BELGESEL', 'DOCU']):
+        return 'Belgesel'
+    if any(k in g_up for k in ['MÜZİK', 'MUZIK', 'MUSIC']):
+        return 'Müzik'
+    if any(k in g_up for k in ['SİNEMA', 'SINEMA', 'SiNEMA', 'FILM', 'MOVIE', 'DİZİ', 'DIZI']):
+        return 'Sinema & Dizi'
+    if any(k in g_up for k in ['DİNİ', 'DINI', 'KÜLTÜR', 'KULTUR', 'RELIGIOUS']):
+        return 'Kültür & Dini'
+    if any(k in g_up for k in ['ULUSAL', 'NATIONAL', 'GENEL']):
+        return get_channel_category(channel_name)
+    if any(k in g_up for k in ['YEREL', 'LOCAL']):
+        return 'Yerel'
+    return get_channel_category(channel_name)
+
+def make_svg_logo(name: str) -> str:
+    """Logo bulunamayan kanallar için standart ve estetik SVG data-uri logosu üretir."""
+    clean = re.sub(r'[^a-zA-Z0-9çğıöşüÇĞİÖŞÜ ]', '', name or 'TV').strip()
+    words = clean.split()
+    if len(words) == 1:
+        initials = words[0][:3].upper()
+    elif len(words) >= 2:
+        initials = (words[0][0] + words[1][0] + (words[2][0] if len(words) > 2 else '')).upper()[:3]
+    else:
+        initials = 'TV'
+    
+    svg = (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="160" height="90" viewBox="0 0 160 90">'
+        f'<rect width="160" height="90" rx="14" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>'
+        f'<text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" '
+        f'font-family="system-ui,-apple-system,sans-serif" font-weight="900" font-size="24" fill="#38bdf8">{initials}</text>'
+        f'</svg>'
+    )
+    import urllib.parse
+    return 'data:image/svg+xml;charset=utf-8,' + urllib.parse.quote(svg)
+
+def fetch_tv_logos_map() -> dict:
+    """tv-logo/tv-logos Türkiye açık kaynak kütüphanesinden güncel kanal logolarını çeker."""
+    mapping = {}
+    url = "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/0_all_logos_mosaic.md"
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=6)
+        if r.status_code == 200:
+            entries = re.findall(r'\[([^\]]+)\]:\s*([^\s]+-tr\.png)', r.text)
+            for slug, fn in entries:
+                clean = slug.replace('-', ' ').strip().lower()
+                logo_url = f"https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/{fn}"
+                mapping[clean] = logo_url
+                mapping[slug.lower()] = logo_url
+                norm = clean.replace('ç','c').replace('ğ','g').replace('ı','i').replace('ö','o').replace('ş','s').replace('ü','u')
+                mapping[norm] = logo_url
+            print(f"[tv-logos] Toplam {len(entries)} adet yüksek çözünürlüklü kanal logosu yüklendi.")
+    except Exception as e:
+        print(f"[tv-logos] Logo kütüphanesi yüklenemedi: {e}")
+    return mapping
 
 # Çapraz Kategori Eşleştirmeleri (Bir kanal birden fazla kategoride yer alabilir)
 CROSS_CATEGORY_MAPPINGS = [
@@ -1081,7 +1189,7 @@ def fetch_onureroz_channels():
                             'name': curr_name,
                             'url': line.strip(),
                             'logo': curr_logo,
-                            'category': curr_group or get_channel_category(curr_name),
+                            'category': normalize_category(curr_group, curr_name),
                             'epg_id': curr_epg,
                             'fallbacks': fallbacks,
                             'is_verified': False
@@ -1206,8 +1314,9 @@ def build_playlist():
     iptv_candidates, iptv_logo_map = fetch_iptv_org_channels()
     famelack_candidates = fetch_famelack_channels()
 
-    # Birleşik logo haritası (IPTV-org + OnurEroz)
-    combined_logo_map = {**iptv_logo_map, **onur_logo_map}
+    # Birleşik logo haritası (tv-logos + IPTV-org + OnurEroz)
+    tv_logos_catalog = fetch_tv_logos_map()
+    combined_logo_map = {**tv_logos_catalog, **iptv_logo_map, **onur_logo_map}
 
     all_candidates.extend(onur_candidates)
     all_candidates.extend(iptv_candidates)
@@ -1259,7 +1368,7 @@ def build_playlist():
         verified_info = verified_map.get(key)
         
         logo = item.get('logo', '')
-        category = item.get('category') or get_channel_category(norm_name)
+        category = normalize_category(item.get('category'), norm_name)
         epg_id = item.get('epg_id', '')
 
         if verified_info:
@@ -1274,6 +1383,9 @@ def build_playlist():
             epg_id = EPG_MAP.get(key, '')
 
         # Logo çözümleme hiyerarşisi: Verified -> Akış Logosu -> Statik Kütüphane -> Birleşik Logo Haritası
+        if 'wikimedia.org' in logo:
+            logo = ''
+
         if not logo:
             if key in STATIC_LOGOS:
                 logo = STATIC_LOGOS[key]
@@ -1299,9 +1411,10 @@ def build_playlist():
             if not final_channel_map[key]['epg_id'] and epg_id:
                 final_channel_map[key]['epg_id'] = epg_id
 
-    # Kanal haritasında kalan boş logolar için ek zenginleştirme güvencesi
+    # Kanal haritasında kalan boş veya Wikimedia logoları için ek zenginleştirme güvencesi
     for key, ch in final_channel_map.items():
-        if not ch.get('logo'):
+        if not ch.get('logo') or 'wikimedia.org' in ch.get('logo', ''):
+            ch['logo'] = ''
             norm_key = key.replace('ç','c').replace('ğ','g').replace('ı','i').replace('ö','o').replace('ş','s').replace('ü','u')
             if key in STATIC_LOGOS:
                 ch['logo'] = STATIC_LOGOS[key]
@@ -1311,6 +1424,8 @@ def build_playlist():
                 ch['logo'] = combined_logo_map[key]
             elif norm_key in combined_logo_map:
                 ch['logo'] = combined_logo_map[norm_key]
+            else:
+                ch['logo'] = make_svg_logo(ch['name'])
 
     final_channels = list(final_channel_map.values())
     print(f"Tekilleştirme sonrası net yerli kanal sayısı: {len(final_channels)}")
@@ -1362,7 +1477,7 @@ def build_playlist():
     # Ulusal kategorisi TOP 50 olarak adlandırıldı/değiştirildi (kullanıcı talebi).
     # Ulusal kategorisindeki kanallar zaten TOP 50 listesindedir.
     # Diğer tematik kategorileri (Çocuk, Haber, Spor, Belgesel, Müzik, Sinema & Dizi, Kültür & Dini, Yerel) ekliyoruz.
-    category_channels = [ch for ch in extended_channels if ch.get('category') != 'Ulusal']
+    category_channels = [ch for ch in extended_channels if ch.get('category') not in ('Ulusal', 'ULUSAL')]
 
     extended_channels = all_channels_group + top_50_group + category_channels
 
