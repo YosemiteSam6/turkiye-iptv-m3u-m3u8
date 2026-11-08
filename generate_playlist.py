@@ -36,7 +36,7 @@ EPG_URL = "https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz"
 # Kategori Öncelik Sıralaması
 CATEGORY_ORDER = [
     "TÜM KANALLAR (A-Z Sıralı)",
-    "Ulusal",
+    "TOP 50",
     "Çocuk",
     "Haber",
     "Spor",
@@ -67,26 +67,30 @@ def is_foreign_or_blocked(name: str) -> bool:
     ]
     return any(b in n for b in blocked_keywords)
 
-# Türkiye'de En Çok İzlenen 50 Kanal (Reyting ve Popülerlik Sıralı)
+# Türkiye'de En Çok İzlenen 50 Kanal (Reyting ve Popülerlik Sıralı - Diyanet TV #1)
 TOP_50_RANKS = [
-    # --- Ulusal Ana Kanallar ---
-    "TRT 1", "ATV", "NOW", "Kanal D", "Star TV", "TV8", "TV8.5", "A2", "360", 
-    "Kanal 7 Avrupa", "Euro D", "Show Max", "TV 4",
-    # --- Popüler Çocuk Kanalları ---
-    "TRT Çocuk", "Minika Çocuk", "Minika Go", "Disney Jr.", "Baby TV", 
-    "Spacetoon Turkey", "TRT Diyanet Çocuk", "TRT EBA İlkokul",
-    # --- Ana Haber & Ekonomi Kanalları ---
-    "TRT Haber", "NTV", "Habertürk TV", "A Haber", "Haber Global", "TV100", 
-    "Halk TV", "Tele1", "TGRT Haber", "Bloomberg HT", "CNBC-e", "24 TV", "Flash Haber TV", 
-    "Bengütürk TV", "Ekol TV", "TRT 3 / TBMM TV",
-    # --- Spor Kanalları ---
-    "TRT Spor", "TRT Spor Yıldız", "A Spor", "Ekol Sports", "FB TV", "HTSpor TV", "TJK TV",
-    # --- Belgesel Kanalları ---
-    "TRT Belgesel", "TGRT Belgesel",
-    # --- Müzik Kanalları ---
-    "TRT Müzik", "Power TV", "PowerTurk TV", "Kral Pop TV", "Dream Turk", "Number 1 TV",
-    # --- Kültür & Sanat ---
-    "TRT 2"
+    # 1. Sıra (Özel İstek):
+    "Diyanet TV",
+    # 2-8. Ulusal Ana Reyting Liderleri:
+    "TRT 1", "ATV", "NOW", "Kanal D", "Star TV", "TV8", "Kanal 7 Avrupa",
+    # 9-14. En Popüler Çocuk ve Ana Haber Kanalları:
+    "TRT Çocuk", "TRT Haber", "A Haber", "NTV", "Habertürk TV", "Halk TV",
+    # 15-20. Spor, Belgesel ve Popüler Tematik Kanallar:
+    "TRT Spor", "A Spor", "TRT Belgesel", "A2", "TV8.5", "360",
+    # 21-26. Popüler Haber ve Eğlence:
+    "Haber Global", "TV100", "CNBC-e", "Tele1", "TGRT Haber", "Show Max",
+    # 27-30. Popüler Çocuk Kanalları:
+    "Minika Çocuk", "Minika Go", "Cartoon Network", "Disney Jr.",
+    # 31-35. Kültür, Spor ve Müzik:
+    "TRT Müzik", "TRT 2", "TRT Spor Yıldız", "FB TV", "HTSpor TV",
+    # 36-40. Ekonomi, Haber ve Yarış:
+    "Bloomberg HT", "24 TV", "Bengütürk TV", "Ekol TV", "TJK TV",
+    # 41-42. Çocuk:
+    "TRT Diyanet Çocuk", "Baby TV",
+    # 43-47. Popüler Müzik Kanalları:
+    "PowerTurk TV", "Power TV", "Kral Pop TV", "Dream Turk", "Number 1 TV",
+    # 48-50. Belgesel ve Ulusal Kanallar:
+    "TGRT Belgesel", "Euro D", "TV 4"
 ]
 
 # Doğrulanmış Öncelikli Kanallar (Failover Yedekleri ve EPG Kimlikleri ile)
@@ -484,6 +488,13 @@ VERIFIED_CHANNELS = [
         "epg_id": "TRT.KURDİ.tr",
         "url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TRT_Kurd%C3%AE_logo_2021.svg/512px-TRT_Kurd%C3%AE_logo_2021.svg.png"
+    },
+    {
+        "name": "Diyanet TV",
+        "category": "Kültür & Dini",
+        "epg_id": "",
+        "url": "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Diyanet_TV_logo.svg/960px-Diyanet_TV_logo.svg.png"
     }
 ]
 
@@ -993,7 +1004,27 @@ def build_playlist():
                 extra_channel['url'] = ch['url'] + mapping['url_suffix']
                 extended_channels.append(extra_channel)
 
-    # 5.1. TÜM KANALLAR (A-Z Sıralı) Grubu (Kullanıcı İsteği: 'Tüm Kanallar' sekmesi olmayan oynatıcılar için)
+    # 5.1. TOP 50 Grubu (En Çok İzlenen 50 Kanal, Reyting ve Popülerlik Sıralı - Diyanet TV #1)
+    # kanallar.m3u içinde Ulusal kategorisi yerine TOP 50 ana vitrin olarak yer alır.
+    top_50_channels = []
+    for req_name in TOP_50_RANKS:
+        req_key = clean_channel_name(req_name).lower()
+        if req_key in final_channel_map:
+            top_50_channels.append(final_channel_map[req_key])
+        else:
+            match = next((v for k, v in final_channel_map.items() if req_key in k or k in req_key), None)
+            if match and match not in top_50_channels:
+                top_50_channels.append(match)
+
+    top_50_group = []
+    for rank, ch in enumerate(top_50_channels, start=1):
+        item = dict(ch)
+        item['category'] = "TOP 50"
+        item['url'] = ch['url'] + "#top50"
+        item['top50_rank'] = rank
+        top_50_group.append(item)
+
+    # 5.2. TÜM KANALLAR (A-Z Sıralı) Grubu (Kullanıcı İsteği: 'Tüm Kanallar' sekmesi olmayan oynatıcılar için)
     # Tüm çalışan yerli kanallar tek bir grupta toplanır ve A-Z olarak listelenir.
     # Diğer kategorilerle çakışmaması ve silinmemesi için URL'ye #all etiketi eklenir.
     all_channels_group = []
@@ -1003,13 +1034,21 @@ def build_playlist():
         item['url'] = ch['url'] + "#all"
         all_channels_group.append(item)
 
-    extended_channels = all_channels_group + extended_channels
+    # Ulusal kategorisi TOP 50 olarak adlandırıldı/değiştirildi (kullanıcı talebi).
+    # Ulusal kategorisindeki kanallar zaten TOP 50 listesindedir.
+    # Diğer tematik kategorileri (Çocuk, Haber, Spor, Belgesel, Müzik, Sinema & Dizi, Kültür & Dini, Yerel) ekliyoruz.
+    category_channels = [ch for ch in extended_channels if ch.get('category') != 'Ulusal']
 
-    # 6. Kategorik Sıralama (Kategori Önceliği + Kategori İçi Türkçe A-Z Sıralama)
+    extended_channels = all_channels_group + top_50_group + category_channels
+
+    # 6. Kategorik Sıralama (Kategori Önceliği + Kategori İçi Sıralama)
     def sort_key(ch):
         cat = ch.get('category', 'Yerel')
         cat_index = CATEGORY_ORDER.index(cat) if cat in CATEGORY_ORDER else 99
-        return (cat_index, turkish_sort_key(ch['name']))
+        if cat == "TOP 50":
+            # TOP 50 kategorisinde kanallar en çok izlenenden en aza doğru sıralanır (Diyanet TV #1)
+            return (cat_index, ch.get('top50_rank', 999), '')
+        return (cat_index, 999, turkish_sort_key(ch['name']))
 
     extended_channels.sort(key=sort_key)
 
@@ -1080,16 +1119,6 @@ def build_playlist():
         print(f"    - {k['name']}")
 
     # 9. TOP 50 ÖZEL M3U / M3U8 Dosyalarını Oluştur (top50.m3u & top50.m3u8)
-    top_50_channels = []
-    for req_name in TOP_50_RANKS:
-        req_key = clean_channel_name(req_name).lower()
-        if req_key in final_channel_map:
-            top_50_channels.append(final_channel_map[req_key])
-        else:
-            match = next((v for k, v in final_channel_map.items() if req_key in k or k in req_key), None)
-            if match and match not in top_50_channels:
-                top_50_channels.append(match)
-
     top50_header = [
         f'#EXTM3U url-tvg="{EPG_URL}" x-tvg-url="{EPG_URL}"',
         "# Turkiye En Cok Izlenen TOP 50 Canli TV Listesi",
