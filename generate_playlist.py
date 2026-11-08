@@ -18,6 +18,7 @@ import sys
 import json
 import gzip
 import unicodedata
+from datetime import datetime, timezone, timedelta
 from concurrent.futures import ThreadPoolExecutor
 import requests
 
@@ -1110,6 +1111,45 @@ def build_playlist():
 
     print(f"[Başarılı] TOP 50 Özel Listesi '{top50_m3u_path}' oluşturuldu! ({len(top_50_channels)} kanal)")
     print(f"[Başarılı] TOP 50 Özel Listesi '{top50_m3u8_path}' oluşturuldu!")
+
+    # 10. API / JSON Formatında Veri Çıktısı (channels.json)
+    now_utc = datetime.now(timezone.utc)
+    now_tr = now_utc + timedelta(hours=3)
+
+    stats_data = {
+        "updated_at": now_tr.strftime("%Y-%m-%d %H:%M:%S (TSİ)"),
+        "total_unique_channels": len(final_channels),
+        "total_extended_entries": len(extended_channels),
+        "total_kids_channels": len(kids_channels),
+        "total_top50_channels": len(top_50_channels),
+        "category_counts": {cat: cat_counts.get(cat, 0) for cat in CATEGORY_ORDER if cat in cat_counts},
+        "epg_source": EPG_URL,
+        "playlists": {
+            "all_m3u": "https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/kanallar.m3u",
+            "all_m3u8": "https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/kanallar.m3u8",
+            "kids_m3u": "https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/cocuk.m3u",
+            "kids_m3u8": "https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/cocuk.m3u8",
+            "top50_m3u": "https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/top50.m3u",
+            "top50_m3u8": "https://raw.githubusercontent.com/YosemiteSam6/turkiye-iptv-m3u-m3u8/main/top50.m3u8"
+        },
+        "channels": [
+            {
+                "name": ch["name"],
+                "category": ch.get("category", "Yerel"),
+                "logo": ch.get("logo", ""),
+                "epg_id": ch.get("epg_id", ""),
+                "url": ch["url"],
+                "is_verified": ch.get("is_verified", False)
+            }
+            for ch in final_channels
+        ]
+    }
+
+    json_path = os.path.join(base_dir, "channels.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(stats_data, f, ensure_ascii=False, indent=2)
+
+    print(f"[Başarılı] JSON Veri Çıktısı '{json_path}' oluşturuldu! ({len(final_channels)} benzersiz kanal)")
     print("=" * 65)
 
 if __name__ == "__main__":

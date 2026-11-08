@@ -1,0 +1,66 @@
+name: 📺 Yeni Kanal Talebi
+description: Listede yer almayan yasal ve açık (FTA) bir Türkiye kanalı önerin
+title: "[Kanal Talebi]: <Kanal Adı>"
+labels: ["channel request", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Önermeden önce lütfen kanalın **kesinlikle şifresiz, kamuya açık ve yasal bir Türkiye kanalı** olduğundan emin olun.
+        *(Digiturk, beIN Sports, Exxen vb. ücretli yayın talepleri kabul edilmez).*
+  - type: input
+    id: channel_name
+    attributes:
+      label: Kanal Adı
+      description: Eklenmesini istediğiniz kanalın adı
+      placeholder: "Örn: TV Kayseri, Ege TV"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Kategori
+      options:
+        - "Ulusal"
+        - "Çocuk"
+        - "Haber"
+        - "Spor"
+        - "Belgesel"
+        - "Müzik"
+        - "Sinema & Dizi"
+        - "Kültür & Dini"
+        - "Yerel"
+    validations:
+      required: true
+  - type: input
+    id: official_site
+    attributes:
+      label: Resmi İnternet Sitesi
+      description: Kanalın yayın haklarını doğrulayabileceğimiz resmi web sitesi
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: stream_url
+    attributes:
+      label: Canlı Yayın Akış Adresi (Varsa)
+      description: Kanalın kamuya açık .m3u8 veya HLS akış adresi
+      placeholder: "https://.../live.m3u8"
+    validations:
+      required: false
+  - type: input
+    id: logo_url
+    attributes:
+      label: Kanal Logosu (Varsa)
+      description: Şeffaf arka planlı yüksek kaliteli logo linki
+      placeholder: "https://..."
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Yasal Onay
+      options:
+        - label: "Bu kanalın şifresiz, kamuya açık (FTA) ve yasal bir yayın olduğunu onaylıyorum."
+          required: true
+

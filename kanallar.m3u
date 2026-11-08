@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz"
 # Generated automatically for Android TV & Smart TV - Turkiye Canli TV
-# Total Verified Turkish Channels: 311
+# Total Verified Turkish Channels: 315
 
 #EXTINF:-1 tvg-id="24.TV.tr" tvg-name="24 TV" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="TÜM KANALLAR (A-Z Sıralı)",24 TV
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8#all
@@ -21,7 +21,7 @@ https://edge1.taksimbilisim.com/altastv/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Anadolu Net TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Anadolu Net TV
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Aras TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Aras TV
-https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8#all
+http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8#all
 #EXTINF:-1 tvg-name="AS TV" group-title="TÜM KANALLAR (A-Z Sıralı)",AS TV
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8#all
 #EXTINF:-1 tvg-id="ATV.HD.tr" tvg-name="ATV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/ATV_logo.svg/512px-ATV_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",ATV
@@ -60,6 +60,8 @@ https://canliyayin.cine1.com.tr/memfs/cbaef080-a742-4644-9e9e-2b9f6a5103c3_outpu
 https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8#all
 #EXTINF:-1 tvg-name="Deniz Postasi TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Deniz Postasi TV
 https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8#all
+#EXTINF:-1 tvg-name="DHA" tvg-logo="https://i.imgur.com/VZhag2x.png" group-title="TÜM KANALLAR (A-Z Sıralı)",DHA
+https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Disney Jr." tvg-logo="https://www.dsmart.com.tr/api/v1/public/images/kanallar/disneyjr.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Disney Jr.
 https://saran-live.ercdn.net/disneyjunior/index.m3u8#all
 #EXTINF:-1 tvg-name="Diyanet TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Diyanet TV
@@ -98,6 +100,8 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c05
 https://edge2.taksimbilisim.com/ftvturk/bant1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="FRT TV" group-title="TÜM KANALLAR (A-Z Sıralı)",FRT TV
 https://edge1.taksimbilisim.com/frttv/bant1/playlist.m3u8#all
+#EXTINF:-1 tvg-name="FX" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/960px-FX_International_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",FX
+https://saran-live.ercdn.net/fx/index.m3u8#all
 #EXTINF:-1 tvg-name="Haber Global" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Haber_Global_logo.svg/512px-Haber_Global_logo.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Haber Global
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8#all
 #EXTINF:-1 tvg-name="Haber61 TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Haber61 TV
@@ -192,8 +196,6 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Number 1 TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Number 1 TV
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8#all
-#EXTINF:-1 tvg-name="OlayTurk TV" group-title="TÜM KANALLAR (A-Z Sıralı)",OlayTurk TV
-https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Power Dance" group-title="TÜM KANALLAR (A-Z Sıralı)",Power Dance
 https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8#all
 #EXTINF:-1 tvg-name="Power Love" group-title="TÜM KANALLAR (A-Z Sıralı)",Power Love
@@ -242,6 +244,8 @@ http://62.60.207.173:8080/hls/thaqalayn/index.m3u8#all
 https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8#all
 #EXTINF:-1 tvg-name="TJK TV" group-title="TÜM KANALLAR (A-Z Sıralı)",TJK TV
 https://tjktv-live.tjk.org/tjktv.m3u8#all
+#EXTINF:-1 tvg-name="TJK TV 2" tvg-logo="https://i.imgur.com/3zHdkYG.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TJK TV 2
+https://tjktv-live.tjk.org/tjktv2/tjktv2.m3u8#all
 #EXTINF:-1 tvg-name="Ton TV" group-title="TÜM KANALLAR (A-Z Sıralı)",Ton TV
 https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8#all
 #EXTINF:-1 tvg-id="TRT.1.HD.tr" tvg-name="TRT 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/TRT_1_logo_2021.svg/512px-TRT_1_logo_2021.svg.png" group-title="TÜM KANALLAR (A-Z Sıralı)",TRT 1
@@ -368,6 +372,8 @@ https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 https://tv.ensonhaber.com/bloomberght/bloomberght.m3u8
 #EXTINF:-1 tvg-name="CNBC-e" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CNBC-e_logo.svg/512px-CNBC-e_logo.svg.png" group-title="Haber",CNBC-e
 https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
+#EXTINF:-1 tvg-name="DHA" tvg-logo="https://i.imgur.com/VZhag2x.png" group-title="Haber",DHA
+https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8
 #EXTINF:-1 tvg-name="Ekol TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ekol_TV_logosu.png/512px-Ekol_TV_logosu.png" group-title="Haber",Ekol TV
 https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
 #EXTINF:-1 tvg-name="Ekoturk" group-title="Haber",Ekoturk
@@ -416,6 +422,8 @@ http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
 https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
 #EXTINF:-1 tvg-name="TJK TV" group-title="Spor",TJK TV
 https://tjktv-live.tjk.org/tjktv.m3u8
+#EXTINF:-1 tvg-name="TJK TV 2" tvg-logo="https://i.imgur.com/3zHdkYG.png" group-title="Spor",TJK TV 2
+https://tjktv-live.tjk.org/tjktv2/tjktv2.m3u8
 #EXTINF:-1 tvg-id="TRT.3.-..SPOR.tr" tvg-name="TRT 3 Spor / TBMM TV" tvg-logo="https://i.imgur.com/JrWFwBd.png" group-title="Spor",TRT 3 Spor / TBMM TV
 https://tv-trt3.live.trt.com.tr/master.m3u8#spor
 #EXTINF:-1 tvg-id="TRT.SPOR.HD.tr" tvg-name="TRT Spor" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/TRT_Spor_logo_2021.svg/512px-TRT_Spor_logo_2021.svg.png" group-title="Spor",TRT Spor
@@ -511,7 +519,7 @@ https://edge1.taksimbilisim.com/altastv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Anadolu Net TV" group-title="Yerel",Anadolu Net TV
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
 #EXTINF:-1 tvg-name="Aras TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="Yerel",Aras TV
-https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8
+http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
 #EXTINF:-1 tvg-name="AS TV" group-title="Yerel",AS TV
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
 #EXTINF:-1 tvg-name="ATV Alanya" group-title="Yerel",ATV Alanya
@@ -546,6 +554,8 @@ https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8
 https://edge2.taksimbilisim.com/ftvturk/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="FRT TV" group-title="Yerel",FRT TV
 https://edge1.taksimbilisim.com/frttv/bant1/playlist.m3u8
+#EXTINF:-1 tvg-name="FX" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/960px-FX_International_logo.svg.png" group-title="Yerel",FX
+https://saran-live.ercdn.net/fx/index.m3u8
 #EXTINF:-1 tvg-name="Hunat TV" group-title="Yerel",Hunat TV
 https://live.artidijitalmedya.com/artidijital_hunattv/hunattv/playlist.m3u8
 #EXTINF:-1 tvg-name="Icel TV" group-title="Yerel",Icel TV
@@ -594,8 +604,6 @@ https://live.artidijitalmedya.com/artidijital_vuslattv/vuslattv/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8
 #EXTINF:-1 tvg-name="Mercan TV" group-title="Yerel",Mercan TV
 https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
-#EXTINF:-1 tvg-name="OlayTurk TV" group-title="Yerel",OlayTurk TV
-https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
 #EXTINF:-1 tvg-name="RTG int." tvg-logo="https://i.imgur.com/ZpUNou4.png" group-title="Yerel",RTG int.
 http://213.91.179.28:8000/play/a0bw
 #EXTINF:-1 tvg-name="Ruha TV" group-title="Yerel",Ruha TV

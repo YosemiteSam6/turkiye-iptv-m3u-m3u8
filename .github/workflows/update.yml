@@ -35,7 +35,7 @@ jobs:
 
       - name: Bağımlılıkları Yükle
         run: |
-          pip install requests
+          pip install -r requirements.txt
 
       - name: Listeyi Doğrula ve Oluştur
         run: |
@@ -45,11 +45,11 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add kanallar.m3u kanallar.m3u8 cocuk.m3u cocuk.m3u8 top50.m3u top50.m3u8
+          git add kanallar.m3u kanallar.m3u8 cocuk.m3u cocuk.m3u8 top50.m3u top50.m3u8 channels.json
           if git diff --staged --quiet; then
             echo "Değişiklik yok, liste güncel."
           else
-            git commit -m "chore: Canlı kanallar güncellendi [skip ci]"
+            git commit -m "chore: Canlı kanallar ve veri tabanı güncellendi [skip ci]"
             git pull --rebase -X theirs origin main
             git push origin main
           fi

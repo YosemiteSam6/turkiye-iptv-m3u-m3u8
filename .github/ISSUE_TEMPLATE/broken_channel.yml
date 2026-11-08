@@ -1,0 +1,58 @@
+name: 🚨 Bozuk / Donan Kanal Bildirimi
+description: Çalışmayan, donan veya sesi/görüntüsü olmayan bir kanal bildirin
+title: "[Bozuk Kanal]: <Kanal Adı>"
+labels: ["broken stream", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Çalışmayan veya sorunlu bir yayın bildirdiğiniz için teşekkürler. Lütfen aşağıdaki bilgileri eksiksiz doldurun.
+  - type: input
+    id: channel_name
+    attributes:
+      label: Kanal Adı
+      description: Sorun yaşadığınız kanalın tam adı (Örn: TRT 1, Haber Global, Spacetoon)
+      placeholder: "Kanal Adı"
+    validations:
+      required: true
+  - type: dropdown
+    id: playlist_type
+    attributes:
+      label: Hangi Çalma Listesini Kullanıyorsunuz?
+      options:
+        - "Genel Liste (kanallar.m3u)"
+        - "Çocuk Listesi (cocuk.m3u)"
+        - "TOP 50 Listesi (top50.m3u)"
+        - "Doğrudan Web Sitesi / Diğer"
+    validations:
+      required: true
+  - type: input
+    id: app_device
+    attributes:
+      label: Kullandığınız Uygulama ve Cihaz
+      description: Hangi IPTV uygulamasını ve cihazını kullanıyorsunuz?
+      placeholder: "Örn: TiviMate 4.7 / TCL Android TV 11 veya Televizo / Samsung Galaxy S23"
+    validations:
+      required: true
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Yaşanan Sorun Nedir?
+      options:
+        - "Yayın hiç açılmıyor / Siyah ekran"
+        - "Sürekli donuyor / Ara belleğe alıyor (Buffering)"
+        - "Ses var görüntü yok"
+        - "Görüntü var ses yok"
+        - "Kanal adı veya logosu yanlış"
+        - "Diğer"
+    validations:
+      required: true
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Ek Detaylar veya Hata Mesajı
+      description: Varsa ekrandaki hata kodunu veya sorunun ne zamandır devam ettiğini belirtin.
+      placeholder: "Örn: 403 Forbidden hatası veriyor..."
+    validations:
+      required: false
+
