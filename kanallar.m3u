@@ -230,7 +230,7 @@ https://live.artidijitalmedya.com/artidijital_vuslattv/vuslattv/playlist.m3u8#al
 https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8#all
 #EXTINF:-1 tvg-name="MC TV" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMT%3C/text%3E%3C/svg%3E" group-title="TÜM KANALLAR (A-Z Sıralı)",MC TV
 https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&type=live&service=wowza&protocol=https&output=playlist.m3u8#all
-#EXTINF:-1 tvg-name="Med Muzik" tvg-logo="https://i.imgur.com/gtUFmCD.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Med Muzik
+#EXTINF:-1 tvg-name="Med Müzik" tvg-logo="https://i.imgur.com/gtUFmCD.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Med Müzik
 http://54.36.110.140/live3/live3.m3u8#all
 #EXTINF:-1 tvg-name="Meltem TV" tvg-logo="https://i.imgur.com/C3m6w5S.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Meltem TV
 https://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8#all
@@ -304,9 +304,9 @@ https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-3
 https://tvsms.club/tv.php?kanal=silatv&file=.m3u8#all
 #EXTINF:-1 tvg-name="SiNEMA 1" tvg-logo="https://e7.pngegg.com/pngimages/879/420/png-clipart-film-video-production-television-graphy-cine-miscellaneous-label-thumbnail.png" group-title="TÜM KANALLAR (A-Z Sıralı)",SiNEMA 1
 https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8#all
-#EXTINF:-1 tvg-name="SiNEMA Aile" tvg-logo="https://www.tivibu.com.tr/uploads/ChannelFiles/sinemaaile_logo_B2AC3808-8447-4546-80EF-EA50B34D6089.png" group-title="TÜM KANALLAR (A-Z Sıralı)",SiNEMA Aile
+#EXTINF:-1 tvg-name="Sinema Aile" tvg-logo="https://www.tivibu.com.tr/uploads/ChannelFiles/sinemaaile_logo_B2AC3808-8447-4546-80EF-EA50B34D6089.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Sinema Aile
 http://65.108.239.207/sinemaaile/index.m3u8#all
-#EXTINF:-1 tvg-name="SiNEMA TV" tvg-logo="https://www.tivibu.com.tr/uploads/ChannelFiles/sinematv_logo_A0CC7C58-E100-4C18-8B8D-BF961C4F785E.png" group-title="TÜM KANALLAR (A-Z Sıralı)",SiNEMA TV
+#EXTINF:-1 tvg-name="Sinema TV" tvg-logo="https://www.tivibu.com.tr/uploads/ChannelFiles/sinematv_logo_A0CC7C58-E100-4C18-8B8D-BF961C4F785E.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Sinema TV
 http://65.108.239.207/sinema/index.m3u8#all
 #EXTINF:-1 tvg-name="Sonmez TV" tvg-logo="https://www.astv.com.tr/static/2026/07/06/astv-logo-1783346167-699-x80.jpeg" group-title="TÜM KANALLAR (A-Z Sıralı)",Sonmez TV
 https://sonmeztv.ozelip.com.tr:3826/live/sonmeztvlive.m3u8#all
@@ -626,7 +626,7 @@ https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
 https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="Kral Pop TV" tvg-logo="https://i.ibb.co/vk0bKz0/kral-pop.png" group-title="Müzik",Kral Pop TV
 http://dygvideo.dygdigital.com/live/hls/kralpop
-#EXTINF:-1 tvg-name="Med Muzik" tvg-logo="https://i.imgur.com/gtUFmCD.png" group-title="Müzik",Med Muzik
+#EXTINF:-1 tvg-name="Med Müzik" tvg-logo="https://i.imgur.com/gtUFmCD.png" group-title="Müzik",Med Müzik
 http://54.36.110.140/live3/live3.m3u8
 #EXTINF:-1 tvg-name="NR1" tvg-logo="https://i.ibb.co/sybLTBG/nr1.png" group-title="Müzik",NR1
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e17cd6360b_1/playlist.m3u8
@@ -672,11 +672,11 @@ https://edge-e3.evrideo.tv/f2dcbecf-5af0-47db-a82e-032112050a23_1000027346_HLS/m
 https://live.artidijitalmedya.com/artidijital_kanalplus/kanalplus/mpeg/playlist.m3u8
 #EXTINF:-1 tvg-name="Show Max (Dizi & Sinema)" tvg-logo="https://www.showmax.com.tr/assets/dist/images/base/logo.svg" group-title="Sinema & Dizi",Show Max (Dizi & Sinema)
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8#dizi
-#EXTINF:-1 tvg-name="SiNEMA 1" tvg-logo="https://e7.pngegg.com/pngimages/879/420/png-clipart-film-video-production-television-graphy-cine-miscellaneous-label-thumbnail.png" group-title="Sinema & Dizi",SiNEMA 1
+#EXTINF:-1 tvg-name="Sinema 1" tvg-logo="https://e7.pngegg.com/pngimages/879/420/png-clipart-film-video-production-television-graphy-cine-miscellaneous-label-thumbnail.png" group-title="Sinema & Dizi",Sinema 1
 https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="SiNEMA Aile" tvg-logo="https://www.tivibu.com.tr/uploads/ChannelFiles/sinemaaile_logo_B2AC3808-8447-4546-80EF-EA50B34D6089.png" group-title="Sinema & Dizi",SiNEMA Aile
+#EXTINF:-1 tvg-name="Sinema Aile" tvg-logo="https://www.tivibu.com.tr/uploads/ChannelFiles/sinemaaile_logo_B2AC3808-8447-4546-80EF-EA50B34D6089.png" group-title="Sinema & Dizi",Sinema Aile
 http://65.108.239.207/sinemaaile/index.m3u8
-#EXTINF:-1 tvg-name="SiNEMA TV" tvg-logo="https://www.tivibu.com.tr/uploads/ChannelFiles/sinematv_logo_A0CC7C58-E100-4C18-8B8D-BF961C4F785E.png" group-title="Sinema & Dizi",SiNEMA TV
+#EXTINF:-1 tvg-name="Sinema TV" tvg-logo="https://www.tivibu.com.tr/uploads/ChannelFiles/sinematv_logo_A0CC7C58-E100-4C18-8B8D-BF961C4F785E.png" group-title="Sinema & Dizi",Sinema TV
 http://65.108.239.207/sinema/index.m3u8
 #EXTINF:-1 tvg-id="TABİİ.tr" tvg-name="Tabii" tvg-logo="https://cms-tabii-assets.tabii.com/thumbnails/23963_781e9dee-cbd8-491a-b166-0b1df25b3bd0_720.jpeg" group-title="Sinema & Dizi",Tabii
 https://ceokzokgtd.erbvr.com/tabiitv/tabiitv.m3u8
@@ -686,14 +686,8 @@ https://al-ekhbaria-prod-dub.shahid.net/out/v1/9885cab0a3ec4008b53bae57a27ca76b/
 https://panel.5gtvhosting.com/hls/cemtv/cemtv.m3u8
 #EXTINF:-1 tvg-name="Diyanet TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/diyanet-tv-tr.png" group-title="Kültür & Dini",Diyanet TV
 https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8
-#EXTINF:-1 tvg-name="Dost TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/dost-tv-tr.png" group-title="Kültür & Dini",Dost TV
-https://dost.stream.emsal.im/tv/live.m3u8
 #EXTINF:-1 tvg-name="Lalegül TV" tvg-logo="https://i.imgur.com/wwCysFs.png" group-title="Kültür & Dini",Lalegül TV
 https://lbl.netmedya.net/hls/lalegultv.m3u8
-#EXTINF:-1 tvg-name="MADINAH TV" tvg-logo="https://e7.pngegg.com/pngimages/758/259/png-clipart-medina-mecca-television-channel-streaming-media-others-miscellaneous-television.png" group-title="Kültür & Dini",MADINAH TV
-https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/saudi_sunnah-avc1_600000=2-mp4a_145600_ara=3.m3u8
-#EXTINF:-1 tvg-name="MAKKAH TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJCVPXXnt4LxrLpCI6sRKfYu0bZkjHUg1WkQ&s" group-title="Kültür & Dini",MAKKAH TV
-https://live.kwikmotion.com/sbrksaquranradiolive/srpksaquranradio/playlist.m3u8
 #EXTINF:-1 tvg-name="Meltem TV" tvg-logo="https://i.imgur.com/C3m6w5S.png" group-title="Kültür & Dini",Meltem TV
 https://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8
 #EXTINF:-1 tvg-name="MUKABELE TV" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMT%3C/text%3E%3C/svg%3E" group-title="Kültür & Dini",MUKABELE TV
@@ -740,16 +734,12 @@ https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
 https://helga.iptv2022.com/sh/AlanyaTV/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="Bi Kanal" tvg-logo="http://www.bikanal.com/uploads/banners/01K6DG6S1EPCZN7DQH406HGMES.webp" group-title="Yerel",Bi Kanal
 https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8
-#EXTINF:-1 tvg-name="Bir TV" tvg-logo="https://i.ibb.co/dDdPMWq/birtv.png" group-title="Yerel",Bir TV
-https://edge1.socialsmart.tv/birtv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Bodrum Kent TV" tvg-logo="https://static.daktilo.com/sites/1600/uploads/2024/07/27/social.png" group-title="Yerel",Bodrum Kent TV
 https://edge1.socialsmart.tv/bodrumkenttv/bant1/chunks.m3u8
 #EXTINF:-1 tvg-name="BRTV" tvg-logo="https://i.imgur.com/U3qlEAp.png" group-title="Yerel",BRTV
 https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8
 #EXTINF:-1 tvg-name="BRÜKSEL TÜRK" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EBT%3C/text%3E%3C/svg%3E" group-title="Yerel",BRÜKSEL TÜRK
 https://live.euromediacenter.com/brukselturk/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-id="CNN.TÜRK.HD.tr" tvg-name="CNN Türk" tvg-logo="https://i.ibb.co/bFsmkwJ/cnn-turk.png" group-title="Yerel",CNN Türk
-https://helga.iptv2022.com/sh/cnn_turk/tracks-v4a1/mono.ts.m3u8?filter.tracks=a1v1v2v3v4&|User-Agent=okhttp/3.8.0/|Referer=https://turkcanli.tv/
 #EXTINF:-1 tvg-name="Çay TV" tvg-logo="https://i.imgur.com/ndupxwu.png" group-title="Yerel",Çay TV
 https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Deniz Postasi TV" tvg-logo="https://i.imgur.com/Mm8hdfx.png" group-title="Yerel",Deniz Postasi TV
@@ -878,8 +868,6 @@ https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8
 #EXTINF:-1 tvg-name="Thaqalayn TV" tvg-logo="https://i.imgur.com/u02FSgI.png" group-title="Yerel",Thaqalayn TV
 http://62.60.207.173:8080/hls/thaqalayn/index.m3u8
-#EXTINF:-1 tvg-name="Tivi 6" tvg-logo="https://i.ibb.co/9H3DMWz/tivi6.png" group-title="Yerel",Tivi 6
-https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
 #EXTINF:-1 tvg-name="Ton TV" tvg-logo="https://i.imgur.com/f0Soeob.png" group-title="Yerel",Ton TV
 https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8
 #EXTINF:-1 tvg-name="TV 1" tvg-logo="https://i.imgur.com/8CtrYVb.png" group-title="Yerel",TV 1

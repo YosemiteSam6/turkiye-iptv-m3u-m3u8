@@ -99,10 +99,10 @@ TOP_50_RANKS = [
 
 # Doğrulanmış Öncelikli Kanallar (Failover Yedekleri ve EPG Kimlikleri ile)
 VERIFIED_CHANNELS = [
-    # ==================== ULUSAL ====================
+    # ==================== TOP 50 ====================
     {
         "name": "TRT 1",
-        "category": "Ulusal",
+        "category": "TOP 50",
         "epg_id": "TRT.1.HD.tr",
         "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
         "fallbacks": ["https://tv-trt1.live.trt.com.tr/master.m3u8"],
@@ -110,7 +110,7 @@ VERIFIED_CHANNELS = [
     },
     {
         "name": "ATV",
-        "category": "Ulusal",
+        "category": "TOP 50",
         "epg_id": "ATV.HD.tr",
         "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8",
         "fallbacks": ["https://trkvz-live.ercdn.net/atv/atv.m3u8"],
@@ -118,42 +118,42 @@ VERIFIED_CHANNELS = [
     },
     {
         "name": "Kanal D",
-        "category": "Ulusal",
+        "category": "TOP 50",
         "epg_id": "KANAL.D.HD.tr",
         "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3",
         "logo": "https://i.imgur.com/9o1atM6.png"
     },
     {
         "name": "Star TV",
-        "category": "Ulusal",
+        "category": "TOP 50",
         "epg_id": "STAR.TV.HD.tr",
         "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5",
         "logo": "https://i.imgur.com/9O3DHRB.png"
     },
     {
         "name": "NOW",
-        "category": "Ulusal",
+        "category": "TOP 50",
         "epg_id": "FOX.HD.tr",
         "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
         "logo": "https://i.imgur.com/5EYjWK7.png"
     },
     {
         "name": "TV8",
-        "category": "Ulusal",
+        "category": "TOP 50",
         "epg_id": "TV8.HD.tr",
         "url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
         "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tv8-tr.png"
     },
     {
         "name": "TV8.5",
-        "category": "Ulusal",
+        "category": "TOP 50",
         "epg_id": "",
         "url": "https://tv8.daioncdn.net/tv8bucuk/tv8bucuk.m3u8?app=tv8bucuk_web&ce=3",
         "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tv85-tr.png"
     },
     {
         "name": "A2",
-        "category": "Ulusal",
+        "category": "TOP 50",
         "epg_id": "A2.HD.tr",
         "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8",
         "fallbacks": ["https://trkvz-live.ercdn.net/a2tv/a2tv.m3u8"],
@@ -161,14 +161,14 @@ VERIFIED_CHANNELS = [
     },
     {
         "name": "360",
-        "category": "Ulusal",
+        "category": "TOP 50",
         "epg_id": "360.HD.tr",
         "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8",
         "logo": "https://i.imgur.com/agn47sQ.png"
     },
     {
         "name": "Kanal 7 Avrupa",
-        "category": "Ulusal",
+        "category": "TOP 50",
         "epg_id": "KANAL.7.HD.tr",
         "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
         "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/kanal-7-avrupa-tr.png"
@@ -818,6 +818,15 @@ def clean_channel_name(raw_name: str) -> str:
         "STAR TV": "Star TV",
         "STAR TV (Turkiye)": "Star TV",
         "STAR TV HD": "Star TV",
+        "SiNEMA 1": "Sinema 1",
+        "SiNEMA TV": "Sinema TV",
+        "SiNEMA Aile": "Sinema Aile",
+        "SiNEMA AKSiYON": "Sinema Aksiyon",
+        "SİNEMA 1": "Sinema 1",
+        "SİNEMA TV": "Sinema TV",
+        "SİNEMA AİLE": "Sinema Aile",
+        "Med Muzik": "Med Müzik",
+        "MED MUZIK": "Med Müzik",
         "SUN TV": "Sun RTV",
         "TABII TV": "Tabii",
         "Tabii TV HD": "Tabii",
@@ -892,9 +901,9 @@ def get_channel_category(name: str) -> str:
     if any(k in n for k in ['çocuk', 'cocuk', 'minika', 'cartoon', 'disney', 'baby', 'spacetoon', 'zarok', 'animasyon', 'eba']):
         return 'Çocuk'
         
-    # 2. Ulusal Kanallar
+    # 2. TOP 50 (En Çok İzlenen / Ana Kanallar)
     if n in ['trt 1', 'atv', 'kanal d', 'star tv', 'now', 'tv8', 'tv8.5', 'show tv', 'show max', 'kanal 7', 'kanal 7 avrupa', 'a2', 'teve2', 'beyaz tv', '360', 'tlc', 'euro d', 'tv 4', 'trt 4k']:
-        return 'Ulusal'
+        return 'TOP 50'
         
     # 3. Spor
     if any(k in n for k in ['spor', 'sport', 'tjk', 'fb tv', 'gs tv', 'bjk tv', 'satranc']):
@@ -942,8 +951,8 @@ def normalize_category(group_name: str, channel_name: str) -> str:
         return 'Sinema & Dizi'
     if any(k in g_up for k in ['DİNİ', 'DINI', 'KÜLTÜR', 'KULTUR', 'RELIGIOUS']):
         return 'Kültür & Dini'
-    if any(k in g_up for k in ['ULUSAL', 'NATIONAL', 'GENEL']):
-        return get_channel_category(channel_name)
+    if any(k in g_up for k in ['ULUSAL', 'NATIONAL', 'GENEL', 'TOP 50', 'TOP50']):
+        return 'TOP 50'
     if any(k in g_up for k in ['YEREL', 'LOCAL']):
         return 'Yerel'
     return get_channel_category(channel_name)
@@ -998,13 +1007,6 @@ CROSS_CATEGORY_MAPPINGS = [
         "url_suffix": "#spor",
         "custom_name": "TRT 3 Spor / TBMM TV"
     },
-    # CNBC-e hem Haber hem Ulusal kategorisinde
-    {
-        "match": lambda n: "cnbc-e" in n.lower(),
-        "extra_category": "Ulusal",
-        "url_suffix": "#ulusal",
-        "custom_name": "CNBC-e"
-    },
     # HTSpor hem Spor hem Haber kategorisinde
     {
         "match": lambda n: "htspor" in n.lower(),
@@ -1012,14 +1014,14 @@ CROSS_CATEGORY_MAPPINGS = [
         "url_suffix": "#haber",
         "custom_name": "HTSpor TV"
     },
-    # Show Max hem Ulusal hem Sinema & Dizi kategorisinde
+    # Show Max hem TOP 50 hem Sinema & Dizi kategorisinde
     {
         "match": lambda n: "show max" in n.lower(),
         "extra_category": "Sinema & Dizi",
         "url_suffix": "#dizi",
         "custom_name": "Show Max (Dizi & Sinema)"
     },
-    # A2 hem Ulusal hem Sinema & Dizi kategorisinde
+    # A2 hem TOP 50 hem Sinema & Dizi kategorisinde
     {
         "match": lambda n: n.lower() == "a2",
         "extra_category": "Sinema & Dizi",
@@ -1303,7 +1305,7 @@ def build_playlist():
             'name': clean_channel_name(ch['name']),
             'url': ch['url'],
             'logo': ch.get('logo', ''),
-            'category': ch.get('category', 'Ulusal'),
+            'category': ch.get('category', 'TOP 50'),
             'epg_id': ch.get('epg_id', ''),
             'fallbacks': ch.get('fallbacks', []),
             'is_verified': True
@@ -1474,10 +1476,9 @@ def build_playlist():
         item['url'] = ch['url'] + "#all"
         all_channels_group.append(item)
 
-    # Ulusal kategorisi TOP 50 olarak adlandırıldı/değiştirildi (kullanıcı talebi).
-    # Ulusal kategorisindeki kanallar zaten TOP 50 listesindedir.
+    # Ulusal kategorisi tamamen kaldırıldı ve TOP 50 kategorisine aktarıldı (kullanıcı talebi).
     # Diğer tematik kategorileri (Çocuk, Haber, Spor, Belgesel, Müzik, Sinema & Dizi, Kültür & Dini, Yerel) ekliyoruz.
-    category_channels = [ch for ch in extended_channels if ch.get('category') not in ('Ulusal', 'ULUSAL')]
+    category_channels = [ch for ch in extended_channels if ch.get('category') not in ('Ulusal', 'ULUSAL', 'TOP 50')]
 
     extended_channels = all_channels_group + top_50_group + category_channels
 
