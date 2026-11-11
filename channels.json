@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-10 15:23:48 (TSİ)",
-  "total_unique_channels": 206,
-  "total_extended_entries": 446,
+  "updated_at": "2026-11-11 14:46:15 (TSİ)",
+  "total_unique_channels": 203,
+  "total_extended_entries": 439,
   "total_kids_channels": 12,
-  "total_top50_channels": 50,
+  "total_top50_channels": 49,
   "category_counts": {
-    "TÜM KANALLAR (A-Z Sıralı)": 206,
-    "TOP 50": 50,
+    "TÜM KANALLAR (A-Z Sıralı)": 203,
+    "TOP 50": 49,
     "Çocuk": 12,
     "Haber": 27,
     "Spor": 9,
-    "Belgesel": 4,
+    "Belgesel": 5,
     "Müzik": 22,
     "Sinema & Dizi": 10,
-    "Kültür & Dini": 17,
-    "Yerel": 89
+    "Kültür & Dini": 15,
+    "Yerel": 87
   },
   "epg_source": "https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz",
   "playlists": {
@@ -627,6 +627,14 @@
       "is_verified": false
     },
     {
+      "name": "Kanal B",
+      "category": "Haber",
+      "logo": "https://www.kanalb.com.tr/assets/images/logo/1683624355Kanal_B_logosu.png",
+      "epg_id": "KANAL.B.tr",
+      "url": "https://baskentaudiovideo.xyz/ULUSALApp/streams/mUE22idl26lA1683879097431.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "Kanal Urfa",
       "category": "Yerel",
       "logo": "https://www.kanalurfa.com/upload/masaustu.png",
@@ -923,6 +931,14 @@
       "is_verified": false
     },
     {
+      "name": "Moviesmart Türk HD",
+      "category": "Sinema & Dizi",
+      "logo": "https://dsmart-static-v2.ercdn.net//resize-width/400//content/e/ZI/13863/Thumbnail.png?v=636987856299906443",
+      "epg_id": "",
+      "url": "https://ds.ayakkabiparti.lol/mvturk/index.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "Film Screen HD",
       "category": "Sinema & Dizi",
       "logo": "https://feo.kablowebtv.com/resize/168A635D265A4328C2883FB4CD8FF/0/0/Vod/HLS/7d58e86c-d38e-4ef5-8ee0-fda0a7e65914.png",
@@ -1064,14 +1080,6 @@
       "logo": "https://i.ibb.co/5hwZ7xw/power-dance.png",
       "epg_id": "",
       "url": "https://listen.powerapp.com.tr/dance/dance.smil/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Meltem TV",
-      "category": "Kültür & Dini",
-      "logo": "https://i.imgur.com/C3m6w5S.png",
-      "epg_id": "",
-      "url": "https://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8",
       "is_verified": false
     },
     {
@@ -1387,6 +1395,14 @@
       "is_verified": false
     },
     {
+      "name": "BBC Earth Turkiye",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/nGSsUd4.png",
+      "epg_id": "",
+      "url": "https://nord.ayakkabiparti.lol/bbc/index.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "Bric ve Satranc TV",
       "category": "Spor",
       "logo": "https://i.imgur.com/TXDV1ty.png",
@@ -1523,6 +1539,22 @@
       "is_verified": false
     },
     {
+      "name": "National Geographic",
+      "category": "Yerel",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+      "epg_id": "NATIONAL.GEOGRAPHIC.HD.tr",
+      "url": "https://nord.ayakkabiparti.lol/natgeo/index.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "National Geographic Wild",
+      "category": "Belgesel",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png",
+      "epg_id": "",
+      "url": "https://nord.ayakkabiparti.lol/natgeowild/index.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "Power TV",
       "category": "Müzik",
       "logo": "https://i.imgur.com/XSL1gd7.png",
@@ -1603,75 +1635,19 @@
       "is_verified": false
     },
     {
+      "name": "Viasat History",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/wRP9XA7.png",
+      "epg_id": "",
+      "url": "https://nord.ayakkabiparti.lol/viasathistory/index.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "YOL TV",
       "category": "Kültür & Dini",
       "logo": "https://i.imgur.com/rTBX6lS.png",
       "epg_id": "",
       "url": "https://live.yoltv.com/hls/stream.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Bi Kanal",
-      "category": "Yerel",
-      "logo": "http://www.bikanal.com/uploads/banners/01K6DG6S1EPCZN7DQH406HGMES.webp",
-      "epg_id": "",
-      "url": "https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Cem TV",
-      "category": "Kültür & Dini",
-      "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/cem-tv-tr.png",
-      "epg_id": "",
-      "url": "https://panel.5gtvhosting.com/hls/cemtv/cemtv.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "FRT TV",
-      "category": "Yerel",
-      "logo": "https://s.gercekfethiye.com/dosya/logo/svg/logo-ana.svg",
-      "epg_id": "",
-      "url": "https://edge1.taksimbilisim.com/frttv/bant1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Kanal B",
-      "category": "Haber",
-      "logo": "https://www.kanalb.com.tr/assets/images/logo/1683624355Kanal_B_logosu.png",
-      "epg_id": "KANAL.B.tr",
-      "url": "https://tv.kanalb.tr/hls/kanalb/index.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Karadeniz TV",
-      "category": "Yerel",
-      "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/mavi-karadeniz-tr.png",
-      "epg_id": "",
-      "url": "https://panel.5gtvhosting.com/hls/karadeniztv/karadeniztv.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Ruha TV",
-      "category": "Yerel",
-      "logo": "https://ruhatv.com.tr/kunye_dosyalar/kunye_logo.png",
-      "epg_id": "",
-      "url": "https://ruhatv.radyotelekom.com.tr:3515/live/ruhatvlive.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Show Max",
-      "category": "TOP 50",
-      "logo": "https://www.showmax.com.tr/assets/dist/images/base/logo.svg",
-      "epg_id": "",
-      "url": "https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showmax/showmax.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Sonmez TV",
-      "category": "Yerel",
-      "logo": "https://www.astv.com.tr/static/2026/07/06/astv-logo-1783346167-699-x80.jpeg",
-      "epg_id": "",
-      "url": "https://sonmeztv.ozelip.com.tr:3826/live/sonmeztvlive.m3u8",
       "is_verified": false
     }
   ]
