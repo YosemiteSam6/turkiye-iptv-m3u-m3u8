@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-13 15:00:57 (TSİ)",
-  "total_unique_channels": 197,
-  "total_extended_entries": 427,
+  "updated_at": "2026-11-14 14:19:48 (TSİ)",
+  "total_unique_channels": 200,
+  "total_extended_entries": 432,
   "total_kids_channels": 12,
   "total_top50_channels": 49,
   "category_counts": {
-    "TÜM KANALLAR (A-Z Sıralı)": 197,
+    "TÜM KANALLAR (A-Z Sıralı)": 200,
     "TOP 50": 49,
     "Çocuk": 12,
     "Haber": 26,
-    "Spor": 9,
+    "Spor": 10,
     "Belgesel": 4,
     "Müzik": 22,
     "Sinema & Dizi": 9,
-    "Kültür & Dini": 16,
-    "Yerel": 83
+    "Kültür & Dini": 15,
+    "Yerel": 85
   },
   "epg_source": "https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz",
   "playlists": {
@@ -651,6 +651,14 @@
       "is_verified": false
     },
     {
+      "name": "KTV Konya",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EKK%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://cdn-ktvtv.yayin.com.tr/ktvtv/ktvtv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "Life TV",
       "category": "Yerel",
       "logo": "https://i.ibb.co/9hCVNks/life-tv.png",
@@ -896,6 +904,14 @@
       "logo": "https://i.postimg.cc/FKkHW8KK/tv4.png",
       "epg_id": "",
       "url": "https://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Bir TV",
+      "category": "TOP 50",
+      "logo": "https://i.ibb.co/dDdPMWq/birtv.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/birtv/bant1/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -1155,14 +1171,6 @@
       "is_verified": false
     },
     {
-      "name": "ARAS TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/JsDCyWG.png",
-      "epg_id": "",
-      "url": "https://2.rtmp.org/tv217/yayin.stream/chunklist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "Bodrum Kent TV",
       "category": "Yerel",
       "logo": "https://static.daktilo.com/sites/1600/uploads/2024/07/27/social.png",
@@ -1371,11 +1379,27 @@
       "is_verified": false
     },
     {
+      "name": "Aras TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/JsDCyWG.png",
+      "epg_id": "",
+      "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "AS TV",
       "category": "Yerel",
       "logo": "https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png",
       "epg_id": "",
       "url": "https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "beIN Sports 1 Turk",
+      "category": "Spor",
+      "logo": "https://static.wikia.nocookie.net/logopedia/images/2/27/BeinSports1.svg/revision/latest?cb=20230910184457",
+      "epg_id": "",
+      "url": "http://57.129.0.61:1990/stream/117/index.m3u8",
       "is_verified": false
     },
     {
@@ -1539,6 +1563,14 @@
       "is_verified": false
     },
     {
+      "name": "Sozcu TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/BxpdvsG.png",
+      "epg_id": "",
+      "url": "https://raw.githubusercontent.com/yaskar661-lgtm/stream/refs/heads/main/filbox/szchd.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "TBMM TV",
       "category": "Haber",
       "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tbmm-tv-tr.png",
@@ -1552,14 +1584,6 @@
       "logo": "https://i.imgur.com/u02FSgI.png",
       "epg_id": "",
       "url": "http://62.60.207.173:8080/hls/thaqalayn/index.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "TRT Genc",
-      "category": "Kültür & Dini",
-      "logo": "https://i.imgur.com/fCHQYWS.png",
-      "epg_id": "",
-      "url": "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
       "is_verified": false
     },
     {
