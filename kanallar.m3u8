@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz"
 # Generated automatically for Android TV & Smart TV - Turkiye Canli TV
-# Total Verified Turkish Channels: 436
+# Total Verified Turkish Channels: 432
 
 #EXTINF:-1 tvg-id="24.TV.tr" tvg-name="24 TV" tvg-logo="https://i.imgur.com/8FO41es.png" group-title="TÜM KANALLAR (A-Z Sıralı)",24 TV
 https://turkmedya-live.ercdn.net/tv24/tv24.m3u8#all
@@ -26,8 +26,8 @@ https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8#all
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8#all
 #EXTINF:-1 tvg-name="ARABESK TV" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EAT%3C/text%3E%3C/svg%3E" group-title="TÜM KANALLAR (A-Z Sıralı)",ARABESK TV
 https://tvsms.club/tv.php?kanal=arabeskyeni&file=.m3u8#all
-#EXTINF:-1 tvg-name="Aras TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Aras TV
-http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8#all
+#EXTINF:-1 tvg-name="ARAS TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="TÜM KANALLAR (A-Z Sıralı)",ARAS TV
+https://2.rtmp.org/tv217/yayin.stream/chunklist.m3u8#all
 #EXTINF:-1 tvg-name="ARMA TV" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EAT%3C/text%3E%3C/svg%3E" group-title="TÜM KANALLAR (A-Z Sıralı)",ARMA TV
 https://tvsms.club/tvz.php?kanal=arma&file=.m3u8#all
 #EXTINF:-1 tvg-name="AS TV" tvg-logo="https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png" group-title="TÜM KANALLAR (A-Z Sıralı)",AS TV
@@ -240,10 +240,6 @@ https://edge1.socialsmart.tv/metropoltv/smil/metropoltv/bant1/chunks.m3u8?app=su
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8#all
 #EXTINF:-1 tvg-id="MİNİKA.GO.tr" tvg-name="Minika Go" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/minika-go-tr.png" group-title="TÜM KANALLAR (A-Z Sıralı)",Minika Go
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8#all
-#EXTINF:-1 tvg-name="MTurk TV" tvg-logo="https://i.imgur.com/xj1gvrq.png" group-title="TÜM KANALLAR (A-Z Sıralı)",MTurk TV
-https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8#all
-#EXTINF:-1 tvg-name="Muğla Türk TV" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMTT%3C/text%3E%3C/svg%3E" group-title="TÜM KANALLAR (A-Z Sıralı)",Muğla Türk TV
-https://edge1.socialsmart.tv/muglaturk/bant1/chunks.m3u8#all
 #EXTINF:-1 tvg-name="MUKABELE TV" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMT%3C/text%3E%3C/svg%3E" group-title="TÜM KANALLAR (A-Z Sıralı)",MUKABELE TV
 https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/mukabele-tv/playlist.m3u8#all
 #EXTINF:-1 tvg-id="FOX.HD.tr" tvg-name="NOW" tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="TÜM KANALLAR (A-Z Sıralı)",NOW
@@ -714,8 +710,8 @@ https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
 https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-name="Anadolu Net TV" tvg-logo="https://www.anadolunettv.com/d/r/logo.png" group-title="Yerel",Anadolu Net TV
 https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
-#EXTINF:-1 tvg-name="Aras TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="Yerel",Aras TV
-http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8
+#EXTINF:-1 tvg-name="ARAS TV" tvg-logo="https://i.imgur.com/JsDCyWG.png" group-title="Yerel",ARAS TV
+https://2.rtmp.org/tv217/yayin.stream/chunklist.m3u8
 #EXTINF:-1 tvg-name="ARMA TV" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EAT%3C/text%3E%3C/svg%3E" group-title="Yerel",ARMA TV
 https://tvsms.club/tvz.php?kanal=arma&file=.m3u8
 #EXTINF:-1 tvg-name="AS TV" tvg-logo="https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png" group-title="Yerel",AS TV
@@ -832,10 +828,6 @@ https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&type=live&service=wowza&protoc
 https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/chunks.m3u8
 #EXTINF:-1 tvg-name="METROPOL TV" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMT%3C/text%3E%3C/svg%3E" group-title="Yerel",METROPOL TV
 https://edge1.socialsmart.tv/metropoltv/smil/metropoltv/bant1/chunks.m3u8?app=supersatforum
-#EXTINF:-1 tvg-name="MTurk TV" tvg-logo="https://i.imgur.com/xj1gvrq.png" group-title="Yerel",MTurk TV
-https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8
-#EXTINF:-1 tvg-name="Muğla Türk TV" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMTT%3C/text%3E%3C/svg%3E" group-title="Yerel",Muğla Türk TV
-https://edge1.socialsmart.tv/muglaturk/bant1/chunks.m3u8
 #EXTINF:-1 tvg-name="OLAY TURK" tvg-logo="https://i.imgur.com/e9ca6gc.png" group-title="Yerel",OLAY TURK
 https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8
 #EXTINF:-1 tvg-name="Ordu Bel TV" tvg-logo="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EOBT%3C/text%3E%3C/svg%3E" group-title="Yerel",Ordu Bel TV
