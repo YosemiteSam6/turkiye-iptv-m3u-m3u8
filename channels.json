@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-22 15:25:11 (TSİ)",
+  "updated_at": "2026-11-23 17:16:55 (TSİ)",
   "total_unique_channels": 201,
-  "total_extended_entries": 435,
+  "total_extended_entries": 434,
   "total_kids_channels": 12,
   "total_top50_channels": 49,
   "category_counts": {
@@ -9,11 +9,11 @@
     "TOP 50": 49,
     "Çocuk": 12,
     "Haber": 27,
-    "Spor": 11,
+    "Spor": 9,
     "Belgesel": 4,
     "Müzik": 21,
     "Sinema & Dizi": 9,
-    "Kültür & Dini": 15,
+    "Kültür & Dini": 16,
     "Yerel": 86
   },
   "epg_source": "https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz",
@@ -643,6 +643,14 @@
       "is_verified": false
     },
     {
+      "name": "Kocaeli TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/LeTP4zq.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/kocaelitv/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "KTV Konya",
       "category": "Yerel",
       "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EKK%3C/text%3E%3C/svg%3E",
@@ -1067,6 +1075,14 @@
       "is_verified": false
     },
     {
+      "name": "Meltem TV",
+      "category": "Kültür & Dini",
+      "logo": "https://i.imgur.com/C3m6w5S.png",
+      "epg_id": "",
+      "url": "https://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "Deniz Postasi TV",
       "category": "Yerel",
       "logo": "https://i.imgur.com/Mm8hdfx.png",
@@ -1155,6 +1171,22 @@
       "is_verified": false
     },
     {
+      "name": "ARAS TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/JsDCyWG.png",
+      "epg_id": "",
+      "url": "https://2.rtmp.org/tv217/yayin.stream/chunklist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Bodrum Kent TV",
+      "category": "Yerel",
+      "logo": "https://static.daktilo.com/sites/1600/uploads/2024/07/27/social.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/bodrumkenttv/bant1/chunks.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "BRTV",
       "category": "Yerel",
       "logo": "https://i.imgur.com/U3qlEAp.png",
@@ -1232,14 +1264,6 @@
       "logo": "https://yt3.googleusercontent.com/ytc/AIdro_msPtG6zfPKIJIIdvG4dehXLoVoXcHM2-2HL9YxsNYzGQ=s512-c-k-c0x00ffffff-no-rj",
       "epg_id": "",
       "url": "https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "ETV MANiSA",
-      "category": "Yerel",
-      "logo": "https://i.ibb.co/QKXtdkz/sOd3INg.png",
-      "epg_id": "",
-      "url": "https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -1371,27 +1395,11 @@
       "is_verified": false
     },
     {
-      "name": "Aras TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/JsDCyWG.png",
-      "epg_id": "",
-      "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "AS TV",
       "category": "Yerel",
       "logo": "https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png",
       "epg_id": "",
       "url": "https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "beIN Sports 1 Turk",
-      "category": "Spor",
-      "logo": "https://static.wikia.nocookie.net/logopedia/images/2/27/BeinSports1.svg/revision/latest?cb=20230910184457",
-      "epg_id": "",
-      "url": "https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F300113394ceebba66c8ad",
       "is_verified": false
     },
     {
@@ -1576,14 +1584,6 @@
       "logo": "https://i.imgur.com/u02FSgI.png",
       "epg_id": "",
       "url": "http://62.60.207.173:8080/hls/thaqalayn/index.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "TRT 3",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/JrWFwBd.png",
-      "epg_id": "TRT.3.-..SPOR.tr",
-      "url": "https://vuvuu-geil-m3u8.yaskar661.workers.dev/?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F418740351278f04c94b243",
       "is_verified": false
     },
     {
