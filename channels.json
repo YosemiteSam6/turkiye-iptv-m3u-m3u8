@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-26 16:41:57 (TSİ)",
-  "total_unique_channels": 150,
-  "total_extended_entries": 342,
+  "updated_at": "2026-11-27 16:39:57 (TSİ)",
+  "total_unique_channels": 204,
+  "total_extended_entries": 440,
   "total_kids_channels": 12,
   "total_top50_channels": 49,
   "category_counts": {
-    "TÜM KANALLAR (A-Z Sıralı)": 150,
+    "TÜM KANALLAR (A-Z Sıralı)": 204,
     "TOP 50": 49,
     "Çocuk": 12,
-    "Haber": 26,
+    "Haber": 27,
     "Spor": 10,
     "Belgesel": 4,
-    "Müzik": 16,
-    "Sinema & Dizi": 4,
-    "Kültür & Dini": 14,
-    "Yerel": 57
+    "Müzik": 22,
+    "Sinema & Dizi": 9,
+    "Kültür & Dini": 15,
+    "Yerel": 88
   },
   "epg_source": "https://epgshare01.online/epgshare01/epg_ripper_TR1.xml.gz",
   "playlists": {
@@ -483,267 +483,67 @@
       "is_verified": true
     },
     {
-      "name": "Aksu TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/mgDCKiy.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8",
+      "name": "Show TV",
+      "category": "TOP 50",
+      "logo": "https://dsmart-static-v2.ercdn.net//resize-width/400/content/E/aM/11889/Thumbnail.png",
+      "epg_id": "SHOW.TV.HD.tr",
+      "url": "https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558",
       "is_verified": false
     },
     {
-      "name": "Alanya Posta TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/a3w9eFe.png",
-      "epg_id": "",
-      "url": "https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8",
+      "name": "Tabii",
+      "category": "Sinema & Dizi",
+      "logo": "https://cms-tabii-assets.tabii.com/thumbnails/23963_781e9dee-cbd8-491a-b166-0b1df25b3bd0_720.jpeg",
+      "epg_id": "TABİİ.tr",
+      "url": "https://ceokzokgtd.erbvr.com/tabiitv/tabiitv.m3u8",
       "is_verified": false
     },
     {
-      "name": "Altas TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/XaJ7fp6.png",
-      "epg_id": "",
-      "url": "https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8",
+      "name": "Kanal 7",
+      "category": "TOP 50",
+      "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/kanal-7-tr.png",
+      "epg_id": "KANAL.7.HD.tr",
+      "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7_1080p.m3u8",
       "is_verified": false
     },
     {
-      "name": "Anadolu Net TV",
-      "category": "Yerel",
-      "logo": "https://www.anadolunettv.com/d/r/logo.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8",
+      "name": "Teve2",
+      "category": "TOP 50",
+      "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/teve2-tr.png",
+      "epg_id": "TEVE2.HD.tr",
+      "url": "https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/teve2/teve2_1080p.m3u8",
       "is_verified": false
     },
     {
-      "name": "Aras TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/JsDCyWG.png",
-      "epg_id": "",
-      "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "AS TV",
-      "category": "Yerel",
-      "logo": "https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "ATV Alanya",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/bUwarR0.png",
-      "epg_id": "",
-      "url": "https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Bi Kanal",
-      "category": "Yerel",
-      "logo": "https://www.bikanal.com/frontend/img/logo.webp",
-      "epg_id": "",
-      "url": "https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Bir TV",
-      "category": "Yerel",
-      "logo": "https://birtv.tv/assets/upload/637f83951df60.png",
-      "epg_id": "",
-      "url": "https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Bric ve Satranc TV",
-      "category": "Spor",
-      "logo": "https://i.imgur.com/TXDV1ty.png",
-      "epg_id": "",
-      "url": "http://139.162.182.79/live/test/index.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "BRTV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/U3qlEAp.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Cartoon Network",
-      "category": "Çocuk",
-      "logo": "https://www.cartoonnetwork.com.tr/static/img/cn-logo.png",
-      "epg_id": "CARTOON.NETWORK.tr",
-      "url": "http://176.65.153.40:6002/play/a013/index.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Çay TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/ndupxwu.png",
-      "epg_id": "",
-      "url": "https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Çiftçi TV",
-      "category": "Belgesel",
-      "logo": "https://i.imgur.com/CLzP4vL.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "CNN Turk",
-      "category": "Yerel",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/CNN_T%C3%BCrk_logo.svg/960px-CNN_T%C3%BCrk_logo.svg.png",
-      "epg_id": "",
-      "url": "http://85.117.61.84/cnnturk/index.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Deniz Postasi TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/Mm8hdfx.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Diyar TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/qWkHjRA.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8",
+      "name": "Beyaz TV",
+      "category": "TOP 50",
+      "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/beyaz-tv-tr.png",
+      "epg_id": "BEYAZ.TV.HD.tr",
+      "url": "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8",
       "is_verified": false
     },
     {
       "name": "Dost TV",
-      "category": "Kültür & Dini",
-      "logo": "https://dosttv.com/wp-content/uploads/2022/02/dost_logo.png",
+      "category": "TOP 50",
+      "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/dost-tv-tr.png",
       "epg_id": "",
       "url": "https://dost.stream.emsal.im/tv/live.m3u8",
       "is_verified": false
     },
     {
-      "name": "Dream Türk",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/vJ8VaZi.png",
-      "epg_id": "",
-      "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Edessa TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/rhU6j9I.png",
-      "epg_id": "",
-      "url": "https://canli.edessatv.com/hls/stream.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Ekotürk",
-      "category": "Haber",
-      "logo": "https://www.dsmart.com.tr/epg/images/0x60/5ffc18c6cfef0b15933a8b65",
-      "epg_id": "EKOTÜRK.tr",
-      "url": "https://cdn.ekoturk.net/hls/master.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "ERTV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/VDGEPrD.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Erzurum Web TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/HF7N4Li.png",
-      "epg_id": "",
-      "url": "https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "ES TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/epAEBrp.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "ETV Kayseri",
-      "category": "Yerel",
-      "logo": "https://yt3.googleusercontent.com/ytc/AIdro_msPtG6zfPKIJIIdvG4dehXLoVoXcHM2-2HL9YxsNYzGQ=s512-c-k-c0x00ffffff-no-rj",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "Euro D",
       "category": "TOP 50",
-      "logo": "https://i.imgur.com/x9kHsXo.png",
+      "logo": "https://i.ibb.co/jMQTJmh/euro-d.png",
       "epg_id": "",
-      "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8",
+      "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/track_4_1000/playlist.m3u8",
       "is_verified": false
     },
     {
-      "name": "Eurosport 1 Turkiye",
-      "category": "Spor",
-      "logo": "https://i.imgur.com/olQJgm7.png",
+      "name": "Tivi 6",
+      "category": "TOP 50",
+      "logo": "https://i.ibb.co/9H3DMWz/tivi6.png",
       "epg_id": "",
-      "url": "https://vavoo.alwaysdata.net/resolver.php?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F207886293750ec015d3e85",
-      "is_verified": false
-    },
-    {
-      "name": "Finans Turk TV",
-      "category": "Haber",
-      "logo": "https://i.ibb.co/wBwmB1T/iY0osc7.png",
-      "epg_id": "",
-      "url": "https://yayin30.haber100.com/live/finansturk/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Fortuna TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/ZbUSlOC.png",
-      "epg_id": "",
-      "url": "https://edge1.socialsmart.tv/ftvturk/bant1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Guneydogu TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/JT5pp3Y.png",
-      "epg_id": "",
-      "url": "https://edge1.socialsmart.tv/gtv/bant1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Haber61 TV",
-      "category": "Haber",
-      "logo": "https://i.imgur.com/2a2XUKl.png",
-      "epg_id": "",
-      "url": "https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Icel TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/CGwImKv.png",
-      "epg_id": "",
-      "url": "https://edge1.socialsmart.tv/iceltv/bant1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Ilke TV",
-      "category": "Haber",
-      "logo": "https://ilketv.com.tr/wp-content/uploads/2024/06/logo.png",
-      "epg_id": "",
-      "url": "https://stream.ilketv.com.tr/hls/ilkecanli.m3u8",
+      "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -775,7 +575,7 @@
       "category": "Yerel",
       "logo": "https://i.imgur.com/3br8RCq.png",
       "epg_id": "",
-      "url": "https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8",
+      "url": "https://live.artidijitalmedya.com/artidijital_kanal23/kanal23/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -787,14 +587,6 @@
       "is_verified": false
     },
     {
-      "name": "Kanal 32",
-      "category": "Yerel",
-      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EK3%3C/text%3E%3C/svg%3E",
-      "epg_id": "",
-      "url": "https://edge1.socialsmart.tv/kanal32/bant1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "Kanal 33",
       "category": "Yerel",
       "logo": "https://i.imgur.com/5WYaoFZ.png",
@@ -803,11 +595,43 @@
       "is_verified": false
     },
     {
+      "name": "Kanal 34",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/SIaI6Sj.png",
+      "epg_id": "",
+      "url": "https://live.euromediacenter.com/kanal34/tracks-v1a1/mono.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Kanal 53",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EK5%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://kanal53.ozelip.com:3448/hybrid/play.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "Kanal 58",
       "category": "Yerel",
       "logo": "https://i.imgur.com/Rgc66sv.png",
       "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8",
+      "url": "https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Kanal Ada",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EKA%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "http://145.239.58.133:28008/kanalada/kanalada/sec-f5-v1-a1.m3u8?app=supersatforum",
+      "is_verified": false
+    },
+    {
+      "name": "Kanal Urfa",
+      "category": "Yerel",
+      "logo": "https://www.kanalurfa.com/upload/masaustu.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/kanalurfa/bant1/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -816,6 +640,854 @@
       "logo": "https://i.imgur.com/3o8Rokp.png",
       "epg_id": "",
       "url": "https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Kocaeli TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/LeTP4zq.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/kocaelitv/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "KTV Konya",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EKK%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://cdn-ktvtv.yayin.com.tr/ktvtv/ktvtv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Life TV",
+      "category": "Yerel",
+      "logo": "https://i.ibb.co/9hCVNks/life-tv.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "MaviKaradeniz TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/wyWappU.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Mercan TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/3CWV8bS.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "METROPOL TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/metropoltv/smil/metropoltv/bant1/chunks.m3u8?app=supersatforum",
+      "is_verified": false
+    },
+    {
+      "name": "Muğla Türk TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMTT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/muglaturk/bant1/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "OLAY TURK",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/e9ca6gc.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Sun RTV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/64tph9N.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Tempo TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/tZpx32y.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Ton TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/f0Soeob.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "TV 41",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/6T472LM.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_tv41/tv41/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "TV 52",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/k4R5CzO.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "TV 264",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/tudXdOZ.png",
+      "epg_id": "",
+      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8?md5=qb_9l3erQIDqZMjbKfALzA&expires=1651666386",
+      "is_verified": false
+    },
+    {
+      "name": "Urfa Natik TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/8KO0uxn.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Malatya Vuslat TV",
+      "category": "Yerel",
+      "logo": "https://vuslattv.com.tr/uploads/logo/logo_66bdb4352c7ab7-60769650.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_vuslattv/vuslattv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Rize Türk TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3ERTT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://yayin.rizeturk.com:3777/hybrid/play.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Ordu Bel TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EOBT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://cdn1-ordubeltv.yayin.com.tr/ordubeltv/ordubeltv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "DAMAR TV",
+      "category": "Müzik",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EDT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://tvsms.club/tv.php?kanal=damar&file=.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "ARABESK TV",
+      "category": "Müzik",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EAT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://tvsms.club/tv.php?kanal=arabeskyeni&file=.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "SILA TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EST%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://tvsms.club/tv.php?kanal=silatv&file=.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "ZEYNO TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EZT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://tvsms.club/tv.php?kanal=zeynotv&file=.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "EZO TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EET%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://tvsms.club/tvz.php?kanal=ezo&file=.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "TOP POP TV",
+      "category": "Müzik",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3ETPT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://tvsms.club/tvz.php?kanal=toppop&file=.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "A VİVA TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EAVT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://tvsms.club/tv.php?kanal=vivatv&file=.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "ARMA TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EAT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://tvsms.club/tvz.php?kanal=arma&file=.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "GENC SMS TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EGST%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://tvsms.club/tv.php?kanal=genctv&file=.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "SAGLIK CHANEL",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3ESC%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://live.euromediacenter.com/saglikchannel/tracks-v1a1/mono.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "ATV Alanya",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/bUwarR0.png",
+      "epg_id": "",
+      "url": "https://helga.iptv2022.com/sh/AlanyaTV/tracks-v1a1/mono.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "HÜR TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EHT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://live.euromediacenter.com/hurtv/tracks-v1a1/mono.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "BRÜKSEL TÜRK",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EBT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://live.euromediacenter.com/brukselturk/tracks-v1a1/mono.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Sinema 1",
+      "category": "Sinema & Dizi",
+      "logo": "https://e7.pngegg.com/pngimages/879/420/png-clipart-film-video-production-television-graphy-cine-miscellaneous-label-thumbnail.png",
+      "epg_id": "",
+      "url": "https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "TV 4",
+      "category": "TOP 50",
+      "logo": "https://i.postimg.cc/FKkHW8KK/tv4.png",
+      "epg_id": "",
+      "url": "https://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Bir TV",
+      "category": "TOP 50",
+      "logo": "https://i.ibb.co/dDdPMWq/birtv.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/birtv/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Sinema TV",
+      "category": "Sinema & Dizi",
+      "logo": "https://www.tivibu.com.tr/uploads/ChannelFiles/sinematv_logo_A0CC7C58-E100-4C18-8B8D-BF961C4F785E.png",
+      "epg_id": "",
+      "url": "http://65.108.239.207/sinema/index.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Sinema Aile",
+      "category": "Sinema & Dizi",
+      "logo": "https://www.tivibu.com.tr/uploads/ChannelFiles/sinemaaile_logo_B2AC3808-8447-4546-80EF-EA50B34D6089.png",
+      "epg_id": "",
+      "url": "http://65.108.239.207/sinemaaile/index.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Film Screen HD",
+      "category": "Sinema & Dizi",
+      "logo": "https://feo.kablowebtv.com/resize/168A635D265A4328C2883FB4CD8FF/0/0/Vod/HLS/7d58e86c-d38e-4ef5-8ee0-fda0a7e65914.png",
+      "epg_id": "",
+      "url": "https://edge-e3.evrideo.tv/f2dcbecf-5af0-47db-a82e-032112050a23_1000027346_HLS/manifest.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "TJK TV",
+      "category": "Spor",
+      "logo": "https://i.ibb.co/PrkXrRn/tjk-tv.png",
+      "epg_id": "",
+      "url": "https://tjktv-live.tjk.org/tjktv_1080p.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "TurkHaber TV",
+      "category": "Haber",
+      "logo": "https://i.ibb.co/ySv65wg/turk-haber.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "NR1",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/sybLTBG/nr1.png",
+      "epg_id": "",
+      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e17cd6360b_1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Kral Pop TV",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/vk0bKz0/kral-pop.png",
+      "epg_id": "",
+      "url": "http://dygvideo.dygdigital.com/live/hls/kralpop",
+      "is_verified": false
+    },
+    {
+      "name": "Number 1 Ask",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/5cJ0KtQ/nr1-ask.png",
+      "epg_id": "",
+      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Number 1 Damar",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/2yCF7ms/nr1-damar.png",
+      "epg_id": "",
+      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Number 1 Dance",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/kXFSFTN/nr1-dance.png",
+      "epg_id": "",
+      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Dream Türk",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/fxRrKmB/dream-turk.png",
+      "epg_id": "",
+      "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "PowerTurk Taptaze",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/F5K5xs9/powerturk-taptaze.png",
+      "epg_id": "",
+      "url": "http://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Haber61 TV",
+      "category": "Haber",
+      "logo": "https://i.imgur.com/2a2XUKl.png",
+      "epg_id": "",
+      "url": "http://win8.yayin.com.tr/haber61tv/smil:haber61tv.smil/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Number 1 Türk",
+      "category": "Müzik",
+      "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/nr1-turk-tr.png",
+      "epg_id": "",
+      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/chunklist_b400000.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "POWER LOVE",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/bJL1VnX/power-love.png",
+      "epg_id": "",
+      "url": "https://listen.powerapp.com.tr/plove/love.smil/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Number 1 TV",
+      "category": "Müzik",
+      "logo": "https://i.imgur.com/02cDIBi.png",
+      "epg_id": "",
+      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/chunklist_b400000.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "PowerTurk TV",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/xXcBD2C/powerturk.png",
+      "epg_id": "",
+      "url": "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlists.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "PowerTurk Slow",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/R4pcKqK/powerturk-slow.png",
+      "epg_id": "",
+      "url": "https://listen.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "PowerTurk Akustik",
+      "category": "Müzik",
+      "logo": "https://i.imgur.com/driabBO.png",
+      "epg_id": "",
+      "url": "https://listen.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "POWER DANCE",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/5hwZ7xw/power-dance.png",
+      "epg_id": "",
+      "url": "https://listen.powerapp.com.tr/dance/dance.smil/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Meltem TV",
+      "category": "Kültür & Dini",
+      "logo": "https://i.imgur.com/C3m6w5S.png",
+      "epg_id": "",
+      "url": "https://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Deniz Postasi TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/Mm8hdfx.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "İSVİÇRE TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3E%C4%B0T%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://i41.ozelip.com:3269/hybrid/play.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "DİZİ TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EDT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/dizi-tv/playlist/0.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Lalegül TV",
+      "category": "Kültür & Dini",
+      "logo": "https://i.imgur.com/wwCysFs.png",
+      "epg_id": "",
+      "url": "https://lbl.netmedya.net/hls/lalegultv.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Semerkand TV",
+      "category": "Kültür & Dini",
+      "logo": "https://i.imgur.com/UVGGrQd.png",
+      "epg_id": "",
+      "url": "http://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "MC TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&type=live&service=wowza&protocol=https&output=playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "MUKABELE TV",
+      "category": "Kültür & Dini",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/mukabele-tv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Al QURAN KAREEM - KABE CANLI",
+      "category": "Kültür & Dini",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EAQK%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://al-ekhbaria-prod-dub.shahid.net/out/v1/9885cab0a3ec4008b53bae57a27ca76b/index.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "AKSU TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/mgDCKiy.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Anadolu Net TV",
+      "category": "Yerel",
+      "logo": "https://www.anadolunettv.com/d/r/logo.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "ARAS TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/JsDCyWG.png",
+      "epg_id": "",
+      "url": "https://2.rtmp.org/tv217/yayin.stream/chunklist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Bodrum Kent TV",
+      "category": "Yerel",
+      "logo": "https://static.daktilo.com/sites/1600/uploads/2024/07/27/social.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/bodrumkenttv/bant1/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "BRTV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/U3qlEAp.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Line TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/6GNp7f8.png",
+      "epg_id": "LINETV.tr",
+      "url": "https://edge1.socialsmart.tv/linetv/bant1/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Çay TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/ndupxwu.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Çiftçi TV",
+      "category": "Belgesel",
+      "logo": "https://i.imgur.com/CLzP4vL.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "DERiN TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EDT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://cdn1-derintv.yayin.com.tr/derintv/derintv/chunklist_w1486394141_b1796000.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "DİM TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EDT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_dimtv/dimtv/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Erciyes TV",
+      "category": "Yerel",
+      "logo": "https://s.erciyestv.com.tr/dosya/logo/erciyes-tv-og.jpg",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_erciyestv/erciyestv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "ERTV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/VDGEPrD.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "ES TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/epAEBrp.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "ETV Kayseri",
+      "category": "Yerel",
+      "logo": "https://yt3.googleusercontent.com/ytc/AIdro_msPtG6zfPKIJIIdvG4dehXLoVoXcHM2-2HL9YxsNYzGQ=s512-c-k-c0x00ffffff-no-rj",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "ETV MANiSA",
+      "category": "Yerel",
+      "logo": "https://i.ibb.co/QKXtdkz/sOd3INg.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Gaziantep GRT TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EGGT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_grt/grt/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Güneydoğu TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/JT5pp3Y.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/gtv/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Gurbet 24 TV",
+      "category": "Haber",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EG2T%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "http://cdn-gurbet24.yayin.com.tr/gurbet24/gurbet24/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Hunat TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/NrxHGnb.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_hunattv/hunattv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Icel TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/CGwImKv.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/iceltv/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "İZMİR TIME 35 TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3E%C4%B0T3%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://cdn-time35tv.yayin.com.tr/time35tv/time35tv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "İKRA TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3E%C4%B0T%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Kanal 32",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EK3%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/kanal32/bant1/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "BELEMTÜRK",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EBEL%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "https://edge.socialsmart.tv/belemturktv/bant1/chunks.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "NR1 FASHION ONE",
+      "category": "Müzik",
+      "logo": "https://i.ibb.co/HV0x9JZ/fashion-one.png",
+      "epg_id": "",
+      "url": "http://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2ee6997cb_1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "CNN Türk",
+      "category": "TOP 50",
+      "logo": "https://i.ibb.co/bFsmkwJ/cnn-turk.png",
+      "epg_id": "CNN.TÜRK.HD.tr",
+      "url": "https://helga.iptv2022.com/sh/cnn_turk/tracks-v4a1/mono.ts.m3u8?filter.tracks=a1v1v2v3v4&|User-Agent=okhttp/3.8.0/|Referer=https://turkcanli.tv/",
+      "is_verified": false
+    },
+    {
+      "name": "MAKKAH TV",
+      "category": "TOP 50",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJCVPXXnt4LxrLpCI6sRKfYu0bZkjHUg1WkQ&s",
+      "epg_id": "",
+      "url": "https://live.kwikmotion.com/sbrksaquranradiolive/srpksaquranradio/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "MADINAH TV",
+      "category": "TOP 50",
+      "logo": "https://e7.pngegg.com/pngimages/758/259/png-clipart-medina-mecca-television-channel-streaming-media-others-miscellaneous-television.png",
+      "epg_id": "",
+      "url": "https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/saudi_sunnah-avc1_600000=2-mp4a_145600_ara=3.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Alanya Posta TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/a3w9eFe.png",
+      "epg_id": "",
+      "url": "https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Altas TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/XaJ7fp6.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "AS TV",
+      "category": "Yerel",
+      "logo": "https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Bi Kanal",
+      "category": "Yerel",
+      "logo": "https://www.bikanal.com/frontend/img/logo.webp",
+      "epg_id": "",
+      "url": "https://bikanal-live.ercdn.net/bikanal/bikanal.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Bric ve Satranc TV",
+      "category": "Spor",
+      "logo": "https://i.imgur.com/TXDV1ty.png",
+      "epg_id": "",
+      "url": "http://139.162.182.79/live/test/index.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Cartoon Network",
+      "category": "Çocuk",
+      "logo": "https://www.cartoonnetwork.com.tr/static/img/cn-logo.png",
+      "epg_id": "CARTOON.NETWORK.tr",
+      "url": "http://176.65.153.40:6002/play/a013/index.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "CNN Turk",
+      "category": "Yerel",
+      "logo": "https://i.ibb.co/bFsmkwJ/cnn-turk.png",
+      "epg_id": "",
+      "url": "http://85.117.61.84/cnnturk/index.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Diyar TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/qWkHjRA.png",
+      "epg_id": "",
+      "url": "https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Edessa TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/rhU6j9I.png",
+      "epg_id": "",
+      "url": "https://canli.edessatv.com/hls/stream.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Ekotürk",
+      "category": "Haber",
+      "logo": "https://www.dsmart.com.tr/epg/images/0x60/5ffc18c6cfef0b15933a8b65",
+      "epg_id": "EKOTÜRK.tr",
+      "url": "https://cdn.ekoturk.net/hls/master.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Erzurum Web TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/HF7N4Li.png",
+      "epg_id": "",
+      "url": "https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Eurosport 1 Turkiye",
+      "category": "Spor",
+      "logo": "https://i.imgur.com/olQJgm7.png",
+      "epg_id": "",
+      "url": "https://vavoo.alwaysdata.net/resolver.php?url=https%3A%2F%2Fvavoo.to%2Fvavoo-iptv%2Fplay%2F207886293750ec015d3e85",
+      "is_verified": false
+    },
+    {
+      "name": "Finans Turk TV",
+      "category": "Haber",
+      "logo": "https://i.ibb.co/wBwmB1T/iY0osc7.png",
+      "epg_id": "",
+      "url": "https://yayin30.haber100.com/live/finansturk/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Fortuna TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/ZbUSlOC.png",
+      "epg_id": "",
+      "url": "https://edge1.socialsmart.tv/ftvturk/bant1/playlist.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "Ilke TV",
+      "category": "Haber",
+      "logo": "https://ilketv.com.tr/wp-content/uploads/2024/06/logo.png",
+      "epg_id": "",
+      "url": "https://stream.ilketv.com.tr/hls/ilkecanli.m3u8",
       "is_verified": false
     },
     {
@@ -851,27 +1523,11 @@
       "is_verified": false
     },
     {
-      "name": "Kocaeli TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/LeTP4zq.png",
-      "epg_id": "",
-      "url": "https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "Konya Olay TV",
       "category": "Yerel",
       "logo": "https://www.konyaolaytv.com/upload/tema/20230307__5154687762.jpg",
       "epg_id": "",
       "url": "https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Kral Pop TV",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/ch365lh.png",
-      "epg_id": "",
-      "url": "https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -883,59 +1539,11 @@
       "is_verified": false
     },
     {
-      "name": "Lalegül TV",
-      "category": "Kültür & Dini",
-      "logo": "https://i.imgur.com/wwCysFs.png",
-      "epg_id": "",
-      "url": "https://lbl.netmedya.net/hls/lalegultv.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Life TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/lWeJxm0.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Line TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/6GNp7f8.png",
-      "epg_id": "LINETV.tr",
-      "url": "https://edge1.socialsmart.tv/linetv/bant1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "MaviKaradeniz TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/wyWappU.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "Med Müzik",
       "category": "Müzik",
       "logo": "https://i.imgur.com/gtUFmCD.png",
       "epg_id": "",
       "url": "http://54.36.110.140/live3/live3.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Meltem TV",
-      "category": "Kültür & Dini",
-      "logo": "https://i.imgur.com/C3m6w5S.png",
-      "epg_id": "",
-      "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Mercan TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/3CWV8bS.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -947,67 +1555,11 @@
       "is_verified": false
     },
     {
-      "name": "Number 1 Ask",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/slwbux7.png",
-      "epg_id": "",
-      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Number 1 Damar",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/rYtbAGZ.png",
-      "epg_id": "",
-      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Number 1 Dance",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/ZM4PSyq.png",
-      "epg_id": "",
-      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Number 1 TV",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/02cDIBi.png",
-      "epg_id": "",
-      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "OlayTurk TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/e9ca6gc.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "Pati TV",
       "category": "Yerel",
       "logo": "https://patitv.com.tr/wp-content/themes/pati-tv/assets/img/logo-240.png",
       "epg_id": "",
       "url": "https://patitv.radyotelekomtv.com:3958/live/patitvlive.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Power Dance",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/QpPteBO.png",
-      "epg_id": "",
-      "url": "https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Power Love",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/0RzUswR.png",
-      "epg_id": "",
-      "url": "https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -1019,51 +1571,11 @@
       "is_verified": false
     },
     {
-      "name": "PowerTurk Akustik",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/driabBO.png",
-      "epg_id": "",
-      "url": "https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "PowerTurk Slow",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/tQSoQXW.png",
-      "epg_id": "",
-      "url": "https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "PowerTurk Taptaze",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/a5nW3HU.png",
-      "epg_id": "",
-      "url": "https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "PowerTurk TV",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/9OPoXQG.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "RTG int.",
       "category": "Yerel",
       "logo": "https://i.imgur.com/ZpUNou4.png",
       "epg_id": "",
       "url": "http://213.91.179.28:8000/play/a0bw",
-      "is_verified": false
-    },
-    {
-      "name": "Semerkand TV",
-      "category": "Kültür & Dini",
-      "logo": "https://i.imgur.com/UVGGrQd.png",
-      "epg_id": "",
-      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -1083,27 +1595,11 @@
       "is_verified": false
     },
     {
-      "name": "Sun RTV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/64tph9N.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "TBMM TV",
       "category": "Haber",
       "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/tbmm-tv-tr.png",
       "epg_id": "",
       "url": "https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Tempo TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/tZpx32y.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -1115,43 +1611,11 @@
       "is_verified": false
     },
     {
-      "name": "Tivi 6",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/Mbi0jbz.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "TJK TV",
-      "category": "Spor",
-      "logo": "https://i.imgur.com/3zHdkYG.png",
-      "epg_id": "",
-      "url": "https://tjktv-live.tjk.org/tjktv.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Ton TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/f0Soeob.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "TRT Genc",
       "category": "Kültür & Dini",
       "logo": "https://i.imgur.com/fCHQYWS.png",
       "epg_id": "",
       "url": "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "TurkHaber TV",
-      "category": "Haber",
-      "logo": "https://i.imgur.com/2AcRKdL.png",
-      "epg_id": "",
-      "url": "https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -1163,43 +1627,11 @@
       "is_verified": false
     },
     {
-      "name": "TV 4",
-      "category": "TOP 50",
-      "logo": "https://i.imgur.com/UpsQsbd.png",
-      "epg_id": "",
-      "url": "https://turkmedya-live.ercdn.net/tv4/tv4.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "TV 52",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/k4R5CzO.png",
-      "epg_id": "",
-      "url": "https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "TV 264",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/tudXdOZ.png",
-      "epg_id": "",
-      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "TV Den",
       "category": "Yerel",
       "logo": "https://i.imgur.com/Uhg95Ze.png",
       "epg_id": "",
       "url": "http://canli.tvden.com.tr/hls/live.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Urfa Natik TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/8KO0uxn.png",
-      "epg_id": "",
-      "url": "https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8",
       "is_verified": false
     },
     {
