@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 16:39:57 (TSİ)",
+  "updated_at": "2026-11-28 15:50:15 (TSİ)",
   "total_unique_channels": 204,
   "total_extended_entries": 440,
   "total_kids_channels": 12,
@@ -8,10 +8,10 @@
     "TÜM KANALLAR (A-Z Sıralı)": 204,
     "TOP 50": 49,
     "Çocuk": 12,
-    "Haber": 27,
+    "Haber": 28,
     "Spor": 10,
     "Belgesel": 4,
-    "Müzik": 22,
+    "Müzik": 21,
     "Sinema & Dizi": 9,
     "Kültür & Dini": 15,
     "Yerel": 88
@@ -787,6 +787,14 @@
       "is_verified": false
     },
     {
+      "name": "FiNEST TV",
+      "category": "Yerel",
+      "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EFT%3C/text%3E%3C/svg%3E",
+      "epg_id": "",
+      "url": "http://media.finest.tv/hls/live.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "DAMAR TV",
       "category": "Müzik",
       "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EDT%3C/text%3E%3C/svg%3E",
@@ -1123,6 +1131,14 @@
       "is_verified": false
     },
     {
+      "name": "Rehber TV",
+      "category": "Kültür & Dini",
+      "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/turkey/rehber-tv-tr.png",
+      "epg_id": "",
+      "url": "https://cdn4.yayin.com.tr/rehbertv/tracks-v1a1/mono.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "MC TV",
       "category": "Yerel",
       "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%2290%22%20viewBox%3D%220%200%20160%2090%22%3E%3Crect%20width%3D%22160%22%20height%3D%2290%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%20stroke%3D%22%232563eb%22%20stroke-width%3D%222%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2224%22%20fill%3D%22%2338bdf8%22%3EMT%3C/text%3E%3C/svg%3E",
@@ -1163,14 +1179,6 @@
       "is_verified": false
     },
     {
-      "name": "ARAS TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/JsDCyWG.png",
-      "epg_id": "",
-      "url": "https://2.rtmp.org/tv217/yayin.stream/chunklist.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "Bodrum Kent TV",
       "category": "Yerel",
       "logo": "https://static.daktilo.com/sites/1600/uploads/2024/07/27/social.png",
@@ -1184,14 +1192,6 @@
       "logo": "https://i.imgur.com/U3qlEAp.png",
       "epg_id": "",
       "url": "https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "Line TV",
-      "category": "Yerel",
-      "logo": "https://i.imgur.com/6GNp7f8.png",
-      "epg_id": "LINETV.tr",
-      "url": "https://edge1.socialsmart.tv/linetv/bant1/chunks.m3u8",
       "is_verified": false
     },
     {
@@ -1387,6 +1387,14 @@
       "is_verified": false
     },
     {
+      "name": "Aras TV",
+      "category": "Yerel",
+      "logo": "https://i.imgur.com/JsDCyWG.png",
+      "epg_id": "",
+      "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
+      "is_verified": false
+    },
+    {
       "name": "AS TV",
       "category": "Yerel",
       "logo": "https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png",
@@ -1424,6 +1432,14 @@
       "logo": "https://i.ibb.co/bFsmkwJ/cnn-turk.png",
       "epg_id": "",
       "url": "http://85.117.61.84/cnnturk/index.m3u8",
+      "is_verified": false
+    },
+    {
+      "name": "DHA",
+      "category": "Haber",
+      "logo": "https://i.imgur.com/VZhag2x.png",
+      "epg_id": "",
+      "url": "https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8",
       "is_verified": false
     },
     {
@@ -1539,14 +1555,6 @@
       "is_verified": false
     },
     {
-      "name": "Med Müzik",
-      "category": "Müzik",
-      "logo": "https://i.imgur.com/gtUFmCD.png",
-      "epg_id": "",
-      "url": "http://54.36.110.140/live3/live3.m3u8",
-      "is_verified": false
-    },
-    {
       "name": "MTurk TV",
       "category": "Yerel",
       "logo": "https://i.imgur.com/xj1gvrq.png",
@@ -1608,14 +1616,6 @@
       "logo": "https://i.imgur.com/u02FSgI.png",
       "epg_id": "",
       "url": "http://62.60.207.173:8080/hls/thaqalayn/index.m3u8",
-      "is_verified": false
-    },
-    {
-      "name": "TRT Genc",
-      "category": "Kültür & Dini",
-      "logo": "https://i.imgur.com/fCHQYWS.png",
-      "epg_id": "",
-      "url": "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
       "is_verified": false
     },
     {
